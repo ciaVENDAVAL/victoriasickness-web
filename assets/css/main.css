@@ -74,12 +74,12 @@ a { color: inherit; }
 .lang summary::-webkit-details-marker { display: none; }
 .lang summary i { font-style: normal; color: var(--bubble); transition: transform .4s var(--ease); }
 .lang[open] summary i { transform: rotate(135deg); }
-.lang ul { position: absolute; right: 0; top: calc(100% + .5rem); list-style: none; margin: 0; padding: .4rem; min-width: 11rem; background: var(--ink); border: 1px solid var(--lacquer); border-radius: 18px; box-shadow: 0 20px 50px -20px #000; }
+.lang ul { position: absolute; right: 0; top: calc(100% + .5rem); list-style: none; margin: 0; padding: .4rem; min-width: 11rem; background: var(--ink); color: var(--bone); border: 1px solid var(--lacquer); border-radius: 18px; box-shadow: 0 20px 50px -20px #000; }
 .lang li a { display: flex; gap: .7rem; padding: .45rem .7rem; border-radius: 12px; text-decoration: none; font-size: .92rem; }
 .lang li a b { width: 1.8rem; font-weight: 600; color: var(--bubble); }
 .lang li a:hover { background: var(--ink-2); }
-.lang li a[aria-current="page"] { background: var(--lacquer); }
-.lang li a[aria-current="page"] b { color: var(--bone); }
+.lang li a[aria-current="page"] { background: var(--lacquer); color: #f4eee6; }
+.lang li a[aria-current="page"] b { color: #f4eee6; }
 @media (max-width: 720px) { .nav { display: none; } }
 
 /* ---------- hero ---------- */
