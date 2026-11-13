@@ -446,3 +446,6 @@ html.a11y-spacing p { margin-bottom: 1.4em; }
 /* stop motion */
 html.a11y-motion *, html.a11y-motion *::before, html.a11y-motion *::after { animation: none !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
 html.a11y-motion .marquee__track { transform: none; }
+
+/* sage smoke canvas */
+.smoke { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 145; }

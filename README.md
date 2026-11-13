@@ -13,6 +13,7 @@ PDFs (dossiers, riders) go in the sister repo **victoriasickness-docs**.
 - **Old WordPress URLs** (`/en/home/`, `/ca/inici/`, `/sobre-mi/`, `/contacto/`) redirect to the new pages.
 - **Menu:** the round button at the top right opens a full-screen menu with the sections, both shows, the email and social icons.
 - **Accessibility:** the Cyr-wheel button at the bottom left has options to stop animations, switch dark/light, raise contrast, underline links, add line spacing, use the normal cursor, and change the text size (80–160%). The choices are remembered in that browser.
+- **Sage smoke:** every tap or click lets a thin curl of sage smoke with a tiny ember rise from that spot (`assets/js/smoke.js`). It's off with reduced motion or the "stop animations" option.
 - **Cursor:** a lacquer dot. **Press and hold** (mouse or finger, about 0.45 s) and the back of a hand appears and gets its nails painted, a different colour each time. A long press never triggers the link underneath, and starting to scroll cancels it on phones.
 
 ## Edit content
