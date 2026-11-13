@@ -17,11 +17,22 @@
   };
   size(); addEventListener('resize', size);
 
-  const tint = () => root.classList.contains('a11y-light') ? [128, 146, 118] : [205, 216, 196]; // sage grey-green
+  // pick the smoke colour from the background under the tap: pale sage on dark, deeper sage on light
+  const SAGE_ON_DARK = [205, 216, 196], SAGE_ON_LIGHT = [92, 112, 84];
+  const bgIsLight = (x, y) => {
+    let el = document.elementFromPoint(x, y);
+    while (el && el !== document.documentElement) {
+      const c = getComputedStyle(el).backgroundColor.match(/[\d.]+/g);
+      if (c && (c.length < 4 || +c[3] > .5)) return (0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]) > 150;
+      el = el.parentElement;
+    }
+    return root.classList.contains('a11y-light');
+  };
 
   // an emitter releases a thin stream for ~0.7 s, like a smouldering sage bundle
   let emitters = [];
-  const wisp = (x, y, k) => ({
+  const wisp = (x, y, k, light) => ({
+    c: light ? SAGE_ON_LIGHT : SAGE_ON_DARK, boost: light ? 1.9 : 1,
     x: x + (Math.random() - .5) * 3, y,
     vx: (Math.random() - .5) * 6, vy: -(48 + Math.random() * 34),
     r: 1.8 + Math.random() * 2.4, grow: 12 + Math.random() * 18,
@@ -31,7 +42,7 @@
   });
   const puff = (x, y) => {
     if (still()) return;
-    emitters.push({ x, y, t: 0, dur: .7, acc: 0, dir: Math.random() < .5 ? -1 : 1 });
+    emitters.push({ x, y, t: 0, dur: .7, acc: 0, light: bgIsLight(x, y) });
     embers.push({ x, y, life: 0, max: .5 });
     if (!running) { running = true; last = performance.now(); requestAnimationFrame(tick); }
   };
@@ -41,10 +52,9 @@
     ctx.clearRect(0, 0, W, H);
     emitters = emitters.filter(em => {
       em.t += dt; em.acc += dt * 60;                       // ~60 wisps per second
-      while (em.acc >= 1) { em.acc--; parts.push(wisp(em.x, em.y, em.t)); }
+      while (em.acc >= 1) { em.acc--; parts.push(wisp(em.x, em.y, em.t, em.light)); }
       return em.t < em.dur;
     });
-    const [r, g, b] = tint();
     ctx.globalCompositeOperation = 'source-over';
     parts = parts.filter(p => {
       p.life += dt; if (p.life >= p.max) return false;
@@ -53,7 +63,8 @@
       p.x += (p.vx + Math.sin(p.wob + p.life * p.wobS) * p.wobA * (1 + p.life * 2.4)) * dt;
       p.y += p.vy * dt; p.vy *= .995; p.vx *= .99;
       const rad = p.r + p.grow * k;
-      const alpha = p.a * Math.sin(Math.PI * Math.min(1, k * 1.15)) ;          // fade in, then out
+      const [r, g, b] = p.c;
+      const alpha = p.a * p.boost * Math.sin(Math.PI * Math.min(1, k * 1.15));          // fade in, then out
       const gr = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, rad);
       gr.addColorStop(0, `rgba(${r},${g},${b},${alpha})`);
       gr.addColorStop(.55, `rgba(${r},${g},${b},${alpha * .45})`);
