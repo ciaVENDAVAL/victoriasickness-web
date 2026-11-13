@@ -386,7 +386,7 @@ a { color: inherit; }
    Accessibility — Cyr wheel button + panel
    ========================================================================== */
 .a11y { position: fixed; left: clamp(.8rem, 2vw, 1.5rem); bottom: clamp(.8rem, 2vw, 1.5rem); z-index: 130; }
-.a11y-btn { width: 60px; height: 60px; padding: 0; border: 0; border-radius: 50%; background: var(--ink); color: var(--bone); cursor: pointer; box-shadow: 0 10px 30px -10px rgb(0 0 0 / .7), 0 0 0 2px var(--ink); }
+.a11y-btn { width: 42px; height: 42px; opacity: .55; transition: opacity .3s; padding: 0; border: 0; border-radius: 50%; background: var(--ink); color: var(--bone); cursor: pointer; box-shadow: 0 10px 30px -10px rgb(0 0 0 / .7), 0 0 0 2px var(--ink); }
 .a11y-btn svg { width: 100%; height: 100%; overflow: visible; }
 .a11y-wheel { transform-origin: 32px 32px; transition: transform 1.2s var(--ease); }
 .a11y-wheel__tube { fill: none; stroke: #c9c2d6; stroke-width: 5.5; }
@@ -395,6 +395,7 @@ a { color: inherit; }
 .a11y-fig circle { stroke: none; }
 .a11y-btn:hover .a11y-wheel, .a11y-btn[aria-expanded="true"] .a11y-wheel,
 .a11y-btn:hover .a11y-fig, .a11y-btn[aria-expanded="true"] .a11y-fig { transform: rotate(360deg); }
+.a11y-btn:hover, .a11y-btn:focus-visible, .a11y-btn[aria-expanded="true"] { opacity: 1; }
 .a11y-btn:focus-visible { outline: 3px solid var(--bubble); outline-offset: 4px; }
 .a11y-panel {
   position: absolute; left: 0; bottom: calc(100% + .8rem); width: min(19rem, calc(100vw - 2rem)); max-height: calc(100dvh - 7rem); overflow: auto;
