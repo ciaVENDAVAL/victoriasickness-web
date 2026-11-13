@@ -174,7 +174,8 @@
   const customOn = () => !root.classList.contains('a11y-cursor');
   apply();
 
-  const HOLD = 450;                                // ms before the hand appears
+  const HOLD = 450;                                // ms before the hand appears (mouse)
+  const HOLD_TOUCH = 320;                          // shorter on touch: beat the browser's own long-press (~500 ms)
   const STEP = reduce ? 120 : 280;                 // ms per nail
   const POLISH = ['#e8004f', '#ff4fb0', '#8a5cff', '#120d11', '#d6b04c', '#2fd1c5', '#c9c2d6'];
   // brush tip positions (svg units) for nails 0..4 = pinky, ring, middle, index, thumb
@@ -182,6 +183,7 @@
   const paints = [...cursor.querySelectorAll('.nail-paint')].sort((a, b) => a.dataset.nail - b.dataset.nail);
   const brush = cursor.querySelector('.brush');
   cursor.style.setProperty('--hold', HOLD + 'ms');
+  if (!finePointer) cursor.style.setProperty('--hold', HOLD_TOUCH + 'ms');
 
   let x = innerWidth / 2, y = innerHeight / 2, raf = 0;
   let holdTimer = 0, stepTimers = [], handOn = false, startX = 0, startY = 0, swallowClick = false;
@@ -223,6 +225,14 @@
     if (hint) { hint.classList.remove('is-shown'); store.set('vs-hint', '1'); }
   };
 
+  const beginHold = (cx, cy) => {
+    startX = cx; startY = cy; swallowClick = false;
+    clearTimeout(holdTimer);
+    cursor.classList.remove('is-pressing'); void cursor.offsetWidth; cursor.classList.add('is-pressing');
+    document.documentElement.classList.add('is-holding');
+    holdTimer = setTimeout(startManicure, cursor.classList.contains('is-touch') ? HOLD_TOUCH : HOLD);
+  };
+
   const reset = () => {
     clearTimeout(holdTimer); stepTimers.forEach(clearTimeout); stepTimers = [];
     cursor.classList.remove('is-pressing', 'is-hand', 'is-painting', 'is-done');
@@ -233,29 +243,40 @@
     if (cursor.classList.contains('is-touch')) setTimeout(() => { if (!handOn) cursor.classList.remove('is-touch'); }, 250);
   };
 
+  // ---- mouse: pointer events ----
   addEventListener('pointerdown', e => {
-    if (e.button !== 0) return;
-    if (e.target.closest('iframe, input, textarea, select, video')) return;
-    const touch = e.pointerType !== 'mouse';
-    if (touch && !customOn()) return;
-    if (touch) { cursor.classList.add('is-touch'); move(e.clientX, e.clientY); place(); }
-    else if (!finePointer || !customOn()) return;
-    startX = e.clientX; startY = e.clientY; swallowClick = false;
-    // restart ring animation
-    cursor.classList.remove('is-pressing'); void cursor.offsetWidth; cursor.classList.add('is-pressing');
-    document.documentElement.classList.add('is-holding');
-    holdTimer = setTimeout(startManicure, HOLD);
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;   // touch is handled below
+    if (!finePointer || !customOn()) return;
+    if (e.target.closest('iframe, input, textarea, select, video, .a11y, .lightbox')) return;
+    beginHold(e.clientX, e.clientY);
   });
-
-  addEventListener('pointermove', e => {
-    if (e.pointerType === 'mouse' || !cursor.classList.contains('is-touch')) return;
-    // a touch that starts scrolling isn't a long press
-    if (!handOn && Math.hypot(e.clientX - startX, e.clientY - startY) > 12) reset();
-    else move(e.clientX, e.clientY);
-  }, { passive: true });
-
-  ['pointerup', 'pointercancel'].forEach(t => addEventListener(t, reset));
+  addEventListener('pointerup', e => { if (e.pointerType === 'mouse') reset(); });
   addEventListener('blur', reset);
+
+  // ---- touch: touch events (iOS fires pointercancel on long press, which would kill the hand) ----
+  let touchId = null, autoHide = 0;
+  addEventListener('touchstart', e => {
+    if (e.touches.length > 1 || !customOn()) { if (touchId !== null) reset(); return; }
+    if (e.target.closest('iframe, input, textarea, select, video, .a11y, .lightbox, .menu')) return;
+    const t = e.changedTouches[0]; touchId = t.identifier;
+    clearTimeout(autoHide);
+    cursor.classList.add('is-touch'); move(t.clientX, t.clientY); place();
+    beginHold(t.clientX, t.clientY);
+  }, { passive: true });
+  addEventListener('touchmove', e => {
+    const t = [...e.changedTouches].find(x => x.identifier === touchId); if (!t) return;
+    if (!handOn && Math.hypot(t.clientX - startX, t.clientY - startY) > 12) { touchId = null; reset(); return; }
+    if (handOn) { e.preventDefault(); move(t.clientX, t.clientY); }      // keep the page still while painting
+  }, { passive: false });
+  addEventListener('touchend', e => {
+    if ([...e.changedTouches].some(x => x.identifier === touchId)) { touchId = null; reset(); }
+  });
+  addEventListener('touchcancel', () => {
+    touchId = null;
+    if (!handOn) return reset();
+    // the browser took over the gesture: finish the manicure, then fade out on its own
+    autoHide = setTimeout(reset, 120 + paints.length * STEP + 900);
+  });
 
   // a long press shouldn't also "click" the link underneath, nor open the context menu
   addEventListener('click', e => { if (swallowClick) { e.preventDefault(); e.stopPropagation(); swallowClick = false; } }, true);
