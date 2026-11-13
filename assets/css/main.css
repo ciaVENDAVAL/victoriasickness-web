@@ -258,7 +258,7 @@ a { color: inherit; }
 .social a:hover, .social a:focus-visible { color: var(--lacquer); transform: rotate(-8deg) scale(1.12); }
 
 /* ---------- footer ---------- */
-.site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding: 1.5rem var(--pad); font-size: .85rem; color: color-mix(in srgb, var(--bone) 72%, transparent); }
+.site-footer { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: .4rem 2rem; text-align: right; padding: 1.5rem var(--pad) 1.5rem calc(var(--pad) + 60px); font-size: .85rem; color: color-mix(in srgb, var(--bone) 72%, transparent); }
 .site-footer p { margin: 0; }
 .site-footer__made span { color: var(--lacquer); }
 
