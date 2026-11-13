@@ -241,10 +241,11 @@ a { color: inherit; }
 }
 
 /* ---------- contact ---------- */
-.contact { background: var(--bone); color: var(--ink); padding: clamp(3rem, 8vw, 6rem) var(--pad) clamp(5rem, 12vw, 9rem); text-align: center; }
+.contact { background: var(--bone); color: var(--ink); padding: 0 var(--pad) clamp(4rem, 10vw, 7rem); text-align: center; }
 .contact .eyebrow { color: var(--lacquer); }
 .contact__title { font: 800 clamp(4rem, 17vw, 15rem)/.82 var(--display); font-stretch: 75%; text-transform: uppercase; letter-spacing: -.05em; margin: 0; }
-.contact__text { margin: 1rem 0 2rem; }
+.contact .eyebrow { font-size: .85rem; font-weight: 600; margin: 0; }
+.contact__text { margin: 1rem 0 2rem; font-size: clamp(1.1rem, 1rem + .5vw, 1.4rem); }
 .contact__mail {
   display: inline-block; font: italic 400 clamp(1.6rem, 5vw, 4rem)/1.1 var(--serif); text-decoration: none; word-break: break-all;
   background: linear-gradient(var(--lacquer), var(--lacquer)) 0 92% / 100% .12em no-repeat; transition: background-size .5s var(--ease), color .3s;
