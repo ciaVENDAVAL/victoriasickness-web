@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'es' }}">
+<head>
+  <meta charset="utf-8">
+  <title>→ {{ page.to }}</title>
+  <link rel="canonical" href="{{ site.url }}{{ page.to }}">
+  <meta http-equiv="refresh" content="0; url={{ page.to | relative_url }}">
+  <meta name="robots" content="noindex">
+</head>
+<body><a href="{{ page.to | relative_url }}">{{ site.url }}{{ page.to }}</a></body>
+</html>

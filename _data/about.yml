@@ -1,0 +1,7 @@
+# Photos in the "about" section (file names in assets/img/sm and assets/img/lg)
+portrait: victoria-retrato
+images:
+  - { file: victoria-escena, o: p }
+  - { file: marikarmen-1, o: p }
+  - { file: victoria-3, o: p }
+  - { file: marikarmen-2, o: p }

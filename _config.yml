@@ -1,0 +1,36 @@
+# cia. Victoria Sickness — GitHub Pages (Jekyll, no plugins needed)
+title: cia. Victoria Sickness
+
+# STAGING: served at https://ciavendaval.github.io/victoriasickness-web/
+# When you move the domain, set   url: https://victoriasickness.com   baseurl: ""
+# and add a file named CNAME containing: victoriasickness.com   (see README)
+url: https://ciavendaval.github.io
+baseurl: /victoriasickness-web
+
+media_base: /assets/img/
+# PDFs (dossiers, technical riders…) live in the victoriasickness-docs repo
+docs_base: https://ciavendaval.github.io/victoriasickness-docs/pdf/
+
+# Languages, in switcher order. ES stays at the root like the old site.
+languages:
+  - { code: es, label: ES, name: Castellano, locale: es_ES, path: / }
+  - { code: ca, label: CA, name: Català,     locale: ca_ES, path: /ca/ }
+  - { code: eu, label: EU, name: Euskara,    locale: eu_ES, path: /eu/ }
+  - { code: en, label: EN, name: English,    locale: en_GB, path: /en/ }
+  - { code: fr, label: FR, name: Français,   locale: fr_FR, path: /fr/ }
+  - { code: it, label: IT, name: Italiano,   locale: it_IT, path: /it/ }
+  - { code: pt, label: PT, name: Português,  locale: pt_PT, path: /pt/ }
+  - { code: de, label: DE, name: Deutsch,    locale: de_DE, path: /de/ }
+
+contact:
+  email: victoriasickness@gmail.com
+  instagram: https://www.instagram.com/cia.victoriasickness/
+  youtube: https://www.youtube.com/@victoriasickness
+  facebook: https://www.facebook.com/victoriasickness/
+
+exclude:
+  - README.md
+  - scripts
+  - preview
+  - Gemfile
+  - Gemfile.lock

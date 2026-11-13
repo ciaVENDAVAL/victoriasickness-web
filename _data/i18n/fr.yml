@@ -1,0 +1,81 @@
+meta:
+  title: "cia. Victoria Sickness — cirque contemporain, mémoire et genre"
+  description: "Compagnie de cirque contemporain qui place le corps travesti au centre. Invocaciones (création été 2027) et Circografía de una Travesti : roue Cyr, acrobatie, rituel et mémoire queer."
+
+ui:
+  skip: "Aller au contenu"
+  nav_label: "Principal"
+  lang_label: "Langue"
+  pause: "Mettre la vidéo en pause"
+  play: "Lire la vidéo"
+  play_video: "Voir la vidéo"
+  cursor_hint: "Restez appuyé·e pour vous faire les ongles"
+  top: "Retour en haut"
+  dossier: "Dossier"
+  prev: "Photo précédente"
+  next: "Photo suivante"
+  close: "Fermer"
+
+nav:
+  shows: "Spectacles"
+  about: "À propos"
+  contact: "Contact"
+
+hero:
+  kicker: "cirque · mémoire · genre"
+  lede: "Du cirque contemporain avec le corps travesti au centre : roue Cyr, acrobatie, rituel et mémoires queer qui refusent de disparaître."
+  cta_shows: "Voir les spectacles"
+  cta_contact: "Programmer"
+
+marquee:
+  - "cirque contemporain"
+  - "corps travesti"
+  - "mémoire queer"
+  - "roue Cyr"
+  - "rituel"
+  - "paillettes politiques"
+
+labels:
+  credits: "Distribution"
+  support: "Avec le soutien de"
+  gallery: "Galerie"
+  photo: "photo"
+
+roles:
+  idea: "Idée et mise en scène"
+  outside_eye: "Regard extérieur"
+  music: "Bande sonore"
+  artistic_support: "Accompagnement artistique"
+  image: "Image"
+  lighting: "Création lumière"
+  video_art: "Art vidéo"
+  costume: "Costumes"
+
+shows:
+  invocaciones:
+    status: "En création · première à l'été 2027"
+    chips: ["40 min", "Rue / espace non conventionnel", "Cérémonie participative"]
+    description: "Une cérémonie de cirque contemporain entre performance et rituel. Le corps travesti occupe le centre pour invoquer les mémoires queer que les arts de la scène en Espagne ont effacées. Le public ne regarde pas : il participe."
+  circografia:
+    chips: ["50 min", "Salle (adaptable en rue)", "Musique live"]
+    description: "Un voyage autobiographique vers l'enfance et l'adolescence queer que Victoria n'a pas pu vivre. Une panne technique en plein concert l'entraîne dans une réalité parallèle où les peluches de son enfance la guident à travers son passé, entre modèles féminins et la socialisation masculine qui lui a été imposée."
+    techniques: "Roue Cyr, acrobatie, patins et échasses · texte et projections"
+
+about:
+  eyebrow: "À propos"
+  name: "Vic Heredero"
+  paragraphs:
+    - "Victoria Sickness est le nom de scène de Vic Heredero, artiste de cirque qui croise technique, création et recherche scénique. Formation au Centre de les Arts del Circ Rogelio Rivel (2016–2020), spécialité roue Cyr et acrobatie au sol, après des études d'ingénierie des systèmes audiovisuels à l'Universidad Carlos III de Madrid."
+    - "Depuis 2018, voix principale et saxophone ténor de Las Marikarmen, dont Vic dirige aussi la mise en scène. Avec la compagnie : un solo de 12 minutes, le spectacle de 50 minutes Circografía de una Travesti et la recherche en cours sur le corps travesti, INVOCACIONES."
+    - "Ateliers de technique et de création à l'école Rogelio Rivel, avec la direction d'un cabaret annuel. Mise en scène du Circ de Nadal 2024 à l'Espai de Circ Cronopis (Mataró), participation à la caixa d'eines de La Central del Circ, résidence à La Poderosa (2026/27) et interprétation dans Combinat 57 à l'Ateneu Popular 9 Barris."
+  quote: "Certain·es d'entre nous ne peuvent pas se permettre le luxe de ne pas engager leur corps."
+  portrait_alt: "Portrait de Victoria Sickness"
+  photo_alt: "Victoria Sickness, photo"
+
+contact:
+  eyebrow: "Contact"
+  title: "Parlons"
+  text: "Programmation, diffusion, presse et ateliers."
+
+footer:
+  made: "Fait de paillettes et de roue Cyr"

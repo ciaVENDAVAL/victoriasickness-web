@@ -1,0 +1,82 @@
+meta:
+  title: "cia. Victoria Sickness — circo contemporáneo, memoria y género"
+  description: "Compañía de circo contemporáneo que pone el cuerpo travesti en el centro. Invocaciones (estreno verano 2027) y Circografía de una Travesti: rueda Cyr, acrobacia, ritual y memoria queer."
+
+ui:
+  skip: "Saltar al contenido"
+  nav_label: "Principal"
+  lang_label: "Idioma"
+  pause: "Pausar vídeo"
+  play: "Reproducir vídeo"
+  play_video: "Ver vídeo"
+  cursor_hint: "Mantén pulsado para hacerte las uñas"
+  top: "Volver arriba"
+  dossier: "Dosier"
+  prev: "Foto anterior"
+  next: "Foto siguiente"
+  close: "Cerrar"
+
+nav:
+  shows: "Espectáculos"
+  about: "Sobre mí"
+  contact: "Contacto"
+
+hero:
+  kicker: "circo · memoria · género"
+  lede: "Circo contemporáneo con el cuerpo travesti en el centro: rueda Cyr, acrobacia, ritual y memorias queer que se resisten a desaparecer."
+  cta_shows: "Ver espectáculos"
+  cta_contact: "Programar"
+
+marquee:
+  - "circo contemporáneo"
+  - "cuerpo travesti"
+  - "memoria queer"
+  - "rueda Cyr"
+  - "ritual"
+  - "purpurina política"
+
+labels:
+  credits: "Ficha artística"
+  support: "Con el apoyo de"
+  gallery: "Galería"
+  photo: "fotografía"
+
+roles:
+  idea: "Idea y dirección"
+  outside_eye: "Mirada externa"
+  music: "Banda sonora"
+  artistic_support: "Acompañamiento artístico"
+  image: "Imagen"
+  lighting: "Diseño de iluminación"
+  video_art: "Videoarte"
+  costume: "Vestuario"
+
+shows:
+  invocaciones:
+    status: "En creación · estreno verano 2027"
+    chips: ["40 min", "Calle / espacio no convencional", "Ceremonia participativa"]
+    description: "Una ceremonia de circo contemporáneo entre la performance y el ritual. El cuerpo travesti ocupa el centro para invocar las memorias queer que las artes escénicas del Estado español han borrado. El público no mira: participa."
+  circografia:
+    chips: ["50 min", "Sala (adaptable a calle)", "Música en directo"]
+    description: "Un viaje autobiográfico a la infancia y la adolescencia queer que Victoria no pudo vivir. Un fallo técnico en pleno concierto la arrastra a una realidad paralela donde los peluches de su infancia la guían por su pasado, entre referentes femeninos y la socialización masculina que le fue impuesta."
+    techniques: "Rueda Cyr, acrobacia, patines y zancos · texto y proyecciones"
+
+about:
+  eyebrow: "Sobre mí"
+  name: "Vic Heredero"
+  paragraphs:
+    - "Victoria Sickness es el nombre artístico de Vic Heredero, artista de circo que cruza técnica, creación e investigación escénica. Se formó en el Centre de les Arts del Circ Rogelio Rivel (2016–2020), con especialidad en rueda Cyr y acrobacia de suelo, después de estudiar Ingeniería de Sistemas Audiovisuales en la Universidad Carlos III de Madrid."
+    - "Desde 2018 es voz principal y saxo tenor de Las Marikarmen, donde también dirige la puesta en escena. Con su compañía ha creado un solo de 12 minutos, el espectáculo de 50 minutos Circografía de una Travesti y la investigación en curso sobre el cuerpo travesti INVOCACIONES."
+    - "Imparte talleres de técnica y creación en la escuela Rogelio Rivel, donde dirige un cabaret anual. Dirigió el Circ de Nadal 2024 del Espai de Circ Cronopis (Mataró), participa en la caixa d'eines de La Central del Circ, está en residencia en La Poderosa (2026/27) y ha actuado en Combinat 57 del Ateneu Popular 9 Barris."
+  quote: "Algunas personas no podemos permitirnos el lujo de no poner el cuerpo."
+  quote_by: "Roberta Marrero"
+  portrait_alt: "Retrato de Victoria Sickness"
+  photo_alt: "Victoria Sickness en escena"
+
+contact:
+  eyebrow: "Contacto"
+  title: "Hablemos"
+  text: "Programación, contratación, prensa y talleres."
+
+footer:
+  made: "Hecho con purpurina y rueda Cyr"
