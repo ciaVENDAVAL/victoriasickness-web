@@ -20,7 +20,7 @@
       toggle.setAttribute('aria-pressed', String(paused));
       label.textContent = paused ? toggle.dataset.play : toggle.dataset.pause;
     };
-    if (reduce) video.removeAttribute('autoplay'), video.pause();
+    if (reduce || document.documentElement.classList.contains('a11y-motion')) video.removeAttribute('autoplay'), video.pause();
     toggle.addEventListener('click', () => { video.paused ? video.play() : video.pause(); });
     video.addEventListener('play', sync); video.addEventListener('pause', sync); sync();
   }
@@ -98,19 +98,87 @@
     });
   }
 
+
+  /* ---------- menu (upper right) ---------- */
+  const menuBtn = document.querySelector('.menu-btn');
+  const menu = document.getElementById('menu');
+  if (menuBtn && menu) {
+    const lbl = menuBtn.querySelector('.sr');
+    const setMenu = open => {
+      menuBtn.setAttribute('aria-expanded', String(open));
+      lbl.textContent = open ? lbl.dataset.close : lbl.dataset.open;
+      document.documentElement.classList.toggle('is-menu-open', open);
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+      if (open) { menu.hidden = false; requestAnimationFrame(() => menu.classList.add('is-open')); menu.querySelector('a').focus({ preventScroll: true }); }
+      else { menu.classList.remove('is-open'); setTimeout(() => { if (!menu.classList.contains('is-open')) menu.hidden = true; }, 700); }
+    };
+    menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+    menu.addEventListener('click', e => { if (e.target.closest('a[href^="#"]')) setMenu(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') { setMenu(false); menuBtn.focus(); } });
+  }
+
+  /* ---------- accessibility panel ---------- */
+  const A11Y_KEY = 'vs-a11y';
+  const root = document.documentElement;
+  const prefs = (() => { try { return JSON.parse(localStorage.getItem(A11Y_KEY) || '{}'); } catch { return {}; } })();
+  const save = () => { try { localStorage.setItem(A11Y_KEY, JSON.stringify(prefs)); } catch {} };
+  const a11yBtn = document.querySelector('.a11y-btn');
+  const panel = document.getElementById('a11y-panel');
+  const sizeOut = panel && panel.querySelector('.a11y-size__val');
+  const TOGGLES = ['motion', 'contrast', 'links', 'spacing', 'cursor'];
+  const apply = () => {
+    TOGGLES.forEach(k => root.classList.toggle('a11y-' + k, !!prefs[k]));
+    root.classList.toggle('a11y-light', !!prefs.light);
+    root.style.setProperty('--fs', prefs.size || 1);
+    if (!panel) return;
+    panel.querySelectorAll('[data-a]').forEach(b => {
+      const k = b.dataset.a;
+      if (TOGGLES.includes(k)) b.setAttribute('aria-pressed', String(!!prefs[k]));
+      if (k === 'light') b.setAttribute('aria-pressed', String(!!prefs.light));
+      if (k === 'dark') b.setAttribute('aria-pressed', String(!prefs.light));
+    });
+    sizeOut.textContent = Math.round((prefs.size || 1) * 100) + '%';
+    // motion: pause the hero video too
+    if (prefs.motion && video && !video.paused) video.pause();
+    // cursor: fall back to the normal pointer
+    root.classList.toggle('has-cursor', finePointerA && !prefs.cursor);
+  };
+  const finePointerA = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (a11yBtn && panel) {
+    a11yBtn.addEventListener('click', () => {
+      const open = a11yBtn.getAttribute('aria-expanded') !== 'true';
+      a11yBtn.setAttribute('aria-expanded', String(open)); panel.hidden = !open;
+      if (open) panel.querySelector('button').focus();
+    });
+    panel.addEventListener('click', e => {
+      const b = e.target.closest('[data-a]'); if (!b) return;
+      const k = b.dataset.a;
+      if (TOGGLES.includes(k)) prefs[k] = !prefs[k];
+      else if (k === 'light') prefs.light = true;
+      else if (k === 'dark') prefs.light = false;
+      else if (k === 'bigger') prefs.size = Math.min(1.6, Math.round(((prefs.size || 1) + .1) * 10) / 10);
+      else if (k === 'smaller') prefs.size = Math.max(.8, Math.round(((prefs.size || 1) - .1) * 10) / 10);
+      else if (k === 'reset') Object.keys(prefs).forEach(x => delete prefs[x]);
+      save(); apply();
+    });
+    document.addEventListener('click', e => { if (!panel.hidden && !e.target.closest('.a11y')) { panel.hidden = true; a11yBtn.setAttribute('aria-expanded', 'false'); } });
+    panel.addEventListener('keydown', e => { if (e.key === 'Escape') { panel.hidden = true; a11yBtn.setAttribute('aria-expanded', 'false'); a11yBtn.focus(); } });
+  }
+
   /* ---------- cursor + manicure ---------- */
   const cursor = document.querySelector('.cursor');
   const hint = document.querySelector('.cursor-hint');
   if (!cursor) return;
 
-  const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
-  if (finePointer) document.documentElement.classList.add('has-cursor');
+  const finePointer = finePointerA;
+  const customOn = () => !root.classList.contains('a11y-cursor');
+  apply();
 
   const HOLD = 450;                                // ms before the hand appears
   const STEP = reduce ? 120 : 280;                 // ms per nail
   const POLISH = ['#e8004f', '#ff4fb0', '#8a5cff', '#120d11', '#d6b04c', '#2fd1c5', '#c9c2d6'];
   // brush tip positions (svg units) for nails 0..4 = pinky, ring, middle, index, thumb
-  const NAILS = [[88, 42], [71, 25], [53, 19], [35, 31], [9, 87]];
+  const NAILS = [[89.3,  42.7],  [72.5,  25.5],  [53.0,  18.7],  [34.1,  27.9],  [10.0,  83.7]];
   const paints = [...cursor.querySelectorAll('.nail-paint')].sort((a, b) => a.dataset.nail - b.dataset.nail);
   const brush = cursor.querySelector('.brush');
   cursor.style.setProperty('--hold', HOLD + 'ms');
@@ -169,8 +237,9 @@
     if (e.button !== 0) return;
     if (e.target.closest('iframe, input, textarea, select, video')) return;
     const touch = e.pointerType !== 'mouse';
+    if (touch && !customOn()) return;
     if (touch) { cursor.classList.add('is-touch'); move(e.clientX, e.clientY); place(); }
-    else if (!finePointer) return;
+    else if (!finePointer || !customOn()) return;
     startX = e.clientX; startY = e.clientY; swallowClick = false;
     // restart ring animation
     cursor.classList.remove('is-pressing'); void cursor.offsetWidth; cursor.classList.add('is-pressing');

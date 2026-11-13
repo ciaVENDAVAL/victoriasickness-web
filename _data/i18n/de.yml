@@ -15,6 +15,23 @@ ui:
   prev: "Vorheriges Foto"
   next: "Nächstes Foto"
   close: "Schließen"
+  menu: "Menü"
+  close_menu: "Menü schließen"
+
+a11y:
+  title: "Barrierefreiheit"
+  motion: "Animationen stoppen"
+  theme: "Farbschema"
+  dark: "Dunkel"
+  light: "Hell"
+  contrast: "Hoher Kontrast"
+  links: "Links unterstreichen"
+  spacing: "Mehr Zeilenabstand"
+  cursor: "Normaler Mauszeiger"
+  size: "Text"
+  smaller: "Kleinerer Text"
+  bigger: "Größerer Text"
+  reset: "Zurücksetzen"
 
 nav:
   shows: "Stücke"

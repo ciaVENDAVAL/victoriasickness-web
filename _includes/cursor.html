@@ -1,45 +1,36 @@
-<!-- Custom cursor: dot + press ring; long press reveals the BACK of a right hand getting its nails painted -->
+<!-- Custom cursor: dot + press ring; long press reveals the back of a right hand (slim fingers, almond nails) getting its nails painted -->
 <div class="cursor" aria-hidden="true">
   <svg class="cursor__ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="18" /></svg>
   <span class="cursor__dot"></span>
-  <svg class="cursor__hand" viewBox="0 0 120 150">
+  <svg class="cursor__hand" viewBox="0 0 120 160">
     <g class="hand">
-      <!-- thumb (left side = back of a right hand) -->
-      <g transform="rotate(-38 30 116)">
-        <rect class="skin" x="21" y="70" width="18" height="50" rx="9" />
-        <path class="knuckle" d="M25 96 q5 2 10 0" />
-        <path class="nail" d="M24.5 74 h11 v9 q0 6 -5.5 6 q-5.5 0 -5.5 -6z" />
-        <path class="nail-paint" data-nail="4" d="M24.5 74 h11 v9 q0 6 -5.5 6 q-5.5 0 -5.5 -6z" />
-        <rect class="gloss" x="26.6" y="76" width="2.2" height="5" rx="1.1" />
+      <!-- silhouette: stroked pass, then fill-only pass on top = one clean outline -->
+      <g class="skin skin--outline">
+      <path transform="rotate(14 80 80)" d="M74.2 86 C74.2 61.1 76 49.2 76 42 A4 4 0 0 1 84 42 C84 49.2 85.8 61.1 85.8 86Z"/>
+      <path transform="rotate(5 68 77)" d="M61.5 83 C61.5 51.8 63.5 33.6 63.5 25.5 A4.5 4.5 0 0 1 72.5 25.5 C72.5 33.6 74.5 51.8 74.5 83Z"/>
+      <path transform="rotate(-2 55 76)" d="M48.2 82 C48.2 48.1 50.2 27.3 50.2 18.8 A4.8 4.8 0 0 1 59.8 18.8 C59.8 27.3 61.8 48.1 61.8 82Z"/>
+      <path transform="rotate(-9 42 78)" d="M35.2 84 C35.2 53.2 37.5 35.6 37.5 27.5 A4.5 4.5 0 0 1 46.5 27.5 C46.5 35.6 48.8 53.2 48.8 84Z"/>
+      <path transform="rotate(-52 36 104)" d="M28.5 110 C28.5 86.9 31 80 31 71 A5 5 0 0 1 41 71 C41 80 43.5 86.9 43.5 110Z"/>
+      <path d="M44 150 C43 136 36 126 32 112 C29 101 31 90 37 82 L86 80 C90 90 89 104 85 118 C82 130 76 138 74 150Z"/>
       </g>
-      <!-- fingers -->
-      <rect class="skin" x="27" y="20" width="16" height="62" rx="8" />
-      <rect class="skin" x="45" y="8"  width="16" height="74" rx="8" />
-      <rect class="skin" x="63" y="14" width="16" height="68" rx="8" />
-      <rect class="skin" x="81" y="32" width="14" height="52" rx="7" />
-      <!-- back of hand -->
-      <path class="skin" d="M26 72 h70 v28 c0 24 -14 36 -36 36 c-20 0 -34 -12 -34 -34z" />
-      <!-- knuckle creases (dorsal side) -->
-      <path class="knuckle" d="M31 50 q4 2 8 0 M31 54 q4 1.5 8 0" />
-      <path class="knuckle" d="M49 42 q4 2 8 0 M49 46 q4 1.5 8 0" />
-      <path class="knuckle" d="M67 46 q4 2 8 0 M67 50 q4 1.5 8 0" />
-      <path class="knuckle" d="M84.5 60 q3.5 2 7 0" />
-      <path class="knuckle knuckle--soft" d="M32 80 q3 -3 6 0 M50 79 q3 -3 6 0 M68 80 q3 -3 6 0 M85 82 q2.5 -2.5 5 0" />
-      <!-- nails: flat top at the tip, rounded cuticle toward the hand -->
-      <path class="nail" d="M30.5 23 h9 v9 q0 6 -4.5 6 q-4.5 0 -4.5 -6z" />
-      <path class="nail" d="M48.5 11 h9 v10 q0 6 -4.5 6 q-4.5 0 -4.5 -6z" />
-      <path class="nail" d="M66.5 17 h9 v9 q0 6 -4.5 6 q-4.5 0 -4.5 -6z" />
-      <path class="nail" d="M84.2 35 h7.6 v7 q0 5 -3.8 5 q-3.8 0 -3.8 -5z" />
-      <path class="nail-paint" data-nail="3" d="M30.5 23 h9 v9 q0 6 -4.5 6 q-4.5 0 -4.5 -6z" />
-      <path class="nail-paint" data-nail="2" d="M48.5 11 h9 v10 q0 6 -4.5 6 q-4.5 0 -4.5 -6z" />
-      <path class="nail-paint" data-nail="1" d="M66.5 17 h9 v9 q0 6 -4.5 6 q-4.5 0 -4.5 -6z" />
-      <path class="nail-paint" data-nail="0" d="M84.2 35 h7.6 v7 q0 5 -3.8 5 q-3.8 0 -3.8 -5z" />
-      <rect class="gloss" x="32.4" y="25" width="2" height="5" rx="1" />
-      <rect class="gloss" x="50.4" y="13" width="2" height="5" rx="1" />
-      <rect class="gloss" x="68.4" y="19" width="2" height="5" rx="1" />
-      <rect class="gloss" x="85.8" y="37" width="1.8" height="4" rx=".9" />
+      <g class="skin skin--fill">
+      <path transform="rotate(14 80 80)" d="M74.2 86 C74.2 61.1 76 49.2 76 42 A4 4 0 0 1 84 42 C84 49.2 85.8 61.1 85.8 86Z"/>
+      <path transform="rotate(5 68 77)" d="M61.5 83 C61.5 51.8 63.5 33.6 63.5 25.5 A4.5 4.5 0 0 1 72.5 25.5 C72.5 33.6 74.5 51.8 74.5 83Z"/>
+      <path transform="rotate(-2 55 76)" d="M48.2 82 C48.2 48.1 50.2 27.3 50.2 18.8 A4.8 4.8 0 0 1 59.8 18.8 C59.8 27.3 61.8 48.1 61.8 82Z"/>
+      <path transform="rotate(-9 42 78)" d="M35.2 84 C35.2 53.2 37.5 35.6 37.5 27.5 A4.5 4.5 0 0 1 46.5 27.5 C46.5 35.6 48.8 53.2 48.8 84Z"/>
+      <path transform="rotate(-52 36 104)" d="M28.5 110 C28.5 86.9 31 80 31 71 A5 5 0 0 1 41 71 C41 80 43.5 86.9 43.5 110Z"/>
+      <path d="M44 150 C43 136 36 126 32 112 C29 101 31 90 37 82 L86 80 C90 90 89 104 85 118 C82 130 76 138 74 150Z"/>
+      </g>
+      <path class="knuckle" transform="rotate(14 80 80)" d="M77.5 62.4 q2.5 1.6 5.1 0"/><path class="knuckle" transform="rotate(5 68 77)" d="M65.1 53.5 q2.9 1.6 5.7 0"/><path class="knuckle" transform="rotate(-2 55 76)" d="M52 50 q3 1.6 5.9 0"/><path class="knuckle" transform="rotate(-9 42 78)" d="M39 54.9 q3 1.6 5.9 0"/>
+      <path class="knuckle knuckle--soft" d="M46 86 q2.5 -2 5 0 M58 84 q2.5 -2 5 0 M69 85 q2.5 -2 5 0"/>
+      <!-- bangle -->
+      <path class="bangle" d="M42 140 Q59 147 76 140"/>
+      <circle class="bangle-gem" cx="59" cy="143.6" r="2.4"/>
+      <!-- almond nails: bare, then paint layer, then gloss -->
+      <path class="nail" transform="rotate(14 80 80)" d="M76.8 49.6 C76.8 37.5 78.8 32.1 80 31.5 C81.2 32.1 83.2 37.5 83.2 49.6 Q80 52.8 76.8 49.6Z"/><path class="nail" transform="rotate(5 68 77)" d="M64.4 34 C64.4 20.5 66.8 15.1 68 14.5 C69.2 15.1 71.6 20.5 71.6 34 Q68 37.2 64.4 34Z"/><path class="nail" transform="rotate(-2 55 76)" d="M51.2 27.8 C51.2 13.5 53.8 8.1 55 7.5 C56.2 8.1 58.8 13.5 58.8 27.8 Q55 31 51.2 27.8Z"/><path class="nail" transform="rotate(-9 42 78)" d="M38.4 36 C38.4 22.5 40.8 17.1 42 16.5 C43.2 17.1 45.6 22.5 45.6 36 Q42 39.2 38.4 36Z"/><path class="nail" transform="rotate(-52 36 104)" d="M32 80.5 C32 65.5 34.8 60.1 36 59.5 C37.2 60.1 40 65.5 40 80.5 Q36 83.7 32 80.5Z"/>
+      <g transform="rotate(14 80 80)"><path class="nail-paint" data-nail="0" d="M76.8 49.6 C76.8 37.5 78.8 32.1 80 31.5 C81.2 32.1 83.2 37.5 83.2 49.6 Q80 52.8 76.8 49.6Z"/></g><g transform="rotate(5 68 77)"><path class="nail-paint" data-nail="1" d="M64.4 34 C64.4 20.5 66.8 15.1 68 14.5 C69.2 15.1 71.6 20.5 71.6 34 Q68 37.2 64.4 34Z"/></g><g transform="rotate(-2 55 76)"><path class="nail-paint" data-nail="2" d="M51.2 27.8 C51.2 13.5 53.8 8.1 55 7.5 C56.2 8.1 58.8 13.5 58.8 27.8 Q55 31 51.2 27.8Z"/></g><g transform="rotate(-9 42 78)"><path class="nail-paint" data-nail="3" d="M38.4 36 C38.4 22.5 40.8 17.1 42 16.5 C43.2 17.1 45.6 22.5 45.6 36 Q42 39.2 38.4 36Z"/></g><g transform="rotate(-52 36 104)"><path class="nail-paint" data-nail="4" d="M32 80.5 C32 65.5 34.8 60.1 36 59.5 C37.2 60.1 40 65.5 40 80.5 Q36 83.7 32 80.5Z"/></g>
+      <g transform="rotate(14 80 80)"><path class="gloss" d="M78.8 48.1 Q78.6 37.5 79.6 34"/></g><g transform="rotate(5 68 77)"><path class="gloss" d="M66.7 32.5 Q66.4 20.5 67.6 17"/></g><g transform="rotate(-2 55 76)"><path class="gloss" d="M53.6 26.3 Q53.3 13.5 54.6 10"/></g><g transform="rotate(-9 42 78)"><path class="gloss" d="M40.7 34.5 Q40.4 22.5 41.6 19"/></g><g transform="rotate(-52 36 104)"><path class="gloss" d="M34.6 79 Q34.2 65.5 35.6 62"/></g>
     </g>
-    <!-- polish brush (tip at 0,0) -->
     <g class="brush">
       <g class="brush__wiggle">
         <line class="brush__handle" x1="9" y1="-12" x2="30" y2="-44" />
@@ -47,11 +38,10 @@
         <path class="brush__tip" d="M0 0 C-1 -5 2 -9 5 -11 L10 -8 C8 -4 4 -1 0 0Z" />
       </g>
     </g>
-    <!-- sparkles -->
     <g class="sparkles">
-      <path d="M100 18 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z" />
-      <path d="M14 40 l1.5 4.5 4.5 1.5 -4.5 1.5 -1.5 4.5 -1.5 -4.5 -4.5 -1.5 4.5 -1.5z" />
-      <path d="M106 70 l1.2 3.6 3.6 1.2 -3.6 1.2 -1.2 3.6 -1.2 -3.6 -3.6 -1.2 3.6 -1.2z" />
+      <path d="M102 16 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z" />
+      <path d="M14 44 l1.5 4.5 4.5 1.5 -4.5 1.5 -1.5 4.5 -1.5 -4.5 -4.5 -1.5 4.5 -1.5z" />
+      <path d="M104 74 l1.2 3.6 3.6 1.2 -3.6 1.2 -1.2 3.6 -1.2 -3.6 -3.6 -1.2 3.6 -1.2z" />
     </g>
   </svg>
 </div>

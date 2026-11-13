@@ -11,6 +11,8 @@ PDFs (dossiers, riders) go in the sister repo **victoriasickness-docs**.
 - **Photos and the hero video are local** (`assets/img/sm` = thumbnails, `assets/img/lg` = full size, `assets/video/hero.mp4`).
 - **Galleries:** a mosaic per show plus a photo strip in "about". Click a photo to open it full size; use the arrows, keyboard ← → or swipe, and Esc to close.
 - **Old WordPress URLs** (`/en/home/`, `/ca/inici/`, `/sobre-mi/`, `/contacto/`) redirect to the new pages.
+- **Menu:** the round button at the top right opens a full-screen menu with the sections, both shows, the email and social icons.
+- **Accessibility:** the Cyr-wheel button at the bottom left has options to stop animations, switch dark/light, raise contrast, underline links, add line spacing, use the normal cursor, and change the text size (80–160%). The choices are remembered in that browser.
 - **Cursor:** a lacquer dot. **Press and hold** (mouse or finger, about 0.45 s) and the back of a hand appears and gets its nails painted, a different colour each time. A long press never triggers the link underneath, and starting to scroll cancels it on phones.
 
 ## Edit content
@@ -23,6 +25,7 @@ PDFs (dossiers, riders) go in the sister repo **victoriasickness-docs**.
 | Email, socials, languages, URLs | `_config.yml` |
 | Look & feel | `assets/css/main.css` (colours and fonts at the top) |
 | Cursor / manicure | `_includes/cursor.html` (SVG), `assets/js/main.js` |
+| Accessibility panel, social icons | `_includes/a11y.html`, `_includes/social.html` |
 
 **Add photos:** save a thumbnail (about 820 px on the long side) in `assets/img/sm/` and a large version (about 1800 px) with the **same name** in `assets/img/lg/`. Then list it in `_data/shows.yml` with `o: p` (portrait) or `o: l` (landscape). The order sets the mosaic.
 

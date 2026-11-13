@@ -15,6 +15,23 @@ ui:
   prev: "Previous photo"
   next: "Next photo"
   close: "Close"
+  menu: "Menu"
+  close_menu: "Close menu"
+
+a11y:
+  title: "Accessibility"
+  motion: "Stop animations"
+  theme: "Theme"
+  dark: "Dark"
+  light: "Light"
+  contrast: "High contrast"
+  links: "Underline links"
+  spacing: "More line spacing"
+  cursor: "Standard cursor"
+  size: "Text"
+  smaller: "Smaller text"
+  bigger: "Larger text"
+  reset: "Reset"
 
 nav:
   shows: "Shows"

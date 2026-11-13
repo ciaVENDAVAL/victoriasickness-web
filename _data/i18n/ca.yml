@@ -15,6 +15,23 @@ ui:
   prev: "Foto anterior"
   next: "Foto següent"
   close: "Tanca"
+  menu: "Menú"
+  close_menu: "Tanca el menú"
+
+a11y:
+  title: "Accessibilitat"
+  motion: "Atura les animacions"
+  theme: "Tema"
+  dark: "Fosc"
+  light: "Clar"
+  contrast: "Contrast alt"
+  links: "Subratlla els enllaços"
+  spacing: "Més espai entre línies"
+  cursor: "Cursor normal"
+  size: "Text"
+  smaller: "Text més petit"
+  bigger: "Text més gran"
+  reset: "Restableix"
 
 nav:
   shows: "Espectacles"

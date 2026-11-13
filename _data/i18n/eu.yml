@@ -15,6 +15,23 @@ ui:
   prev: "Aurreko argazkia"
   next: "Hurrengo argazkia"
   close: "Itxi"
+  menu: "Menua"
+  close_menu: "Itxi menua"
+
+a11y:
+  title: "Irisgarritasuna"
+  motion: "Gelditu animazioak"
+  theme: "Gaia"
+  dark: "Iluna"
+  light: "Argia"
+  contrast: "Kontraste handia"
+  links: "Azpimarratu estekak"
+  spacing: "Lerroartea handitu"
+  cursor: "Kurtsore arrunta"
+  size: "Testua"
+  smaller: "Testu txikiagoa"
+  bigger: "Testu handiagoa"
+  reset: "Berrezarri"
 
 nav:
   shows: "Ikuskizunak"

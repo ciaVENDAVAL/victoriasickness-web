@@ -15,6 +15,23 @@ ui:
   prev: "Foto anterior"
   next: "Foto siguiente"
   close: "Cerrar"
+  menu: "Menú"
+  close_menu: "Cerrar menú"
+
+a11y:
+  title: "Accesibilidad"
+  motion: "Detener animaciones"
+  theme: "Tema"
+  dark: "Oscuro"
+  light: "Claro"
+  contrast: "Contraste alto"
+  links: "Subrayar enlaces"
+  spacing: "Más espacio entre líneas"
+  cursor: "Cursor normal"
+  size: "Texto"
+  smaller: "Texto más pequeño"
+  bigger: "Texto más grande"
+  reset: "Restablecer"
 
 nav:
   shows: "Espectáculos"

@@ -1,0 +1,34 @@
+<!-- Accessibility: Cyr-wheel button + panel (prefs saved in this browser only) -->
+<div class="a11y">
+  <button type="button" class="a11y-btn" aria-expanded="false" aria-controls="a11y-panel" aria-label="{{ t.a11y.title }}" title="{{ t.a11y.title }}">
+    <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+      <g class="a11y-wheel">
+        <circle class="a11y-wheel__tube" cx="32" cy="32" r="27"/>
+        <circle class="a11y-wheel__shine" cx="32" cy="32" r="27"/>
+      </g>
+      <!-- figure spread inside the wheel -->
+      <g class="a11y-fig">
+        <circle cx="32" cy="15.5" r="4.2"/>
+        <path d="M32 21 V36 M32 25 L12.5 20 M32 25 L51.5 20 M32 36 L17 54 M32 36 L47 54"/>
+      </g>
+    </svg>
+  </button>
+  <div id="a11y-panel" class="a11y-panel" role="group" aria-label="{{ t.a11y.title }}" hidden>
+    <p class="a11y-title">{{ t.a11y.title }}</p>
+    <button type="button" data-a="motion" aria-pressed="false"><span aria-hidden="true">⏸</span>{{ t.a11y.motion }}</button>
+    <div class="a11y-row" role="group" aria-label="{{ t.a11y.theme }}">
+      <button type="button" data-a="dark" aria-pressed="true"><span aria-hidden="true">☾</span>{{ t.a11y.dark }}</button>
+      <button type="button" data-a="light" aria-pressed="false"><span aria-hidden="true">☀</span>{{ t.a11y.light }}</button>
+    </div>
+    <button type="button" data-a="contrast" aria-pressed="false"><span aria-hidden="true">◐</span>{{ t.a11y.contrast }}</button>
+    <button type="button" data-a="links" aria-pressed="false"><span aria-hidden="true">⎁</span>{{ t.a11y.links }}</button>
+    <button type="button" data-a="spacing" aria-pressed="false"><span aria-hidden="true">↕</span>{{ t.a11y.spacing }}</button>
+    <button type="button" data-a="cursor" aria-pressed="false"><span aria-hidden="true">➚</span>{{ t.a11y.cursor }}</button>
+    <div class="a11y-size">
+      <button type="button" data-a="smaller" aria-label="{{ t.a11y.smaller }}">A−</button>
+      <span>{{ t.a11y.size }} <output class="a11y-size__val">100%</output></span>
+      <button type="button" data-a="bigger" aria-label="{{ t.a11y.bigger }}">A+</button>
+    </div>
+    <button type="button" data-a="reset" class="a11y-reset"><span aria-hidden="true">↺</span>{{ t.a11y.reset }}</button>
+  </div>
+</div>
