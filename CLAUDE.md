@@ -9,7 +9,6 @@ Website victoriasickness.com and all promoter material of Cia. Victoria Sickness
 - **Push:** build, check, commit (author `Cia. Victoria Sickness <victoriasickness@gmail.com>`), `git fetch origin main && git rebase origin/main && git push origin HEAD:main`. If a rebase conflicts only in `docs/`, take ours, rebuild, `git add -A`, continue. GitHub Pages serves `docs/` (branch main, folder /docs).
 - **Languages:** ES (default) CA EU EN FR IT PT DE — kept consistent. A language is live when `content/i18n/<lang>.json` exists and it is in `content/data.json → languages`. No Esperanto, no Japanese. EU FR IT PT DE need a native check (fact sheet ⚠13).
 - **Domain:** while `site.domain_live` is false, links and previews use the GitHub address. To move victoriasickness.com: at the DNS provider set A records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` and `www` CNAME → `ciavendaval.github.io`; then set `domain_live` true, rebuild, push (adds docs/CNAME), and in Settings → Pages enter the domain and tick Enforce HTTPS.
-- **Transition:** the root `index.html` forwards to `docs/` only while Pages still serves the repo root. Once Pages serves `/docs`, delete the root `index.html` and `.nojekyll`.
 
 ## House style
 - Name: **Cia. Victoria Sickness** (capital C, confirmed by tyle 14 Nov 2026) · Vic Heredero · tyle fernández lowercase. Spellings in `content/facts.json → names`.
