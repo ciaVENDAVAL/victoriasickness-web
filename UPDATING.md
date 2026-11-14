@@ -1,4 +1,4 @@
-# cia. Victoria Sickness — how to change a fact everywhere
+# Cia. Victoria Sickness — how to change a fact everywhere
 
 Goal: one change → every language, every PDF and the website say the same thing.
 

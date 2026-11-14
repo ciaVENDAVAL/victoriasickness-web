@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the cia. Victoria Sickness website into docs/ (served by GitHub Pages, branch main, folder /docs).
+"""Build the Cia. Victoria Sickness website into docs/ (served by GitHub Pages, branch main, folder /docs).
 
 Texts:   content/i18n/<lang>.json   (one file per language; a language is live when its file exists
                                      AND it is listed in content/data.json → languages)

@@ -1,4 +1,4 @@
-/* cia. Victoria Sickness — interactions
+/* Cia. Victoria Sickness — interactions
    - hero video pause/play (+ reduced motion)
    - lite YouTube embeds (no third-party load until click)
    - custom cursor; long press = hand getting a manicure (mouse + touch)

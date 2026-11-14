@@ -1,6 +1,6 @@
 # victoriasickness-web
 
-Website and promoter material of **cia. Victoria Sickness** — contemporary circus, travesti body, queer memory.
+Website and promoter material of **Cia. Victoria Sickness** — contemporary circus, travesti body, queer memory.
 
 - Live (staging): https://ciavendaval.github.io/victoriasickness-web/ → victoriasickness.com once the domain moves
 - 8 languages: ES CA EU EN FR IT PT DE

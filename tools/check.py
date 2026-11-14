@@ -63,8 +63,10 @@ def main():
         low = text.lower()
         for bad in re.findall(r'[\w.+-]+@[\w-]+\.[\w.]+', text):
             if 'victoriasickness' in bad.lower() and bad.lower() != email: out.append(f'- ❌ {label}: email "{bad}" (should be {email})')
-        for w in facts.get('banned', {}).get('*', []):
-            if w.lower() in low: out.append(f'- ❌ {label}: banned "{w}"')
+        m = re.search(r'(?:i18n/|dossiers/[^/]+/)([a-z]{2})\.(?:json|html)$|_([A-Z]{2})_', label)
+        lang = (m.group(1) or m.group(2).lower()) if m else None
+        for w in facts.get('banned', {}).get('*', []) + (facts.get('banned', {}).get(lang, []) if lang else []):
+            if w.lower() in low: out.append(f'- ❌ {label}: banned "{w}"' + (f' (pronouns: {facts["pronouns"][lang]})' if lang and w in facts.get('banned', {}).get(lang, []) else ''))
         for right, wrongs in facts.get('names', {}).items():
             for w in wrongs:
                 if re.search(r'(?<![\w])' + re.escape(w) + r'(?![\w])', text): out.append(f'- ❌ {label}: "{w}" → {right}')

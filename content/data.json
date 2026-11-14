@@ -1,7 +1,7 @@
 {
  "_about": "Facts for the website (language-neutral). Texts per language: content/i18n/<lang>.json. Source of truth for people: Project doc 'master/VICTORIA SICKNESS master fact sheet.md'.",
  "site": {
-  "name": "cia. Victoria Sickness",
+  "name": "Cia. Victoria Sickness",
   "domain": "victoriasickness.com",
   "domain_live": false,
   "preview_url": "https://ciavendaval.github.io/victoriasickness-web",

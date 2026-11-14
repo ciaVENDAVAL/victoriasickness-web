@@ -37,17 +37,45 @@
   "Tub d'assaig": [
    "Tub d'Assaig",
    "Tub Dassaig"
+  ],
+  "Cia. Victoria Sickness": [
+   "cia. Victoria Sickness",
+   "Cía. Victoria Sickness",
+   "CIA. Victoria Sickness"
   ]
  },
  "banned": {
   "*": [
    "Hablemos",
    "Hecho con purpurina y rueda Cyr"
+  ],
+  "en": [
+   "pulls her",
+   "guide her"
+  ],
+  "es": [
+   "la arrastra",
+   "la guían"
+  ],
+  "ca": [
+   "la Victoria",
+   "la guien"
   ]
  },
  "rules": [
   "Prices never public",
   "Never crop photos",
   "Web link in print: victoriasickness.com"
- ]
+ ],
+ "pronouns": {
+  "_about": "Vic Heredero / Victoria Sickness: neutral pronouns (tyle, 14 Nov 2026). Where a language has no settled neutral pronoun, rephrase around the name.",
+  "en": "they / them / their",
+  "es": "elle (le, -e endings)",
+  "ca": "elli (le, -e endings; no personal article before the name)",
+  "eu": "no grammatical gender",
+  "fr": "rephrase around the name (iel if needed)",
+  "it": "rephrase around the name",
+  "pt": "rephrase around the name",
+  "de": "rephrase around the name"
+ }
 }
