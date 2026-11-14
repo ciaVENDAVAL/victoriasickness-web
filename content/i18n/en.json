@@ -1,0 +1,111 @@
+{
+ "lang_name": "English",
+ "lang_label": "EN",
+ "locale": "en_GB",
+ "meta": {
+  "title": "cia. Victoria Sickness — contemporary circus, memory and gender",
+  "description": "Contemporary circus company placing the travesti body centre stage. Invocaciones (premiere summer 2027) and Circografía de una Travesti: Cyr wheel, acrobatics, ritual and queer memory."
+ },
+ "ui": {
+  "skip": "Skip to content",
+  "nav_label": "Main",
+  "lang_label": "Language",
+  "pause": "Pause video",
+  "play": "Play video",
+  "play_video": "Watch video",
+  "cursor_hint": "Press and hold to get your nails done",
+  "top": "Back to top",
+  "dossier": "Dossier",
+  "prev": "Previous photo",
+  "next": "Next photo",
+  "close": "Close",
+  "menu": "Menu",
+  "close_menu": "Close menu"
+ },
+ "a11y": {
+  "title": "Accessibility",
+  "motion": "Stop animations",
+  "theme": "Theme",
+  "dark": "Dark",
+  "light": "Light",
+  "contrast": "High contrast",
+  "links": "Underline links",
+  "spacing": "More line spacing",
+  "cursor": "Standard cursor",
+  "size": "Text",
+  "smaller": "Smaller text",
+  "bigger": "Larger text",
+  "reset": "Reset"
+ },
+ "nav": {
+  "shows": "Shows",
+  "about": "About",
+  "contact": "Contact"
+ },
+ "hero": {
+  "kicker": "circus · memory · gender",
+  "lede": "Contemporary circus with the travesti body at its centre: Cyr wheel, acrobatics, ritual, and queer memories that refuse to disappear.",
+  "cta_shows": "See the shows",
+  "cta_contact": "Book us"
+ },
+ "marquee": [
+  "contemporary circus",
+  "travesti body",
+  "queer memory",
+  "Cyr wheel",
+  "ritual",
+  "political glitter"
+ ],
+ "labels": {
+  "credits": "Credits",
+  "support": "Supported by",
+  "gallery": "Gallery",
+  "photo": "photo"
+ },
+ "roles": {
+  "idea": "Concept & direction",
+  "outside_eye": "Outside eye",
+  "music": "Soundtrack",
+  "artistic_support": "Artistic mentoring",
+  "image": "Visual identity",
+  "lighting": "Lighting design",
+  "video_art": "Video art",
+  "costume": "Costumes"
+ },
+ "shows": {
+  "invocaciones": {
+   "status": "In creation · premiere summer 2027",
+   "chips": [
+    "40 min",
+    "Street / non-conventional space",
+    "Participatory ceremony"
+   ],
+   "description": "A contemporary circus ceremony between performance and ritual. The travesti body takes the centre to summon the queer memories that the performing arts in Spain have erased. The audience doesn't watch: it takes part."
+  },
+  "circografia": {
+   "chips": [
+    "50 min",
+    "Indoor (street-adaptable)",
+    "Live music"
+   ],
+   "description": "An autobiographical journey into the queer childhood and adolescence Victoria never got to live. A technical failure mid-concert pulls her into a parallel reality where the stuffed toys of her childhood guide her through her past, between female role models and the masculine socialisation imposed on her.",
+   "techniques": "Cyr wheel, acrobatics, roller skates and stilts · text and projections"
+  }
+ },
+ "about": {
+  "eyebrow": "About",
+  "name": "Vic Heredero",
+  "paragraphs": [
+   "Victoria Sickness is the stage name of Vic Heredero, a circus artist working across technique, creation and stage research. Trained at the Centre de les Arts del Circ Rogelio Rivel (2016–2020), specialising in Cyr wheel and floor acrobatics, after studying Audiovisual Systems Engineering at Universidad Carlos III de Madrid.",
+   "Lead vocalist and tenor sax of Las Marikarmen since 2018, also directing the band's live staging. With the company: a 12-minute solo, the 50-minute show Circografía de una Travesti, and the ongoing research on the travesti body, INVOCACIONES.",
+   "Teaches technique and creation workshops at the Rogelio Rivel school and directs its yearly cabaret. Directed the 2024 Circ de Nadal at Espai de Circ Cronopis (Mataró), takes part in La Central del Circ's caixa d'eines, is in residence at La Poderosa (2026/27), and has performed in Combinat 57 at Ateneu Popular 9 Barris."
+  ],
+  "quote": "Some of us can't afford the luxury of not putting our bodies on the line.",
+  "portrait_alt": "Portrait of Victoria Sickness",
+  "photo_alt": "Victoria Sickness on stage"
+ },
+ "contact": {
+  "eyebrow": "Contact",
+  "text": "Programming, booking, press and workshops."
+ }
+}

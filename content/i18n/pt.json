@@ -1,0 +1,111 @@
+{
+ "lang_name": "Português",
+ "lang_label": "PT",
+ "locale": "pt_PT",
+ "meta": {
+  "title": "cia. Victoria Sickness — circo contemporâneo, memória e género",
+  "description": "Companhia de circo contemporâneo que coloca o corpo travesti no centro. Invocaciones (estreia no verão de 2027) e Circografía de una Travesti: roda Cyr, acrobacia, ritual e memória queer."
+ },
+ "ui": {
+  "skip": "Saltar para o conteúdo",
+  "nav_label": "Principal",
+  "lang_label": "Idioma",
+  "pause": "Pausar vídeo",
+  "play": "Reproduzir vídeo",
+  "play_video": "Ver vídeo",
+  "cursor_hint": "Mantém premido para fazer as unhas",
+  "top": "Voltar ao topo",
+  "dossier": "Dossiê",
+  "prev": "Foto anterior",
+  "next": "Foto seguinte",
+  "close": "Fechar",
+  "menu": "Menu",
+  "close_menu": "Fechar menu"
+ },
+ "a11y": {
+  "title": "Acessibilidade",
+  "motion": "Parar animações",
+  "theme": "Tema",
+  "dark": "Escuro",
+  "light": "Claro",
+  "contrast": "Alto contraste",
+  "links": "Sublinhar ligações",
+  "spacing": "Mais espaço entre linhas",
+  "cursor": "Cursor normal",
+  "size": "Texto",
+  "smaller": "Texto mais pequeno",
+  "bigger": "Texto maior",
+  "reset": "Repor"
+ },
+ "nav": {
+  "shows": "Espetáculos",
+  "about": "Sobre mim",
+  "contact": "Contacto"
+ },
+ "hero": {
+  "kicker": "circo · memória · género",
+  "lede": "Circo contemporâneo com o corpo travesti no centro: roda Cyr, acrobacia, ritual e memórias queer que se recusam a desaparecer.",
+  "cta_shows": "Ver espetáculos",
+  "cta_contact": "Programar"
+ },
+ "marquee": [
+  "circo contemporâneo",
+  "corpo travesti",
+  "memória queer",
+  "roda Cyr",
+  "ritual",
+  "purpurina política"
+ ],
+ "labels": {
+  "credits": "Ficha artística",
+  "support": "Com o apoio de",
+  "gallery": "Galeria",
+  "photo": "fotografia"
+ },
+ "roles": {
+  "idea": "Ideia e direção",
+  "outside_eye": "Olhar externo",
+  "music": "Banda sonora",
+  "artistic_support": "Acompanhamento artístico",
+  "image": "Imagem",
+  "lighting": "Desenho de luz",
+  "video_art": "Videoarte",
+  "costume": "Figurinos"
+ },
+ "shows": {
+  "invocaciones": {
+   "status": "Em criação · estreia no verão de 2027",
+   "chips": [
+    "40 min",
+    "Rua / espaço não convencional",
+    "Cerimónia participativa"
+   ],
+   "description": "Uma cerimónia de circo contemporâneo entre a performance e o ritual. O corpo travesti ocupa o centro para invocar as memórias queer que as artes cénicas em Espanha apagaram. O público não assiste: participa."
+  },
+  "circografia": {
+   "chips": [
+    "50 min",
+    "Sala (adaptável à rua)",
+    "Música ao vivo"
+   ],
+   "description": "Uma viagem autobiográfica à infância e à adolescência queer que Victoria não pôde viver. Uma falha técnica a meio de um concerto arrasta-a para uma realidade paralela, onde os peluches da sua infância a guiam pelo seu passado, entre referências femininas e a socialização masculina que lhe foi imposta.",
+   "techniques": "Roda Cyr, acrobacia, patins e andas · texto e projeções"
+  }
+ },
+ "about": {
+  "eyebrow": "Sobre mim",
+  "name": "Vic Heredero",
+  "paragraphs": [
+   "Victoria Sickness é o nome artístico de Vic Heredero, artista de circo que cruza técnica, criação e investigação cénica. Formação no Centre de les Arts del Circ Rogelio Rivel (2016–2020), com especialização em roda Cyr e acrobacia de solo, depois de estudar Engenharia de Sistemas Audiovisuais na Universidad Carlos III de Madrid.",
+   "Desde 2018, voz principal e saxofone tenor de Las Marikarmen, onde também dirige a encenação. Com a companhia: um solo de 12 minutos, o espetáculo de 50 minutos Circografía de una Travesti e a investigação em curso sobre o corpo travesti, INVOCACIONES.",
+   "Orienta oficinas de técnica e criação na escola Rogelio Rivel, onde dirige um cabaré anual. Dirigiu o Circ de Nadal 2024 no Espai de Circ Cronopis (Mataró), participa na caixa d'eines de La Central del Circ, está em residência em La Poderosa (2026/27) e atuou em Combinat 57 no Ateneu Popular 9 Barris."
+  ],
+  "quote": "Algumas de nós não podemos dar-nos ao luxo de não pôr o corpo.",
+  "portrait_alt": "Retrato de Victoria Sickness",
+  "photo_alt": "Victoria Sickness, fotografia"
+ },
+ "contact": {
+  "eyebrow": "Contacto",
+  "text": "Programação, contratação, imprensa e oficinas."
+ }
+}

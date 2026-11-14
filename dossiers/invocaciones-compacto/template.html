@@ -1,0 +1,301 @@
+{#- Compact dossier template. Texts: <lang>.json in this folder. Credits + supporters: content/data.json. Build: python3 build.py [langs] -#}
+<!doctype html>
+<html lang="{{ lang }}"><head><meta charset="utf-8">
+<title>Invocaciones — {{ t.doc_title }} · cia. Victoria Sickness</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75,700..800&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Instrument+Serif:ital@0;1&display=block">
+<style>
+@page { size: 297mm 210mm; margin: 0; }
+:root { --ink:#120d11; --ink2:#1d151b; --bone:#f4eee6; --lac:#e8004f; --bub:#ff8fc7; --line:rgb(244 238 230 / .2);
+  --chrome: linear-gradient(100deg,#fff 0%,#c9c2d6 18%,#ff9fd0 36%,#fff6fb 50%,#9b93ad 66%,#ffd3ea 82%,#fff 100%);
+  --serif:"Instrument Serif",serif; --sans:"Instrument Sans",sans-serif; --disp:"Bricolage Grotesque",sans-serif; }
+* { box-sizing: border-box; margin: 0; }
+html, body { background: #555; }
+body { font: 400 10.5pt/1.5 var(--sans); color: var(--bone); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 297mm; height: 210mm; position: relative; overflow: hidden; background: var(--ink); page-break-after: always; break-after: page; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.page--bone { background: var(--bone); color: var(--ink); }
+.page--lac { background: var(--lac); color: var(--ink); }
+img { display: block; }
+.grain-off::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.06; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* running foot */
+.foot { position: absolute; left: 16mm; right: 16mm; bottom: 9mm; display: flex; justify-content: space-between; font-size: 7.5pt; letter-spacing: .18em; text-transform: uppercase; opacity: .75; }
+.foot b { color: var(--lac); font-weight: 600; }
+.page--lac .foot b { color: var(--bone); }
+
+.eyebrow { font-size: 8pt; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--bub); }
+.page--bone .eyebrow, .page--lac .eyebrow { color: var(--lac); }
+.page--lac .eyebrow { color: var(--ink); }
+.h { font: italic 400 46pt/.92 var(--serif); letter-spacing: -.02em; margin: 3mm 0 6mm; }
+.h em { font: 800 40pt/1 var(--disp); font-stretch: 75%; font-style: normal; text-transform: uppercase; letter-spacing: -.04em; }
+.chrome { background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lede { font-size: 15pt; line-height: 1.38; }
+p + p { margin-top: 3.2mm; }
+.chips { display: flex; flex-wrap: wrap; gap: 2mm; list-style: none; padding: 0; margin-top: 7mm; }
+.chips li { border: .3mm solid var(--line); border-radius: 99px; padding: 1.4mm 3.6mm; font-size: 9pt; }
+.page--bone .chips li { border-color: rgb(18 13 17 / .3); }
+.badge { display: inline-flex; align-items: center; gap: 2.4mm; padding: 1.6mm 4mm; border: .3mm solid var(--lac); border-radius: 99px; background: rgb(232 0 79 / .16); font-size: 9pt; font-weight: 600; }
+.badge i { width: 2.4mm; height: 2.4mm; border-radius: 50%; background: var(--lac); box-shadow: 0 0 0 1.2mm rgb(232 0 79 / .3); }
+.num { position: absolute; font: 800 120pt/.8 var(--disp); font-stretch: 75%; color: transparent; -webkit-text-stroke: .35mm var(--bub); letter-spacing: -.05em; opacity: .65; }
+.arch { border-radius: 999px 999px 4mm 4mm; overflow: hidden; }
+.cover-img { width: 100%; height: 100%; object-fit: cover; }
+
+/* 1 — cover */
+.p1 .art { position: absolute; right: 0; top: 0; bottom: 0; width: 46%; }
+.p1 .art::before { content:""; position:absolute; inset:0; background: linear-gradient(90deg, var(--ink) 0%, rgb(18 13 17 / 0) 22%); z-index: 1; }
+.p1 .txt { position: absolute; left: 16mm; top: 15mm; bottom: 30mm; width: 52%; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; }
+.p1 .{{ t.cover_presenta }} { font: italic 400 15pt/1 var(--serif); color: var(--bub); }
+.p1 .presenta b { font: 600 9pt var(--sans); letter-spacing: .3em; text-transform: uppercase; color: var(--bone); margin-left: 2mm; font-style: normal; }
+.p1 h1 { font: italic 400 90pt/.82 var(--serif); letter-spacing: -.035em; }
+.p1 .sub { font: 800 25pt/1 var(--disp); font-stretch: 75%; text-transform: uppercase; letter-spacing: -.02em; margin-top: 4mm; }
+.p1 .meta { display: flex; gap: 4mm; align-items: center; margin-top: 8mm; }
+.marquee { position: absolute; left: -5mm; right: -5mm; bottom: 9mm; background: var(--lac); color: var(--ink); transform: rotate(-1.2deg); padding: 2.6mm 0; white-space: nowrap; overflow: hidden; z-index: 2; border-block: .3mm solid var(--ink); }
+.marquee span { font: italic 400 17pt/1 var(--serif); padding: 0 3mm; }
+.marquee i { font-style: normal; font-size: 10pt; }
+
+/* 2 — la pieza */
+.p2 .txt { position: absolute; left: 16mm; top: 18mm; width: 150mm; }
+.p2 .ph { position: absolute; right: 16mm; top: 16mm; width: 92mm; height: 160mm; box-shadow: 5mm 5mm 0 var(--lac); }
+.p2 .num { left: 14mm; bottom: 16mm; }
+
+/* 3 — investigación */
+.p3 .ph { position: absolute; left: 0; top: 0; bottom: 0; width: 118mm; }
+.p3 .ph::after { content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgb(18 13 17 / 0) 55%, var(--ink)); }
+.p3 .txt { position: absolute; left: 132mm; right: 16mm; top: 18mm; font-size: 12pt; line-height: 1.5; }
+.p3 blockquote { margin-top: 9mm; padding-top: 6mm; border-top: .3mm solid var(--line); }
+.p3 blockquote p { font: italic 400 26pt/1.06 var(--serif); color: var(--bub); }
+.p3 blockquote footer { margin-top: 3mm; font-size: 8pt; letter-spacing: .25em; text-transform: uppercase; }
+
+/* 4 — proceso */
+.p4 .col { position: absolute; top: 18mm; }
+.p4 .c1 { left: 16mm; width: 116mm; }
+.p4 .c2 { left: 146mm; right: 16mm; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-top: 4mm; }
+.fact { border: .3mm solid rgb(18 13 17 / .25); border-radius: 4mm; padding: 4mm; }
+.fact b { display: block; font: 800 22pt/1 var(--disp); font-stretch: 75%; letter-spacing: -.02em; margin-bottom: 1.5mm; }
+.fact span { font-size: 8.5pt; }
+.supports { list-style: none; padding: 0; margin-top: 4mm; columns: 2; column-gap: 6mm; }
+.supports li { break-inside: avoid; padding: 2mm 0; border-bottom: .3mm dashed rgb(18 13 17 / .3); font-weight: 500; }
+.supports li::before { content: "✦ "; color: var(--lac); }
+.video { display: flex; gap: 5mm; align-items: center; margin-top: 8mm; padding: 4mm; background: var(--ink); color: var(--bone); border-radius: 5mm; }
+.video img.qr { width: 25mm; height: 25mm; background: var(--bone); padding: 2mm; border-radius: 2mm; }
+.video .thumb { width: 52mm; height: 29mm; object-fit: cover; border-radius: 3mm; }
+.video p { font-size: 9pt; }
+.video p b { display: block; font: italic 400 15pt/1.1 var(--serif); color: var(--bub); margin-bottom: 1mm; }
+
+/* 5 — ficha */
+.p5 .txt { position: absolute; left: 16mm; top: 18mm; width: 150mm; }
+.credits { margin-top: 2mm; }
+.credits div { display: grid; grid-template-columns: 56mm 1fr; padding: 3.2mm 0; border-bottom: .3mm dashed var(--line); font-size: 12pt; }
+.credits dt { color: rgb(244 238 230 / .65); font-size: 10pt; align-self: center; }
+.credits dd { font-weight: 600; }
+.p5 .ph { position: absolute; right: 16mm; top: 16mm; width: 96mm; height: 162mm; }
+.p5 .ph img { width: 100%; height: 100%; object-fit: cover; }
+
+.credits--ink div { border-bottom-color: rgb(18 13 17 / .3); grid-template-columns: 50mm 1fr; padding: 2.4mm 0; font-size: 10.5pt; }
+.credits--ink dt { color: rgb(18 13 17 / .65); font-size: 9pt; }
+/* 6 — compañía (bone) */
+.p6 .ph { position: absolute; left: 16mm; top: 16mm; width: 84mm; height: 150mm; border: 1.4mm solid var(--ink); box-shadow: 4mm 4mm 0 var(--lac); }
+.p6 .txt { position: absolute; left: 116mm; right: 16mm; top: 16mm; font-size: 10pt; }
+.p6 .name { font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 8.5pt; margin: -2mm 0 4mm; }
+.p6 .strip { display: flex; gap: 3mm; margin-top: 6mm; }
+.p6 .strip img { width: 31mm; height: 40mm; object-fit: cover; border-radius: 3mm; border: .7mm solid var(--ink); }
+.p6 .strip img:nth-child(2) { border-radius: 99px 99px 3mm 3mm; }
+
+/* 7 — repertorio */
+.p7 .txt { position: absolute; left: 16mm; top: 18mm; width: 118mm; }
+.p7 .tech { color: var(--bub); margin-top: 4mm; font-size: 9.5pt; }
+.p7 .m { position: absolute; right: 16mm; top: 16mm; width: 136mm; height: 162mm; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3mm; }
+.p7 .m img { width: 100%; height: 100%; object-fit: cover; border-radius: 3mm; }
+.p7 .m img:first-child { grid-row: span 2; border-radius: 999px 999px 3mm 3mm; }
+.p7 .video { background: var(--ink2); }
+
+/* 8 — contacto (lacquer) */
+.p8 .wrap { position: absolute; inset: 16mm 16mm 22mm; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 10mm; }
+.p8 h2 { font: 800 118pt/.8 var(--disp); font-stretch: 75%; text-transform: uppercase; letter-spacing: -.05em; }
+.p8 .mail { font: italic 400 46pt/1 var(--serif); margin-top: 5mm; display: inline-block; border-bottom: 1mm solid var(--ink); }
+.p8 ul { list-style: none; padding: 0; margin-top: 8mm; display: grid; gap: 1.6mm; font-size: 11pt; }
+.p8 ul b { display: inline-block; width: 30mm; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 8.5pt; }
+.p8 .qrbox { text-align: center; font-size: 8pt; letter-spacing: .2em; text-transform: uppercase; }
+.p8 .qrbox img { width: 44mm; height: 44mm; background: var(--bone); padding: 3mm; border-radius: 3mm; margin-bottom: 2.5mm; }
+.p8 .sig { position: absolute; right: 16mm; top: 16mm; font: italic 400 18pt/1 var(--serif); }
+.p8 .sig em { font: 800 15pt var(--disp); font-stretch: 75%; font-style: normal; text-transform: uppercase; }
+
+/* ===== v2 compact ===== */
+.p1 .lede1 { font: 400 13pt/1.4 var(--sans); max-width: 125mm; margin-top: 7mm; color: var(--bone); }
+/* 2 — pieza + investigación */
+.q2 .txt { position: absolute; left: 16mm; top: 16mm; width: 140mm; }
+.q2 .h { font-size: 40pt; margin-bottom: 4mm; }
+.q2 .lede { font-size: 13pt; }
+.q2 .inv { margin-top: 9mm; padding-top: 6mm; border-top: .3mm solid var(--line); font-size: 11pt; line-height: 1.5; }
+.q2 .inv .eyebrow { margin-bottom: 2mm; }
+.q2 .phs { position: absolute; right: 16mm; top: 16mm; width: 112mm; display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.q2 .phs img { width: 100%; height: 118mm; object-fit: cover; }
+.q2 .phs .a { border-radius: 999px 999px 4mm 4mm; }
+.q2 .phs .b { border-radius: 4mm; box-shadow: 3mm 3mm 0 var(--lac); }
+.q2 blockquote { position: absolute; right: 16mm; top: 142mm; width: 112mm; }
+.q2 blockquote p { font: italic 400 16pt/1.1 var(--serif); color: var(--bub); }
+.q2 blockquote footer { margin-top: 2mm; font-size: 7.5pt; letter-spacing: .25em; text-transform: uppercase; }
+/* 4 — compañía + anteriores + contacto */
+.q4 .top { position: absolute; left: 16mm; right: 16mm; top: 13mm; height: 140mm; display: grid; grid-template-columns: 56mm 1fr 80mm; gap: 8mm; }
+.q4 .portrait { height: 128mm; border: 1mm solid var(--bone); }
+.q4 .portrait img { width: 100%; height: 100%; object-fit: cover; }
+.q4 .bio { font-size: 8.6pt; line-height: 1.45; }
+.q4 .bio .h { font-size: 30pt; margin: 2mm 0 2mm; }
+.q4 .bio .h em { font-size: 26pt; }
+.q4 .name { font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 7.5pt; margin-bottom: 3mm; color: var(--bub); }
+.q4 .bio p + p { margin-top: 2.2mm; }
+.q4 .prev .ph { height: 84mm; border-radius: 3mm; overflow: hidden; margin: 2mm 0 2.5mm; }
+.q4 .prev .ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; }
+.q4 .prev h3 { font: italic 400 19pt/1 var(--serif); margin-bottom: 2mm; }
+.q4 .prev h3 em { font: 800 15pt var(--disp); font-stretch: 75%; font-style: normal; text-transform: uppercase; }
+.q4 .prev p.d { font-size: 8.3pt; line-height: 1.42; }
+.q4 .prev .row { display: flex; gap: 3mm; align-items: center; margin-top: 3mm; font-size: 7.5pt; }
+.q4 .prev .row img { width: 15mm; height: 15mm; background: var(--bone); padding: 1.2mm; border-radius: 1.5mm; }
+.q4 .prev .row b { display: block; color: var(--bub); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.q4 .band { position: absolute; left: 0; right: 0; bottom: 0; height: 46mm; background: var(--lac); color: var(--ink);
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12mm; padding: 0 16mm 8mm; }
+.q4 .band .eyebrow { color: var(--ink); }
+.q4 .band .mail { font: italic 400 32pt/1 var(--serif); display: inline-block; border-bottom: .8mm solid var(--ink); margin-top: 3mm; }
+.q4 .band ul { list-style: none; padding: 0; display: grid; gap: 1.2mm; font-size: 9.5pt; }
+.q4 .band ul b { display: inline-block; width: 24mm; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 7.5pt; }
+.q4 .band .qr { text-align: center; font-size: 6.5pt; letter-spacing: .2em; text-transform: uppercase; }
+.q4 .band .qr img { width: 30mm; height: 30mm; background: var(--bone); padding: 2mm; border-radius: 2mm; margin-bottom: 1.5mm; }
+.q4 .foot { color: var(--ink); opacity: .8; }
+.q4 .foot b { color: var(--bone); }
+
+a { color: inherit; text-decoration: none; }
+.vlink { display: inline-flex; align-items: center; gap: 4mm; margin-top: 8mm; padding: 3.5mm 6mm 3.5mm 3.5mm; background: var(--ink); color: var(--bone); border-radius: 99px; font-size: 9pt; }
+.vlink .play { width: 11mm; height: 11mm; border-radius: 50%; background: var(--lac); display: grid; place-items: center; font-size: 10pt; padding-left: .6mm; color: var(--bone); }
+.vlink b { display: block; font: italic 400 14pt/1.1 var(--serif); color: var(--bub); }
+.vlink span:last-child { text-decoration: underline; text-decoration-color: rgb(244 238 230 / .35); text-underline-offset: .6mm; }
+.vlink span:last-child b { text-decoration: none; }
+.vlink--sm { margin-top: 2.5mm; padding: 2mm 4.5mm 2mm 2mm; background: var(--ink2); font-size: 8pt; }
+.vlink--sm .play { width: 8mm; height: 8mm; font-size: 7.5pt; }
+.vlink--sm b { font-size: 11.5pt; }
+.meta2 { margin-top: 2mm; font-size: 7.5pt; letter-spacing: .06em; text-transform: uppercase; color: var(--bub); font-weight: 600; }
+.q4 .band a { text-decoration: none; }
+.q4 .band ul a { border-bottom: .25mm solid rgb(18 13 17 / .5); }
+
+/* page 3 on black */
+.dark3 .fact { border-color: var(--line); }
+.dark3 .supports li { border-bottom-color: var(--line); }
+.dark3 .credits--ink div { border-bottom-color: var(--line); }
+.dark3 .credits--ink dt { color: rgb(244 238 230 / .65); }
+.dark3 .vlink { background: var(--ink2); border: .3mm solid var(--line); }
+.dark3 .eyebrow { color: var(--bub); }
+/* page 4 on white */
+.q4.page--bone { background: #fbf8f4; }
+.q4 .portrait { border-color: var(--ink); box-shadow: 3mm 3mm 0 var(--lac); }
+.q4 .name, .q4 .meta2 { color: var(--lac); }
+.q4 .vlink--sm { background: var(--ink); }
+.q4 .prev .ph { box-shadow: 0 0 0 .3mm rgb(18 13 17 / .15); }
+/* red band: bold and legible */
+.q4 .band .eyebrow { font-weight: 800; font-size: 8.5pt; letter-spacing: .26em; }
+.q4 .band .mail { font: 700 25pt/1 var(--sans); letter-spacing: -.01em; border-bottom-width: 1mm; padding-bottom: 1mm; }
+.q4 .reach { display: grid; justify-items: end; gap: 4mm; }
+.q4 .reach .web { font: 800 19pt/1 var(--disp); font-stretch: 75%; letter-spacing: -.01em; text-transform: uppercase; }
+.q4 .icons { display: flex; gap: 6mm; }
+.q4 .icons a { display: block; width: 10mm; height: 10mm; color: var(--ink); }
+.q4 .icons svg { width: 100%; height: 100%; }
+.q4 .foot { font-weight: 700; opacity: 1; }
+.q4 .foot b { color: var(--ink); }
+</style></head><body>
+<!-- 1 · PORTADA -->
+<section class="page p1 grain">
+  <div class="art"><img class="cover-img" src="{{ img }}invocaciones-cartel.jpg" alt=""></div>
+  <div class="txt">
+    <p class="presenta">cia. Victoria Sickness <b>presenta</b></p>
+    <div>
+      <h1>Invocaciones</h1>
+      <p class="sub" style="color:var(--bub)">{{ t.cover_sub }}</p>
+      <div class="meta"><span class="badge"><i></i>{{ t.status }}</span></div>
+      <p class="lede1">{{ t.cover_lede }}</p>
+    </div>
+    <p class="eyebrow">✦ {{ t.cover_kicker }}</p>
+  </div>
+  <div class="marquee">{% for w in t.marquee + t.marquee[:2] %}<span>{{ w }}</span>{% if not loop.last %}<i>✦</i>{% endif %}{% endfor %}</div>
+</section>
+
+<!-- 2 · LA PIEZA + INVESTIGACIÓN -->
+<section class="page q2">
+  <div class="txt">
+    <p class="eyebrow">✦ {{ t.piece_eyebrow }}</p>
+    <h2 class="h">{{ t.piece_title }}</h2>
+    <p class="lede">{{ t.piece_text }}</p>
+    <p class="lede" style="color:var(--bub)">{{ t.piece_punch }}</p>
+    <ul class="chips">{% for c in t.chips %}<li>{{ c }}</li>{% endfor %}</ul>
+    <div class="inv">
+      <p class="eyebrow">✦ {{ t.research_eyebrow }}</p>
+      <p>{{ t.research_text }}</p>
+    </div>
+  </div>
+  <div class="phs"><img class="a" src="{{ img }}invocaciones-2.jpg" alt=""><img class="b" src="{{ img }}invocaciones-1.jpg" alt=""></div>
+  <blockquote><p>“{{ t.quote }}”</p><footer>— Roberta Marrero</footer></blockquote>
+  <div class="foot"><span><b>✦</b> Invocaciones</span><span>cia. Victoria Sickness · 02</span></div>
+</section>
+
+<!-- 4 · PROCESO (bone) -->
+<section class="page p4 dark3">
+  <div class="col c1">
+    <p class="eyebrow">✦ {{ t.process_eyebrow }}</p>
+    <h2 class="h">{{ t.process_title }}</h2>
+    <div class="facts">
+      {% for a, b in t.facts %}<div class="fact"><b>{{ a }}</b><span>{{ b }}</span></div>
+      {% endfor %}
+    </div>
+    <a class="vlink" href="https://youtu.be/zzgOx4tenbE"><span class="play">▶</span><span><b>{{ t.video_process }}</b>youtu.be/zzgOx4tenbE</span></a>
+  </div>
+  <div class="col c2">
+    <p class="eyebrow">✦ {{ t.credits_eyebrow }}</p>
+    <dl class="credits credits--ink">
+      {% for c in show.credits %}<div><dt>{{ t.roles[c.role] }}</dt><dd>{{ c.name }}</dd></div>
+      {% endfor %}
+    </dl>
+    <p class="eyebrow" style="margin-top:8mm">✦ {{ t.support_eyebrow }}</p>
+    <ul class="supports">
+      {% for x in show.support %}<li>{{ x }}</li>{% endfor %}
+    </ul>
+    <p style="margin-top:6mm;font-size:9.5pt">{{ t.programmers }} <b>victoriasickness@gmail.com</b></p>
+  </div>
+  <div class="foot"><span><b>✦</b> Invocaciones</span><span>cia. Victoria Sickness · 03</span></div>
+</section>
+
+<!-- 4 · COMPAÑÍA + PRODUCCIONES ANTERIORES + CONTACTO -->
+<section class="page page--bone q4">
+  <div class="top">
+    <div class="portrait arch"><img src="{{ img }}victoria-retrato.jpg" alt="{{ t.portrait_alt }}"></div>
+    <div class="bio">
+      <p class="eyebrow">✦ {{ t.company_eyebrow }}</p>
+      <h2 class="h">Victoria <em>Sickness</em></h2>
+      <p class="name">Vic Heredero</p>
+      {% for p in t.bio %}<p>{{ p }}</p>
+      {% endfor %}
+    </div>
+    <div class="prev">
+      <p class="eyebrow">✦ {{ t.prev_eyebrow }}</p>
+      <div class="ph"><img src="{{ img }}circografia-4.jpg" alt="Circografía de una Travesti"></div>
+      <h3>{{ t.circo_title }}</h3>
+      <p class="d">{{ t.circo_text }}</p>
+      <p class="meta2">{{ t.circo_meta }}</p>
+      <a class="vlink vlink--sm" href="https://youtu.be/9dBYIIkbDuE"><span class="play">▶</span><span><b>{{ t.video_watch }}</b>youtu.be/9dBYIIkbDuE</span></a>
+    </div>
+  </div>
+  <div class="band">
+    <div>
+      <p class="eyebrow">✦ {{ t.contact_eyebrow }}</p>
+      <a class="mail" href="mailto:victoriasickness@gmail.com">victoriasickness@gmail.com</a>
+    </div>
+    <div class="reach">
+      <a class="web" href="https://victoriasickness.com">victoriasickness.com</a>
+      <div class="icons">
+        <a href="https://www.instagram.com/cia.victoriasickness/" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.2" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a>
+        <a href="https://www.youtube.com/@victoriasickness" aria-label="YouTube"><svg viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M2.5 7.2c.2-1.6 1.4-2.8 3-2.9C8 4.1 10 4 12 4s4 .1 6.5.3c1.6.1 2.8 1.3 3 2.9.2 1.6.3 3.2.3 4.8s-.1 3.2-.3 4.8c-.2 1.6-1.4 2.8-3 2.9-2.5.2-4.5.3-6.5.3s-4-.1-6.5-.3c-1.6-.1-2.8-1.3-3-2.9-.2-1.6-.3-3.2-.3-4.8s.1-3.2.3-4.8zM10 8.6v6.8l5.8-3.4z"/></svg></a>
+        <a href="https://www.facebook.com/victoriasickness/" aria-label="Facebook"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M13.6 21.5v-8.2h2.8l.4-3.3h-3.2V7.9c0-.9.3-1.6 1.6-1.6h1.7V3.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.4v3.3h2.8v8.2z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>✦</b> Invocaciones · {{ t.dossier_foot }}</span><span>04</span></div>
+</section>
+</body></html>

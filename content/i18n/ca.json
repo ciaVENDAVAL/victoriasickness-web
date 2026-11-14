@@ -1,0 +1,111 @@
+{
+ "lang_name": "Català",
+ "lang_label": "CA",
+ "locale": "ca_ES",
+ "meta": {
+  "title": "cia. Victoria Sickness — circ contemporani, memòria i gènere",
+  "description": "Companyia de circ contemporani que posa el cos travesti al centre. Invocaciones (estrena estiu 2027) i Circografía de una Travesti: roda Cyr, acrobàcia, ritual i memòria queer."
+ },
+ "ui": {
+  "skip": "Salta al contingut",
+  "nav_label": "Principal",
+  "lang_label": "Idioma",
+  "pause": "Pausa el vídeo",
+  "play": "Reprodueix el vídeo",
+  "play_video": "Mira el vídeo",
+  "cursor_hint": "Mantén premut per fer-te les ungles",
+  "top": "Torna amunt",
+  "dossier": "Dossier",
+  "prev": "Foto anterior",
+  "next": "Foto següent",
+  "close": "Tanca",
+  "menu": "Menú",
+  "close_menu": "Tanca el menú"
+ },
+ "a11y": {
+  "title": "Accessibilitat",
+  "motion": "Atura les animacions",
+  "theme": "Tema",
+  "dark": "Fosc",
+  "light": "Clar",
+  "contrast": "Contrast alt",
+  "links": "Subratlla els enllaços",
+  "spacing": "Més espai entre línies",
+  "cursor": "Cursor normal",
+  "size": "Text",
+  "smaller": "Text més petit",
+  "bigger": "Text més gran",
+  "reset": "Restableix"
+ },
+ "nav": {
+  "shows": "Espectacles",
+  "about": "Sobre mi",
+  "contact": "Contacte"
+ },
+ "hero": {
+  "kicker": "circ · memòria · gènere",
+  "lede": "Circ contemporani amb el cos travesti al centre: roda Cyr, acrobàcia, ritual i memòries queer que es resisteixen a desaparèixer.",
+  "cta_shows": "Mira els espectacles",
+  "cta_contact": "Programa'ns"
+ },
+ "marquee": [
+  "circ contemporani",
+  "cos travesti",
+  "memòria queer",
+  "roda Cyr",
+  "ritual",
+  "purpurina política"
+ ],
+ "labels": {
+  "credits": "Fitxa artística",
+  "support": "Amb el suport de",
+  "gallery": "Galeria",
+  "photo": "fotografia"
+ },
+ "roles": {
+  "idea": "Idea i direcció",
+  "outside_eye": "Mirada externa",
+  "music": "Banda sonora",
+  "artistic_support": "Acompanyament artístic",
+  "image": "Imatge",
+  "lighting": "Disseny d'il·luminació",
+  "video_art": "Videoart",
+  "costume": "Vestuari"
+ },
+ "shows": {
+  "invocaciones": {
+   "status": "En creació · estrena estiu 2027",
+   "chips": [
+    "40 min",
+    "Carrer / espai no convencional",
+    "Cerimònia participativa"
+   ],
+   "description": "Una cerimònia de circ contemporani entre la performance i el ritual. El cos travesti ocupa el centre per invocar les memòries queer que les arts escèniques de l'Estat espanyol han esborrat. El públic no mira: hi participa."
+  },
+  "circografia": {
+   "chips": [
+    "50 min",
+    "Sala (adaptable a carrer)",
+    "Música en directe"
+   ],
+   "description": "Un viatge autobiogràfic a la infantesa i l'adolescència queer que la Victoria no va poder viure. Una fallada tècnica en ple concert l'arrossega a una realitat paral·lela on els peluixos de la seva infància la guien pel seu passat, entre referents femenins i la socialització masculina que li va ser imposada.",
+   "techniques": "Roda Cyr, acrobàcia, patins i xanques · text i projeccions"
+  }
+ },
+ "about": {
+  "eyebrow": "Sobre mi",
+  "name": "Vic Heredero",
+  "paragraphs": [
+   "Victoria Sickness és el nom artístic de Vic Heredero, artista de circ que creua tècnica, creació i recerca escènica. Es va formar al Centre de les Arts del Circ Rogelio Rivel (2016–2020), amb especialitat en roda Cyr i acrobàcia de terra, després d'estudiar Enginyeria de Sistemes Audiovisuals a la Universidad Carlos III de Madrid.",
+   "Des del 2018 és veu principal i saxo tenor de Las Marikarmen, on també dirigeix la posada en escena. Amb la seva companyia ha creat un solo de 12 minuts, l'espectacle de 50 minuts Circografía de una Travesti i la recerca en curs sobre el cos travesti INVOCACIONES.",
+   "Imparteix tallers de tècnica i creació a l'escola Rogelio Rivel, on dirigeix un cabaret anual. Va dirigir el Circ de Nadal 2024 de l'Espai de Circ Cronopis (Mataró), participa a la caixa d'eines de La Central del Circ, és en residència a La Poderosa (2026/27) i ha actuat al Combinat 57 de l'Ateneu Popular 9 Barris."
+  ],
+  "quote": "Algunes persones no ens podem permetre el luxe de no posar-hi el cos.",
+  "portrait_alt": "Retrat de Victoria Sickness",
+  "photo_alt": "Victoria Sickness en escena"
+ },
+ "contact": {
+  "eyebrow": "Contacte",
+  "text": "Programació, contractació, premsa i tallers."
+ }
+}

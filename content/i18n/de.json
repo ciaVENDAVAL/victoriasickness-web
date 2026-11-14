@@ -1,0 +1,111 @@
+{
+ "lang_name": "Deutsch",
+ "lang_label": "DE",
+ "locale": "de_DE",
+ "meta": {
+  "title": "cia. Victoria Sickness — zeitgenössischer Zirkus, Erinnerung und Gender",
+  "description": "Kompanie für zeitgenössischen Zirkus, die den Travesti-Körper ins Zentrum stellt. Invocaciones (Premiere Sommer 2027) und Circografía de una Travesti: Cyr-Rad, Akrobatik, Ritual und queere Erinnerung."
+ },
+ "ui": {
+  "skip": "Zum Inhalt springen",
+  "nav_label": "Hauptmenü",
+  "lang_label": "Sprache",
+  "pause": "Video pausieren",
+  "play": "Video abspielen",
+  "play_video": "Video ansehen",
+  "cursor_hint": "Gedrückt halten für eine Maniküre",
+  "top": "Nach oben",
+  "dossier": "Dossier",
+  "prev": "Vorheriges Foto",
+  "next": "Nächstes Foto",
+  "close": "Schließen",
+  "menu": "Menü",
+  "close_menu": "Menü schließen"
+ },
+ "a11y": {
+  "title": "Barrierefreiheit",
+  "motion": "Animationen stoppen",
+  "theme": "Farbschema",
+  "dark": "Dunkel",
+  "light": "Hell",
+  "contrast": "Hoher Kontrast",
+  "links": "Links unterstreichen",
+  "spacing": "Mehr Zeilenabstand",
+  "cursor": "Normaler Mauszeiger",
+  "size": "Text",
+  "smaller": "Kleinerer Text",
+  "bigger": "Größerer Text",
+  "reset": "Zurücksetzen"
+ },
+ "nav": {
+  "shows": "Stücke",
+  "about": "Über mich",
+  "contact": "Kontakt"
+ },
+ "hero": {
+  "kicker": "Zirkus · Erinnerung · Gender",
+  "lede": "Zeitgenössischer Zirkus mit dem Travesti-Körper im Zentrum: Cyr-Rad, Akrobatik, Ritual und queere Erinnerungen, die sich weigern zu verschwinden.",
+  "cta_shows": "Zu den Stücken",
+  "cta_contact": "Buchen"
+ },
+ "marquee": [
+  "zeitgenössischer Zirkus",
+  "Travesti-Körper",
+  "queere Erinnerung",
+  "Cyr-Rad",
+  "Ritual",
+  "politischer Glitzer"
+ ],
+ "labels": {
+  "credits": "Besetzung & Team",
+  "support": "Mit Unterstützung von",
+  "gallery": "Galerie",
+  "photo": "Foto"
+ },
+ "roles": {
+  "idea": "Idee und Regie",
+  "outside_eye": "Outside Eye",
+  "music": "Soundtrack",
+  "artistic_support": "Künstlerische Begleitung",
+  "image": "Bildgestaltung",
+  "lighting": "Lichtdesign",
+  "video_art": "Videokunst",
+  "costume": "Kostüme"
+ },
+ "shows": {
+  "invocaciones": {
+   "status": "In Entstehung · Premiere Sommer 2027",
+   "chips": [
+    "40 Min.",
+    "Straße / unkonventioneller Ort",
+    "Partizipative Zeremonie"
+   ],
+   "description": "Eine Zeremonie des zeitgenössischen Zirkus zwischen Performance und Ritual. Der Travesti-Körper steht im Zentrum, um die queeren Erinnerungen heraufzubeschwören, die die darstellenden Künste in Spanien ausgelöscht haben. Das Publikum schaut nicht zu: Es nimmt teil."
+  },
+  "circografia": {
+   "chips": [
+    "50 Min.",
+    "Bühne (straßentauglich)",
+    "Livemusik"
+   ],
+   "description": "Eine autobiografische Reise in die queere Kindheit und Jugend, die Victoria nicht leben konnte. Eine technische Panne mitten im Konzert reißt sie in eine Parallelwelt, in der die Kuscheltiere ihrer Kindheit sie durch ihre Vergangenheit führen – zwischen weiblichen Vorbildern und der ihr aufgezwungenen männlichen Sozialisation.",
+   "techniques": "Cyr-Rad, Akrobatik, Rollschuhe und Stelzen · Text und Projektionen"
+  }
+ },
+ "about": {
+  "eyebrow": "Über mich",
+  "name": "Vic Heredero",
+  "paragraphs": [
+   "Victoria Sickness ist der Künstlername von Vic Heredero, Zirkusartist*in an der Schnittstelle von Technik, Kreation und szenischer Forschung. Ausbildung am Centre de les Arts del Circ Rogelio Rivel (2016–2020) mit Schwerpunkt Cyr-Rad und Bodenakrobatik, nach einem Studium der audiovisuellen Systemtechnik an der Universidad Carlos III in Madrid.",
+   "Seit 2018 Leadstimme und Tenorsaxofon bei Las Marikarmen, dort auch verantwortlich für die Inszenierung. Mit der Kompanie entstanden ein 12-minütiges Solo, das 50-minütige Stück Circografía de una Travesti und die laufende Recherche zum Travesti-Körper, INVOCACIONES.",
+   "Leitet Technik- und Kreationsworkshops an der Schule Rogelio Rivel und dort ein jährliches Cabaret. Regie beim Circ de Nadal 2024 im Espai de Circ Cronopis (Mataró), Teilnahme an der caixa d'eines von La Central del Circ, Residenz bei La Poderosa (2026/27) und Auftritte in Combinat 57 im Ateneu Popular 9 Barris."
+  ],
+  "quote": "Manche von uns können sich den Luxus nicht leisten, nicht mit dem eigenen Körper einzustehen.",
+  "portrait_alt": "Porträt von Victoria Sickness",
+  "photo_alt": "Victoria Sickness, Foto"
+ },
+ "contact": {
+  "eyebrow": "Kontakt",
+  "text": "Programmierung, Booking, Presse und Workshops."
+ }
+}

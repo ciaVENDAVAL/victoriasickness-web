@@ -1,0 +1,53 @@
+{
+ "_about": "Canonical facts and house style used by tools/check.py. Update this file FIRST when a spelling, contact detail or style rule changes.",
+ "contact": {
+  "email": "victoriasickness@gmail.com",
+  "web": "victoriasickness.com"
+ },
+ "names": {
+  "Vic Heredero": [
+   "Vic Herederos",
+   "Victor Heredero"
+  ],
+  "Victoria Sickness": [
+   "Victoria Sicknes",
+   "Victoria sickness",
+   "victoria Sickness"
+  ],
+  "tyle fernández": [
+   "Tyle Fernández",
+   "tyle fernandez",
+   "Tyle Fernandez"
+  ],
+  "Antxon Ordoñez": [
+   "Antxon Ordonez"
+  ],
+  "Martí Corbera": [
+   "Marti Corbera"
+  ],
+  "Artis Díaz Barbagli": [
+   "Artis Diaz Barbagli"
+  ],
+  "Rogelio Rivel": [
+   "Rogelio Rível"
+  ],
+  "La Central del Circ": [
+   "La central del circ"
+  ],
+  "Tub d'assaig": [
+   "Tub d'Assaig",
+   "Tub Dassaig"
+  ]
+ },
+ "banned": {
+  "*": [
+   "Hablemos",
+   "Hecho con purpurina y rueda Cyr"
+  ]
+ },
+ "rules": [
+  "Prices never public",
+  "Never crop photos",
+  "Web link in print: victoriasickness.com"
+ ]
+}

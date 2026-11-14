@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Invocaciones — dossier de prensa · cia. Victoria Sickness</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75,700..800&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Instrument+Serif:ital@0;1&display=block">
+<style>
+@page { size: 297mm 210mm; margin: 0; }
+:root { --ink:#120d11; --ink2:#1d151b; --bone:#f4eee6; --lac:#e8004f; --bub:#ff8fc7; --line:rgb(244 238 230 / .2);
+  --chrome: linear-gradient(100deg,#fff 0%,#c9c2d6 18%,#ff9fd0 36%,#fff6fb 50%,#9b93ad 66%,#ffd3ea 82%,#fff 100%);
+  --serif:"Instrument Serif",serif; --sans:"Instrument Sans",sans-serif; --disp:"Bricolage Grotesque",sans-serif; }
+* { box-sizing: border-box; margin: 0; }
+html, body { background: #555; }
+body { font: 400 10.5pt/1.5 var(--sans); color: var(--bone); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 297mm; height: 210mm; position: relative; overflow: hidden; background: var(--ink); page-break-after: always; break-after: page; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.page--bone { background: var(--bone); color: var(--ink); }
+.page--lac { background: var(--lac); color: var(--ink); }
+img { display: block; }
+.grain-off::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.06; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* running foot */
+.foot { position: absolute; left: 16mm; right: 16mm; bottom: 9mm; display: flex; justify-content: space-between; font-size: 7.5pt; letter-spacing: .18em; text-transform: uppercase; opacity: .75; }
+.foot b { color: var(--lac); font-weight: 600; }
+.page--lac .foot b { color: var(--bone); }
+
+.eyebrow { font-size: 8pt; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--bub); }
+.page--bone .eyebrow, .page--lac .eyebrow { color: var(--lac); }
+.page--lac .eyebrow { color: var(--ink); }
+.h { font: italic 400 46pt/.92 var(--serif); letter-spacing: -.02em; margin: 3mm 0 6mm; }
+.h em { font: 800 40pt/1 var(--disp); font-stretch: 75%; font-style: normal; text-transform: uppercase; letter-spacing: -.04em; }
+.chrome { background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lede { font-size: 15pt; line-height: 1.38; }
+p + p { margin-top: 3.2mm; }
+.chips { display: flex; flex-wrap: wrap; gap: 2mm; list-style: none; padding: 0; margin-top: 7mm; }
+.chips li { border: .3mm solid var(--line); border-radius: 99px; padding: 1.4mm 3.6mm; font-size: 9pt; }
+.page--bone .chips li { border-color: rgb(18 13 17 / .3); }
+.badge { display: inline-flex; align-items: center; gap: 2.4mm; padding: 1.6mm 4mm; border: .3mm solid var(--lac); border-radius: 99px; background: rgb(232 0 79 / .16); font-size: 9pt; font-weight: 600; }
+.badge i { width: 2.4mm; height: 2.4mm; border-radius: 50%; background: var(--lac); box-shadow: 0 0 0 1.2mm rgb(232 0 79 / .3); }
+.num { position: absolute; font: 800 120pt/.8 var(--disp); font-stretch: 75%; color: transparent; -webkit-text-stroke: .35mm var(--bub); letter-spacing: -.05em; opacity: .65; }
+.arch { border-radius: 999px 999px 4mm 4mm; overflow: hidden; }
+.cover-img { width: 100%; height: 100%; object-fit: cover; }
+
+/* 1 — cover */
+.p1 .art { position: absolute; right: 0; top: 0; bottom: 0; width: 46%; }
+.p1 .art::before { content:""; position:absolute; inset:0; background: linear-gradient(90deg, var(--ink) 0%, rgb(18 13 17 / 0) 22%); z-index: 1; }
+.p1 .txt { position: absolute; left: 16mm; top: 15mm; bottom: 30mm; width: 52%; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; }
+.p1 .presenta { font: italic 400 15pt/1 var(--serif); color: var(--bub); }
+.p1 .presenta b { font: 600 9pt var(--sans); letter-spacing: .3em; text-transform: uppercase; color: var(--bone); margin-left: 2mm; font-style: normal; }
+.p1 h1 { font: italic 400 90pt/.82 var(--serif); letter-spacing: -.035em; }
+.p1 .sub { font: 800 25pt/1 var(--disp); font-stretch: 75%; text-transform: uppercase; letter-spacing: -.02em; margin-top: 4mm; }
+.p1 .meta { display: flex; gap: 4mm; align-items: center; margin-top: 8mm; }
+.marquee { position: absolute; left: -5mm; right: -5mm; bottom: 9mm; background: var(--lac); color: var(--ink); transform: rotate(-1.2deg); padding: 2.6mm 0; white-space: nowrap; overflow: hidden; z-index: 2; border-block: .3mm solid var(--ink); }
+.marquee span { font: italic 400 17pt/1 var(--serif); padding: 0 3mm; }
+.marquee i { font-style: normal; font-size: 10pt; }
+
+/* 2 — la pieza */
+.p2 .txt { position: absolute; left: 16mm; top: 18mm; width: 150mm; }
+.p2 .ph { position: absolute; right: 16mm; top: 16mm; width: 92mm; height: 160mm; box-shadow: 5mm 5mm 0 var(--lac); }
+.p2 .num { left: 14mm; bottom: 16mm; }
+
+/* 3 — investigación */
+.p3 .ph { position: absolute; left: 0; top: 0; bottom: 0; width: 118mm; }
+.p3 .ph::after { content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgb(18 13 17 / 0) 55%, var(--ink)); }
+.p3 .txt { position: absolute; left: 132mm; right: 16mm; top: 18mm; font-size: 12pt; line-height: 1.5; }
+.p3 blockquote { margin-top: 9mm; padding-top: 6mm; border-top: .3mm solid var(--line); }
+.p3 blockquote p { font: italic 400 26pt/1.06 var(--serif); color: var(--bub); }
+.p3 blockquote footer { margin-top: 3mm; font-size: 8pt; letter-spacing: .25em; text-transform: uppercase; }
+
+/* 4 — proceso */
+.p4 .col { position: absolute; top: 18mm; }
+.p4 .c1 { left: 16mm; width: 116mm; }
+.p4 .c2 { left: 146mm; right: 16mm; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-top: 4mm; }
+.fact { border: .3mm solid rgb(18 13 17 / .25); border-radius: 4mm; padding: 4mm; }
+.fact b { display: block; font: 800 22pt/1 var(--disp); font-stretch: 75%; letter-spacing: -.02em; margin-bottom: 1.5mm; }
+.fact span { font-size: 8.5pt; }
+.supports { list-style: none; padding: 0; margin-top: 4mm; columns: 2; column-gap: 6mm; }
+.supports li { break-inside: avoid; padding: 2mm 0; border-bottom: .3mm dashed rgb(18 13 17 / .3); font-weight: 500; }
+.supports li::before { content: "✦ "; color: var(--lac); }
+.video { display: flex; gap: 5mm; align-items: center; margin-top: 8mm; padding: 4mm; background: var(--ink); color: var(--bone); border-radius: 5mm; }
+.video img.qr { width: 25mm; height: 25mm; background: var(--bone); padding: 2mm; border-radius: 2mm; }
+.video .thumb { width: 52mm; height: 29mm; object-fit: cover; border-radius: 3mm; }
+.video p { font-size: 9pt; }
+.video p b { display: block; font: italic 400 15pt/1.1 var(--serif); color: var(--bub); margin-bottom: 1mm; }
+
+/* 5 — ficha */
+.p5 .txt { position: absolute; left: 16mm; top: 18mm; width: 150mm; }
+.credits { margin-top: 2mm; }
+.credits div { display: grid; grid-template-columns: 56mm 1fr; padding: 3.2mm 0; border-bottom: .3mm dashed var(--line); font-size: 12pt; }
+.credits dt { color: rgb(244 238 230 / .65); font-size: 10pt; align-self: center; }
+.credits dd { font-weight: 600; }
+.p5 .ph { position: absolute; right: 16mm; top: 16mm; width: 96mm; height: 162mm; }
+.p5 .ph img { width: 100%; height: 100%; object-fit: cover; }
+
+.credits--ink div { border-bottom-color: rgb(18 13 17 / .3); grid-template-columns: 50mm 1fr; padding: 2.4mm 0; font-size: 10.5pt; }
+.credits--ink dt { color: rgb(18 13 17 / .65); font-size: 9pt; }
+/* 6 — compañía (bone) */
+.p6 .ph { position: absolute; left: 16mm; top: 16mm; width: 84mm; height: 150mm; border: 1.4mm solid var(--ink); box-shadow: 4mm 4mm 0 var(--lac); }
+.p6 .txt { position: absolute; left: 116mm; right: 16mm; top: 16mm; font-size: 10pt; }
+.p6 .name { font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 8.5pt; margin: -2mm 0 4mm; }
+.p6 .strip { display: flex; gap: 3mm; margin-top: 6mm; }
+.p6 .strip img { width: 31mm; height: 40mm; object-fit: cover; border-radius: 3mm; border: .7mm solid var(--ink); }
+.p6 .strip img:nth-child(2) { border-radius: 99px 99px 3mm 3mm; }
+
+/* 7 — repertorio */
+.p7 .txt { position: absolute; left: 16mm; top: 18mm; width: 118mm; }
+.p7 .tech { color: var(--bub); margin-top: 4mm; font-size: 9.5pt; }
+.p7 .m { position: absolute; right: 16mm; top: 16mm; width: 136mm; height: 162mm; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3mm; }
+.p7 .m img { width: 100%; height: 100%; object-fit: cover; border-radius: 3mm; }
+.p7 .m img:first-child { grid-row: span 2; border-radius: 999px 999px 3mm 3mm; }
+.p7 .video { background: var(--ink2); }
+
+/* 8 — contacto (lacquer) */
+.p8 .wrap { position: absolute; inset: 16mm 16mm 22mm; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 10mm; }
+.p8 h2 { font: 800 118pt/.8 var(--disp); font-stretch: 75%; text-transform: uppercase; letter-spacing: -.05em; }
+.p8 .mail { font: italic 400 46pt/1 var(--serif); margin-top: 5mm; display: inline-block; border-bottom: 1mm solid var(--ink); }
+.p8 ul { list-style: none; padding: 0; margin-top: 8mm; display: grid; gap: 1.6mm; font-size: 11pt; }
+.p8 ul b { display: inline-block; width: 30mm; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 8.5pt; }
+.p8 .qrbox { text-align: center; font-size: 8pt; letter-spacing: .2em; text-transform: uppercase; }
+.p8 .qrbox img { width: 44mm; height: 44mm; background: var(--bone); padding: 3mm; border-radius: 3mm; margin-bottom: 2.5mm; }
+.p8 .sig { position: absolute; right: 16mm; top: 16mm; font: italic 400 18pt/1 var(--serif); }
+.p8 .sig em { font: 800 15pt var(--disp); font-stretch: 75%; font-style: normal; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<!-- 1 · PORTADA -->
+<section class="page p1 grain">
+  <div class="art"><img class="cover-img" src="img/invocaciones-cartel.jpg" alt=""></div>
+  <div class="txt">
+    <p class="presenta">cia. Victoria Sickness <b>presenta</b></p>
+    <div>
+      <h1>Invocaciones</h1>
+      <p class="sub" style="color:var(--bub)">Ceremonia de circo contemporáneo</p>
+      <div class="meta"><span class="badge"><i></i>En creación · estreno verano 2027</span></div>
+    </div>
+    <p class="eyebrow">✦ Dossier de prensa · 2026</p>
+  </div>
+  <div class="marquee"><span>circo contemporáneo</span><i>✦</i><span>cuerpo travesti</span><i>✦</i><span>memoria queer</span><i>✦</i><span>rueda Cyr</span><i>✦</i><span>ritual</span><i>✦</i><span>purpurina política</span><i>✦</i><span>circo contemporáneo</span><i>✦</i><span>cuerpo travesti</span></div>
+</section>
+
+<!-- 2 · LA PIEZA -->
+<section class="page p2 grain">
+  <div class="txt">
+    <p class="eyebrow">✦ La pieza</p>
+    <h2 class="h">Una ceremonia <em>travesti</em></h2>
+    <p class="lede">Una ceremonia de circo contemporáneo entre la performance y el ritual. El cuerpo travesti ocupa el centro para invocar las memorias queer que las artes escénicas del Estado español han borrado.</p>
+    <p class="lede" style="color:var(--bub)">El público no mira: participa.</p>
+    <ul class="chips"><li>40 min</li><li>Calle / espacio no convencional</li><li>Ceremonia participativa</li><li>Circo · performance · ritual</li></ul>
+  </div>
+  <p class="num">01</p>
+  <div class="ph arch"><img class="cover-img" src="img/invocaciones-2.jpg" alt="Invocaciones, proceso de creación"></div>
+  <div class="foot"><span><b>✦</b> Invocaciones</span><span>cia. Victoria Sickness · 02</span></div>
+</section>
+
+<!-- 3 · INVESTIGACIÓN -->
+<section class="page p3 grain">
+  <div class="ph"><img class="cover-img" src="img/invocaciones-1.jpg" alt="Ensayo de Invocaciones con rueda Cyr"></div>
+  <div class="txt">
+    <p class="eyebrow">✦ La investigación</p>
+    <h2 class="h">El cuerpo <em>como archivo</em></h2>
+    <p>Invocaciones nace de una investigación escénica sobre el cuerpo travesti que la compañía desarrolla desde la técnica de circo, la creación y la performance.</p>
+    <p>La pregunta de partida: qué memorias queer han quedado fuera de la historia de las artes escénicas en el Estado español, y cómo un cuerpo en escena puede convocarlas de nuevo. La respuesta toma la forma de una ceremonia, un espacio compartido en el que el público forma parte del rito.</p>
+    <p>La pieza continúa la línea de trabajo de la compañía sobre los límites del movimiento, el género y la expresión queer.</p>
+    <blockquote>
+      <p>“Algunas personas no podemos permitirnos el lujo de no poner el cuerpo.”</p>
+      <footer>— Roberta Marrero</footer>
+    </blockquote>
+  </div>
+  <div class="foot"><span><b>✦</b> Invocaciones</span><span>cia. Victoria Sickness · 03</span></div>
+</section>
+
+<!-- 4 · PROCESO (bone) -->
+<section class="page page--bone p4">
+  <div class="col c1">
+    <p class="eyebrow">✦ Proceso de creación</p>
+    <h2 class="h">En <em>creación</em></h2>
+    <div class="facts">
+      <div class="fact"><b>Verano 2027</b><span>Estreno previsto</span></div>
+      <div class="fact"><b>40 min</b><span>Duración</span></div>
+      <div class="fact"><b>Calle</b><span>O espacio no convencional</span></div>
+      <div class="fact"><b>Participativa</b><span>El público forma parte de la ceremonia</span></div>
+    </div>
+    <div class="video">
+      <img class="qr" src="img/qr-video.svg" alt="QR del vídeo">
+      <p><b>Vídeo del proceso</b>youtube.com/watch?v=zzgOx4tenbE<br>Escanea para verlo.</p>
+    </div>
+  </div>
+  <div class="col c2">
+    <p class="eyebrow">✦ Ficha artística</p>
+    <dl class="credits credits--ink">
+      <div><dt>Idea y dirección</dt><dd>Cia. Victoria Sickness</dd></div>
+      <div><dt>Mirada externa</dt><dd>Antxon Ordoñez</dd></div>
+      <div><dt>Banda sonora</dt><dd>Sloubou</dd></div>
+      <div><dt>Acompañamiento artístico</dt><dd>Martí Corbera</dd></div>
+      <div><dt>Imagen</dt><dd>Julia Vargas</dd></div>
+    </dl>
+    <p class="eyebrow" style="margin-top:8mm">✦ Apoyos y residencias</p>
+    <ul class="supports">
+      <li>Becas Barcelona Crea</li><li>La Central del Circ</li><li>nau Ivanov</li><li>L'Obrador Deltebre</li>
+      <li>Plataforma In-Situ</li><li>FRAC Fuenlabrada</li><li>Cardant Cultura</li>
+    </ul>
+    <p style="margin-top:6mm;font-size:9.5pt">Para programadores, festivales y espacios de residencia que quieran acompañar el proceso o programar el estreno: <b>victoriasickness@gmail.com</b></p>
+  </div>
+  <div class="foot"><span><b>✦</b> Invocaciones</span><span>cia. Victoria Sickness · 04</span></div>
+</section>
+
+<!-- 6 · LA COMPAÑÍA (bone) -->
+<section class="page page--bone p6">
+  <div class="ph arch"><img class="cover-img" src="img/victoria-retrato.jpg" alt="Retrato de Victoria Sickness"></div>
+  <div class="txt">
+    <p class="eyebrow">✦ La compañía</p>
+    <h2 class="h">Victoria <em>Sickness</em></h2>
+    <p class="name">Vic Heredero</p>
+    <p>Victoria Sickness es el nombre artístico de Vic Heredero, artista de circo que cruza técnica, creación e investigación escénica. Se formó en el Centre de les Arts del Circ Rogelio Rivel (2016–2020), con especialidad en rueda Cyr y acrobacia de suelo, después de estudiar Ingeniería de Sistemas Audiovisuales en la Universidad Carlos III de Madrid.</p>
+    <p>Desde 2018 es voz principal y saxo tenor de Las Marikarmen, donde también dirige la puesta en escena. Con su compañía ha creado un solo de 12 minutos, el espectáculo de 50 minutos Circografía de una Travesti y la investigación en curso sobre el cuerpo travesti INVOCACIONES.</p>
+    <p>Imparte talleres de técnica y creación en la escuela Rogelio Rivel, donde dirige un cabaret anual. Dirigió el Circ de Nadal 2024 del Espai de Circ Cronopis (Mataró), participa en la caixa d'eines de La Central del Circ, está en residencia en La Poderosa (2026/27) y ha actuado en Combinat 57 del Ateneu Popular 9 Barris.</p>
+    <div class="strip"><img src="img/victoria-escena.jpg" alt=""><img src="img/marikarmen-1.jpg" alt=""><img src="img/circografia-4.jpg" alt=""></div>
+  </div>
+  <div class="foot"><span><b>✦</b> Invocaciones</span><span>cia. Victoria Sickness · 05</span></div>
+</section>
+
+<!-- 7 · REPERTORIO -->
+<section class="page p7 grain">
+  <div class="txt">
+    <p class="eyebrow">✦ Repertorio</p>
+    <h2 class="h">Circografía de una <em>Travesti</em></h2>
+    <p>Un viaje autobiográfico a la infancia y la adolescencia queer que Victoria no pudo vivir. Un fallo técnico en pleno concierto la arrastra a una realidad paralela donde los peluches de su infancia la guían por su pasado, entre referentes femeninos y la socialización masculina que le fue impuesta.</p>
+    <p class="tech">Rueda Cyr, acrobacia, patines y zancos · música en directo, texto y proyecciones</p>
+    <ul class="chips"><li>50 min</li><li>Sala (adaptable a calle)</li><li>Música en directo</li></ul>
+    <div class="video">
+      <img class="qr" src="img/qr-circo.svg" alt="QR del vídeo">
+      <p><b>Ver el vídeo</b>youtube.com/watch?v=9dBYIIkbDuE</p>
+    </div>
+  </div>
+  <div class="m"><img src="img/circografia-4.jpg" alt=""><img src="img/circografia-8.jpg" alt=""><img src="img/circografia-1.jpg" alt=""></div>
+  <div class="foot"><span><b>✦</b> Invocaciones</span><span>cia. Victoria Sickness · 06</span></div>
+</section>
+
+<!-- 8 · CONTACTO (lacquer) -->
+<section class="page page--lac p8 grain">
+  <p class="sig">cia. Victoria <em>Sickness</em></p>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">✦ Contacto · contratación · prensa</p>
+      <a class="mail">victoriasickness@gmail.com</a>
+      <ul>
+        <li><b>Web</b>ciavendaval.github.io/victoriasickness-web</li>
+        <li><b>Instagram</b>@cia.victoriasickness</li>
+        <li><b>YouTube</b>@victoriasickness</li>
+        <li><b>Facebook</b>facebook.com/victoriasickness</li>
+      </ul>
+    </div>
+    <div class="qrbox"><img src="img/qr-web.svg" alt="QR de la web">Web · 8 idiomas</div>
+  </div>
+  <div class="foot"><span><b>✦</b> Invocaciones · dossier 2026</span><span>07</span></div>
+</section>
+
+</body>
+</html>

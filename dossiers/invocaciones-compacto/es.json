@@ -1,0 +1,76 @@
+{
+ "_lang": "es",
+ "_status": "draft, waiting for tyle's approval (14 Nov 2026)",
+ "cover_presenta": "presenta",
+ "cover_sub": "Ceremonia de circo contemporáneo",
+ "status": "En creación · estreno verano 2027",
+ "cover_lede": "El cuerpo travesti en el centro de un ritual de circo para invocar las memorias queer borradas de la escena. 40 minutos, en la calle, con el público dentro.",
+ "cover_kicker": "Dossier de prensa · 2026",
+ "marquee": [
+  "circo contemporáneo",
+  "cuerpo travesti",
+  "memoria queer",
+  "rueda Cyr",
+  "ritual",
+  "purpurina política"
+ ],
+ "piece_eyebrow": "La pieza",
+ "piece_title": "Una ceremonia <em>travesti</em>",
+ "piece_text": "Una ceremonia de circo contemporáneo entre la performance y el ritual. El cuerpo travesti ocupa el centro para invocar las memorias queer que las artes escénicas del Estado español han borrado.",
+ "piece_punch": "El público no mira: participa.",
+ "chips": [
+  "40 min",
+  "Calle / espacio no convencional",
+  "Ceremonia participativa",
+  "Circo · performance · ritual"
+ ],
+ "research_eyebrow": "La investigación · el cuerpo como archivo",
+ "research_text": "Invocaciones nace de una investigación escénica sobre el cuerpo travesti que la compañía desarrolla desde la técnica de circo, la creación y la performance. La pregunta de partida: qué memorias queer han quedado fuera de la historia de las artes escénicas en el Estado español, y cómo un cuerpo en escena puede convocarlas de nuevo. La respuesta toma la forma de una ceremonia, un espacio compartido en el que el público forma parte del rito.",
+ "quote": "Algunas personas no podemos permitirnos el lujo de no poner el cuerpo.",
+ "process_eyebrow": "Proceso de creación",
+ "process_title": "En <em>creación</em>",
+ "facts": [
+  [
+   "Verano 2027",
+   "Estreno previsto"
+  ],
+  [
+   "40 min",
+   "Duración"
+  ],
+  [
+   "Calle",
+   "O espacio no convencional"
+  ],
+  [
+   "Participativa",
+   "El público forma parte de la ceremonia"
+  ]
+ ],
+ "video_process": "Vídeo del proceso",
+ "credits_eyebrow": "Ficha artística",
+ "roles": {
+  "idea": "Idea y dirección",
+  "outside_eye": "Mirada externa",
+  "music": "Banda sonora",
+  "artistic_support": "Acompañamiento artístico",
+  "image": "Imagen"
+ },
+ "support_eyebrow": "Apoyos y residencias",
+ "programmers": "Para programadores, festivales y espacios de residencia que quieran acompañar el proceso o programar el estreno:",
+ "company_eyebrow": "La compañía",
+ "portrait_alt": "Retrato de Victoria Sickness",
+ "bio": [
+  "Victoria Sickness es el nombre artístico de Vic Heredero, artista de circo que cruza técnica, creación e investigación escénica. Se formó en el Centre de les Arts del Circ Rogelio Rivel (2016–2020), con especialidad en rueda Cyr y acrobacia de suelo, después de estudiar Ingeniería de Sistemas Audiovisuales en la Universidad Carlos III de Madrid.",
+  "Desde 2018 es voz principal y saxo tenor de Las Marikarmen, donde también dirige la puesta en escena. Con su compañía ha creado un solo de 12 minutos, el espectáculo de 50 minutos Circografía de una Travesti y la investigación en curso sobre el cuerpo travesti INVOCACIONES.",
+  "Imparte talleres de técnica y creación en la escuela Rogelio Rivel, donde dirige un cabaret anual. Dirigió el Circ de Nadal 2024 del Espai de Circ Cronopis (Mataró), participa en la caixa d'eines de La Central del Circ, está en residencia en La Poderosa (2026/27) y ha actuado en Combinat 57 del Ateneu Popular 9 Barris."
+ ],
+ "prev_eyebrow": "Producciones anteriores",
+ "circo_title": "Circografía de una <em>Travesti</em>",
+ "circo_text": "Un viaje autobiográfico a la infancia y la adolescencia queer que Victoria no pudo vivir. Un fallo técnico en pleno concierto la arrastra a una realidad paralela donde los peluches de su infancia la guían por su pasado.",
+ "circo_meta": "50 min · sala · música en directo · rueda Cyr, acrobacia, patines y zancos",
+ "video_watch": "Ver el vídeo",
+ "contact_eyebrow": "Contacto · contratación · prensa",
+ "dossier_foot": "dossier 2026",
+ "doc_title": "dossier compacto"
+}
