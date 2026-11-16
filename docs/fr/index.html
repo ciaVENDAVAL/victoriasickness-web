@@ -22,10 +22,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://ciavendaval.github.io/victoriasickness-web/og/victoria-sickness.jpg">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75,700..800&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Instrument+Serif:ital@0;1&display=swap">
-  <link rel="stylesheet" href="../assets/style.css?v=202611142153">
+  <link rel="stylesheet" href="../fonts/fonts.css?v=be160f6bc8">
+  <link rel="stylesheet" href="../assets/style.css?v=be160f6bc8">
+  <style>:root{--ink:#120d11;--bone:#f4eee6;--lacquer:#e8004f;--bubble:#ff8fc7;--sans:"Instrument Sans",system-ui,sans-serif}</style>
   <script>try{var a=JSON.parse(localStorage.getItem("vs-a11y")||"{}"),h=document.documentElement;Object.keys(a).forEach(function(k){if(k==="size")h.style.setProperty("--fs",a[k]);else if(a[k])h.classList.add("a11y-"+k)})}catch(e){}</script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"PerformingGroup","name":"Cia. Victoria Sickness","url":"https://ciavendaval.github.io/victoriasickness-web/","email":"victoriasickness@gmail.com","sameAs":["https://www.instagram.com/cia.victoriasickness/","https://www.youtube.com/@victoriasickness","https://www.facebook.com/victoriasickness/"]}
@@ -108,8 +107,8 @@
           <p class="show__desc">Une cérémonie de cirque contemporain entre performance et rituel. Le corps travesti occupe le centre pour invoquer les mémoires queer que les arts de la scène en Espagne ont effacées. Le public ne regarde pas : il participe.</p><p><a class="btn btn--ghost btn--sm" href="../pdf/VictoriaSickness-Invocaciones_ES_dossier_2026-11.pdf" target="_blank">Dossier (PDF, ES) ↓</a></p>        </div>
 
         <div class="show__media">
-          <button class="yt" type="button" data-yt="zzgOx4tenbE" data-title="Invocaciones">
-            <img src="https://i.ytimg.com/vi/zzgOx4tenbE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <button class="yt" type="button" data-embed="https://www.youtube-nocookie.com/embed/zzgOx4tenbE?autoplay=1&rel=0" data-title="Invocaciones">
+            <img src="../img/lg/invocaciones-cartel.jpg" alt="" loading="lazy" width="1200" height="800">
             <span class="yt__play" aria-hidden="true"></span>
             <span class="yt__label">Voir la vidéo — Invocaciones</span>
           </button>
@@ -139,8 +138,8 @@
           <p class="show__desc">Un voyage autobiographique vers l'enfance et l'adolescence queer que Victoria n'a pas pu vivre. Une panne technique en plein concert l'entraîne dans une réalité parallèle où les peluches de son enfance accompagnent son retour vers le passé, entre modèles féminins et la socialisation masculine qui lui a été imposée.</p><p class="show__tech">Roue Cyr, acrobatie, patins et échasses · texte et projections</p>        </div>
 
         <div class="show__media">
-          <button class="yt" type="button" data-yt="9dBYIIkbDuE" data-title="Circografía de una Travesti">
-            <img src="https://i.ytimg.com/vi/9dBYIIkbDuE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <button class="yt" type="button" data-embed="https://www.youtube-nocookie.com/embed/9dBYIIkbDuE?autoplay=1&rel=0" data-title="Circografía de una Travesti">
+            <img src="../img/lg/circografia-1.jpg" alt="" loading="lazy" width="1200" height="800">
             <span class="yt__play" aria-hidden="true"></span>
             <span class="yt__label">Voir la vidéo — Circografía de una Travesti</span>
           </button>
@@ -309,7 +308,15 @@
     </g>
   </svg>
 </div>
-<p class="cursor-hint" role="note"><span aria-hidden="true">💅</span> Restez appuyé·e pour vous faire les ongles</p>  <script src="../assets/site.js?v=202611142153" defer></script>
-  <script src="../assets/smoke.js?v=202611142153" defer></script>
+<p class="cursor-hint" role="note"><span aria-hidden="true">💅</span> Restez appuyé·e pour vous faire les ongles</p>  <script src="../assets/site.js?v=be160f6bc8" defer></script>
+  <script src="../assets/smoke.js?v=be160f6bc8" defer></script>  <script>try{if(location.hash==="#edit"||sessionStorage.getItem("ls-edit")){sessionStorage.setItem("ls-edit","1");document.documentElement.classList.add("is-editing");
+window.LS_EDIT={repo:"ciaVENDAVAL/victoriasickness-web",branch:"main",base:"/victoriasickness-web",lang:"fr",
+files:["content/i18n/{lang}.json","content/data.json","content/downloads.json"],
+skip:["_about","lang_name","lang_label","locale","site","languages","redirects","photos","id","file","o","video","video_cover","download","url","role","portrait","email","instagram","youtube","facebook","kind","short","show","source","draft","marquee"],
+img:{root:"/img/",small:"/img/sm/",large:"/img/lg/",repo:"source-images/"},
+pdf:{downloads:"content/downloads.json",repo:"static",name:"/pdf/VictoriaSickness-{kind}_{LANG}_dossier_{yyyy-mm}.pdf",short:"/dossier/{kind}/{lang}/"},
+admin:"https://ciavendaval.github.io/victoriasickness-admin/"};
+var s=document.createElement("script");s.type="module";s.src="../assets/edit.js?v=be160f6bc8";document.body.appendChild(s)}
+else addEventListener("hashchange",function(){if(location.hash==="#edit")location.reload()})}catch(e){}</script>
 </body>
 </html>

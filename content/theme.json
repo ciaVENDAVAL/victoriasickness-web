@@ -1,0 +1,8 @@
+{
+ "_about": "Colours and text font of the website (editable in the admin). Defaults = the original design.",
+ "ink": "#120d11",
+ "bone": "#f4eee6",
+ "lacquer": "#e8004f",
+ "bubble": "#ff8fc7",
+ "body_font": "Instrument Sans"
+}

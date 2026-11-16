@@ -72,18 +72,30 @@ def main():
                 if re.search(r'(?<![\w])' + re.escape(w) + r'(?![\w])', text): out.append(f'- ❌ {label}: "{w}" → {right}')
         if label.startswith('static/pdf') and 'compacto' in label and web not in low:
             out.append(f'- ⚠ {label}: web address {web} not found')
+    # 5. private data must never be in this public repo
+    out += ['', '## 5. Private data (public repo!)', '']
+    for label, text in sources():
+        if 'facts.json' in label or label.startswith('static/fonts'): continue
+        for rule in facts.get('private', []):
+            for m in re.finditer(rule['pattern'], text):
+                out.append(f'- ❌ {label}: {rule["why"]} → "{m.group(0)}"')
     # 4. files
     out += ['', '## 4. Files', '']
+    downloads = json.loads((ROOT/'content/downloads.json').read_text(encoding='utf-8'))
     registered = set()
-    for key, d in data['downloads'].items():
-        for l, u in d['files'].items():
+    for key, per in downloads.items():
+        if key not in data['downloads']: out.append(f'- ⚠ downloads.json "{key}" has no entry in data.json → downloads')
+        for l, u in per.items():
+            if not u: continue
             registered.add(pathlib.Path(u).name)
-            if not (ROOT/'static'/u).exists(): out.append(f'- ❌ download {key}/{l}: missing static/{u}')
+            if not (ROOT/'static'/u.lstrip('/')).exists(): out.append(f'- ❌ download {key}/{l}: missing static{u}')
     for p in (ROOT/'static/pdf').glob('*.pdf'):
-        if p.name not in registered: out.append(f'- ⚠ {p.name} is not in data.json → downloads')
+        if p.name not in registered: out.append(f'- ⚠ {p.name} is not in content/downloads.json')
         if p.stat().st_size > 3e6: out.append(f'- ⚠ {p.name} is {p.stat().st_size/1e6:.1f} MB (limit 3 MB)')
-    for slug, name in data['photos']['originals'].items():
-        if not (ROOT/'source-images'/name).exists(): out.append(f'- ❌ photo {slug}: missing source-images/{name}')
+    have = {p.stem for p in (ROOT/'source-images').iterdir()}
+    used = [i['file'] for s in data['shows'] for i in s['images']] + [s.get('video_cover') for s in data['shows']] + [data['about']['portrait']] + [i['file'] for i in data['about']['images']]
+    for u in used:
+        if u and pathlib.PurePosixPath(u).stem not in have: out.append(f'- ❌ photo "{u}" is used but not in source-images/')
     if not data['photos'].get('credits'): out.append('- ⚠ no photographer credits yet (data.json → photos.credits)')
     problems = sum(1 for x in out if x.startswith('- ❌'))
     out.insert(1, f'{problems} problem(s), {sum(1 for x in out if x.startswith("- ⚠"))} warning(s).\n')

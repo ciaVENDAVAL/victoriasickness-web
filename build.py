@@ -5,14 +5,17 @@ Texts:   content/i18n/<lang>.json   (one file per language; a language is live w
                                      AND it is listed in content/data.json → languages)
 Facts:   content/data.json          (shows, credits, photos, downloads, redirects)
 Layout:  src/page.html (+ social.html, a11y.html, cursor.html), src/style.css, src/site.js, src/smoke.js
-Static:  static/ (favicon, preview image, video, PDFs) is copied as is.
-Photos:  originals in source-images/ (never cropped). Web sizes are generated once into docs/img/sm|lg/<slug>.jpg.
+Static:  static/ (favicon, fonts, preview image, video, PDFs) is copied as is.
+Photos:  every original in source-images/ (never cropped) → docs/img/sm|lg/<name>.jpg. Data may name a photo
+         by its bare name ("circografia-1"), file name or path: only the name counts.
+PDFs:    content/downloads.json says which file each language gets ({ kind: { lang: "/pdf/…" } }).
+Colours: content/theme.json (editable in the admin).
 
 Pages:        /<lang>/            (root / picks the visitor's language, default from data.json)
 Short links:  /dossier/<short>/<lang>/  ·  /dossier/<short>/  (opens in the reader's language)
 Run:  pip install jinja2 pillow && python3 build.py
 """
-import datetime, json, pathlib, shutil
+import datetime, hashlib, json, pathlib, re, shutil
 from jinja2 import Environment, FileSystemLoader
 from PIL import Image, ImageOps
 
@@ -20,11 +23,13 @@ ROOT = pathlib.Path(__file__).parent
 SRC, OUT, CONTENT, STATIC, IMGSRC = ROOT/'src', ROOT/'docs', ROOT/'content', ROOT/'static', ROOT/'source-images'
 data = json.loads((CONTENT/'data.json').read_text(encoding='utf-8'))
 SITE_URL = 'https://' + data['site']['domain'] if data['site'].get('domain_live') else data['site']['preview_url']
+downloads = json.loads((CONTENT/'downloads.json').read_text(encoding='utf-8'))
+theme = json.loads((CONTENT/'theme.json').read_text(encoding='utf-8'))
 langs = [l for l in data['languages'] if (CONTENT/'i18n'/f'{l}.json').exists()]
 i18n = {l: json.loads((CONTENT/'i18n'/f'{l}.json').read_text(encoding='utf-8')) for l in langs}
 DEFAULT = data['site']['default_lang']
 today = datetime.date.today()
-version = datetime.datetime.now().strftime('%Y%m%d%H%M')
+version = hashlib.sha1(b''.join((SRC/f).read_bytes() for f in ('style.css', 'site.js', 'smoke.js', 'edit.js'))).hexdigest()[:10]   # changes only when the code does
 SIZES = {'sm': 820, 'lg': 1800}
 
 # ---------- static files and images
@@ -34,26 +39,47 @@ def build_static():
             if p.name != 'img': (shutil.rmtree if p.is_dir() else pathlib.Path.unlink)(p)
     shutil.copytree(STATIC, OUT, dirs_exist_ok=True)
     (OUT/'assets').mkdir(exist_ok=True)
-    for f in ('style.css', 'site.js', 'smoke.js'): shutil.copy(SRC/f, OUT/'assets'/f)
-    for slug, name in data['photos']['originals'].items():
-        src = IMGSRC/name
-        if not src.exists(): print(f'  ! missing original {name} for {slug}'); continue
+    for f in ('style.css', 'site.js', 'smoke.js', 'edit.js'): shutil.copy(SRC/f, OUT/'assets'/f)
+    # remember which original made each web copy (by content: after a git checkout all dates are equal)
+    seen_file = OUT/'img'/'.sources.json'
+    seen = json.loads(seen_file.read_text()) if seen_file.exists() else {}
+    for src in sorted(IMGSRC.iterdir()):
+        if src.suffix.lower() not in ('.jpg', '.jpeg', '.png', '.webp'): continue
+        slug = src.stem
+        digest = hashlib.sha1(src.read_bytes()).hexdigest()
+        if seen.get(slug) == digest and all((OUT/'img'/d/f'{slug}.jpg').exists() for d in SIZES): continue
+        seen[slug] = digest
         for d, size in SIZES.items():
             out = OUT/'img'/d/f'{slug}.jpg'
-            if out.exists() and out.stat().st_mtime >= src.stat().st_mtime: continue
             out.parent.mkdir(parents=True, exist_ok=True)
             im = ImageOps.exif_transpose(Image.open(src)).convert('RGB')
             im.thumbnail((size, size), Image.LANCZOS)           # resize only, never crop
             im.save(out, 'JPEG', quality=82 if d == 'lg' else 78, optimize=True, progressive=True)
+        print(f'  photo {slug}')
+    seen_file.parent.mkdir(parents=True, exist_ok=True)
+    seen_file.write_text(json.dumps(seen, indent=0, sort_keys=True) + '\n')
 
 # ---------- downloads (PDFs live in static/pdf/)
 def avail(key):
-    return {l: u for l, u in data['downloads'][key]['files'].items() if (OUT/u).exists()}
+    return {l: u.lstrip('/') for l, u in downloads.get(key, {}).items() if u and (OUT/u.lstrip('/')).exists()}
+
+def slug(x):
+    """'circografia-1', 'circografia-1.jpg', '/source-images/circografia-1.jpg' → 'circografia-1'"""
+    return pathlib.PurePosixPath(str(x or '')).stem
+
+def embed(url):
+    """Video link (PeerTube or YouTube) → player address. PeerTube is preferred (no Google)."""
+    url = str(url or '')
+    m = re.search(r'(?:youtu\.be/|youtube\.com/(?:watch\?v=|embed/|shorts/))([\w-]{6,})', url)
+    if m: return f'https://www.youtube-nocookie.com/embed/{m.group(1)}?autoplay=1&rel=0'
+    m = re.match(r'(https?://[^/]+)/(?:w|videos/watch|videos/embed)/([\w-]+)', url)
+    if m: return f'{m.group(1)}/videos/embed/{m.group(2)}?autoplay=1&title=0&warningTitle=0&peertubeLink=0&p2p=0'
+    return url
 
 def make_dlfile(lang):
     def dlfile(key):
         d = data['downloads'].get(key)
-        if not d or d.get('draft'): return None
+        if not isinstance(d, dict) or d.get('draft'): return None
         fs = avail(key)
         if not fs: return None
         for l in (lang, DEFAULT, 'en', 'ca'):
@@ -68,6 +94,7 @@ def redirect_html(target):
 def build_links():
     lines = []
     for key, d in data['downloads'].items():
+        if key.startswith('_'): continue
         fs = avail(key)
         if not fs: print(f'  ! no PDF yet for download "{key}"'); continue
         base = OUT/d['kind']/d['short']
@@ -86,11 +113,14 @@ def build_links():
 # ---------- pages
 def render():
     env = Environment(loader=FileSystemLoader(SRC), autoescape=False, trim_blocks=True, lstrip_blocks=True)
+    env.filters['slug'] = slug
+    env.filters['embed'] = embed
     tpl = env.get_template('page.html')
     urls = []
     for lang in langs:
         ctx = dict(data, site_url=SITE_URL, t=i18n[lang], lang=lang, langs=langs, i18n=i18n, R='../',
-                   version=version, year=today.year, dlfile=make_dlfile(lang))
+                   version=version, year=today.year, dlfile=make_dlfile(lang), theme=theme,
+                   edit_base='' if data['site'].get('domain_live') else '/' + data['site']['preview_url'].rstrip('/').split('/')[-1])
         out = OUT/lang/'index.html'; out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(tpl.render(**ctx), encoding='utf-8')
         urls.append(f'{SITE_URL}/{lang}/')

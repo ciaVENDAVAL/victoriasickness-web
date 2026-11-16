@@ -9,6 +9,9 @@
 ## 2. Contact data and 3. House style
 
 
+## 5. Private data (public repo!)
+
+
 ## 4. Files
 
 - ⚠ no photographer credits yet (data.json → photos.credits)

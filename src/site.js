@@ -39,7 +39,7 @@
   document.querySelectorAll('.yt').forEach(btn => btn.addEventListener('click', () => {
     const f = document.createElement('iframe');
     f.className = 'yt-frame';
-    f.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.yt}?autoplay=1&rel=0`;
+    f.src = btn.dataset.embed;   // PeerTube or YouTube player address, made by build.py
     f.title = btn.dataset.title;
     f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
     f.allowFullscreen = true;
@@ -166,6 +166,7 @@
   }
 
   /* ---------- cursor + manicure ---------- */
+  if (document.documentElement.classList.contains('is-editing')) return;   // editing on the page: normal cursor
   const cursor = document.querySelector('.cursor');
   const hint = document.querySelector('.cursor-hint');
   if (!cursor) return;

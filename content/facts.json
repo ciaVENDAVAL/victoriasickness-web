@@ -77,5 +77,89 @@
   "it": "rephrase around the name",
   "pt": "rephrase around the name",
   "de": "rephrase around the name"
- }
+ },
+ "private": [
+  {
+   "pattern": "\\b[A-Z]{2}\\d{2}(?:\\s?\\d{4}){5}\\b",
+   "why": "IBAN / bank account"
+  },
+  {
+   "pattern": "\\b(?:NIF|CIF|DNI|NIE)\\b",
+   "why": "tax / ID number"
+  },
+  {
+   "pattern": "\\b\\d{8}[A-HJ-NP-TV-Z]\\b",
+   "why": "DNI-like number"
+  },
+  {
+   "pattern": "\\b[XYZ]\\d{7}[A-Z]\\b",
+   "why": "NIE-like number"
+  },
+  {
+   "pattern": "\\d[\\d.,]*\\s?(?:€|EUR\\b)|€\\s?\\d",
+   "why": "money amount"
+  },
+  {
+   "pattern": "(?i)\\b(?:cachet|caché|catxet|honorarios|honoraris|fee|fees|pressupost|presupuesto|budget)(?!\\w)",
+   "why": "fee / budget word"
+  }
+ ],
+ "do_not_translate": [
+  "Ateneu Popular 9 Barris",
+  "caixa d'eines",
+  "Centre de les Arts del Circ Rogelio Rivel",
+  "Cia. Victoria Sickness",
+  "Circ de Nadal",
+  "Circografía de una Travesti",
+  "Combinat 57",
+  "Cyr",
+  "Espai de Circ Cronopis",
+  "Invocaciones",
+  "INVOCACIONES",
+  "La Central del Circ",
+  "La Poderosa",
+  "Las Marikarmen",
+  "Mataró",
+  "queer",
+  "Roberta Marrero",
+  "Rogelio Rivel",
+  "travesti",
+  "travestis",
+  "tyle fernández",
+  "Universidad Carlos III",
+  "Vic Heredero",
+  "Victoria Sickness"
+ ],
+ "terms": [
+  {
+   "es": "rueda Cyr",
+   "ca": "roda Cyr",
+   "eu": "Cyr gurpila",
+   "en": "Cyr wheel",
+   "fr": "roue Cyr",
+   "it": "ruota Cyr",
+   "pt": "roda Cyr",
+   "de": "Cyr-Rad"
+  },
+  {
+   "es": "circo contemporáneo",
+   "ca": "circ contemporani",
+   "eu": "zirku garaikidea",
+   "en": "contemporary circus",
+   "fr": "cirque contemporain",
+   "it": "circo contemporaneo",
+   "pt": "circo contemporâneo",
+   "de": "zeitgenössischer Zirkus"
+  },
+  {
+   "es": "Circo contemporáneo",
+   "ca": "Circ contemporani",
+   "eu": "Zirku garaikidea",
+   "en": "Contemporary circus",
+   "fr": "Cirque contemporain",
+   "it": "Circo contemporaneo",
+   "pt": "Circo contemporâneo",
+   "de": "Zeitgenössischer Zirkus"
+  }
+ ]
 }

@@ -27,7 +27,7 @@ def images():
     for slug in IMAGES:
         out = d/f'{slug}.jpg'
         if out.exists(): continue
-        im = ImageOps.exif_transpose(Image.open(ROOT/'source-images'/data['photos']['originals'][slug])).convert('RGB')
+        im = ImageOps.exif_transpose(Image.open(ROOT/'source-images'/f'{slug}.jpg')).convert('RGB')
         im.thumbnail((1500, 1500)); im.save(out, 'JPEG', quality=78, optimize=True, progressive=True)
 
 async def pdf(html_path, out):

@@ -3,6 +3,7 @@
    Off with prefers-reduced-motion or the accessibility "stop animations" option. */
 (() => {
   const root = document.documentElement;
+  if (root.classList.contains('is-editing')) return;   // editing on the page: no smoke
   const still = () => matchMedia('(prefers-reduced-motion: reduce)').matches || root.classList.contains('a11y-motion');
   const cv = document.createElement('canvas');
   cv.className = 'smoke'; cv.setAttribute('aria-hidden', 'true');

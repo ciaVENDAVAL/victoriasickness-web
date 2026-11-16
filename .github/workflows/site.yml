@@ -1,0 +1,75 @@
+# Rebuild the website after every change to its sources (admin, edit-on-page, or a push from a computer).
+#  1. Translate: texts changed in ONE language only are translated into the other 7 with Softcatalà's open
+#     models (tools/translate.py, via Catalan; no account, no key, no Google, no Amazon). Skipped when the
+#     commit message contains [no-translate] (the on-page editor's "Translate" switch, or by hand).
+#  2. Build: python3 build.py → docs/ (photos from source-images/ are resized here).
+#  3. Commit content/i18n + docs/, then ask GitHub Pages to publish (a push made with GITHUB_TOKEN
+#     doesn't start other workflows or a Pages build by itself).
+name: Build site
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "src/**"
+      - "static/**"
+      - "source-images/**"
+      - "build.py"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: site
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NMT_MODELS: ${{ github.workspace }}/../nmt-models
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Did a text change? (and translation not switched off)
+        id: tr
+        env:
+          BEFORE: ${{ github.event.before }}
+          MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          if [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then BEFORE=HEAD~1; fi
+          echo "before=$BEFORE" >> "$GITHUB_OUTPUT"
+          if [[ "$MESSAGE" == *"[no-translate]"* ]]; then echo "run=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if git diff --quiet "$BEFORE" HEAD -- content/i18n; then echo "run=false" >> "$GITHUB_OUTPUT"; else echo "run=true" >> "$GITHUB_OUTPUT"; fi
+      - run: pip install jinja2 pillow
+      - if: steps.tr.outputs.run == 'true'
+        run: pip install ctranslate2 sentencepiece ruamel.yaml
+      - name: Translation models (downloaded from softcatala.org once, then cached)
+        if: steps.tr.outputs.run == 'true'
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/../nmt-models
+          key: softcatala-nmt-8langs-2024-10-v1
+      - name: Translate
+        if: steps.tr.outputs.run == 'true'
+        env:
+          TRANSLATED_LIST: /tmp/translated.txt
+        run: |
+          python tools/translate.py --download
+          python tools/translate.py "${{ steps.tr.outputs.before }}"
+      - name: Build
+        run: python build.py
+      - name: Commit and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add content/i18n docs LINKS.txt
+          if git diff --cached --quiet; then echo "Nothing changed"; else
+            { echo "Auto-build$( [ -s /tmp/translated.txt ] && echo ' + auto-translate (Softcatalà) — please check' )"; echo; cat /tmp/translated.txt 2>/dev/null; } > /tmp/msg.txt
+            git -c user.name="site bot" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -F /tmp/msg.txt
+            git pull --rebase origin main && git push
+          fi
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true

@@ -29,10 +29,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{ site_url }}/og/victoria-sickness.jpg">
   <link rel="icon" href="{{ R }}favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75,700..800&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="{{ R }}fonts/fonts.css?v={{ version }}">
   <link rel="stylesheet" href="{{ R }}assets/style.css?v={{ version }}">
+  <style>:root{--ink:{{ theme.ink }};--bone:{{ theme.bone }};--lacquer:{{ theme.lacquer }};--bubble:{{ theme.bubble }};--sans:"{{ theme.body_font }}",system-ui,sans-serif}</style>
   <script>try{var a=JSON.parse(localStorage.getItem("vs-a11y")||"{}"),h=document.documentElement;Object.keys(a).forEach(function(k){if(k==="size")h.style.setProperty("--fs",a[k]);else if(a[k])h.classList.add("a11y-"+k)})}catch(e){}</script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"PerformingGroup","name":"{{ site.name }}","url":"{{ site_url }}/","email":"{{ contact.email }}","sameAs":["{{ contact.instagram }}","{{ contact.youtube }}","{{ contact.facebook }}"]}
@@ -125,8 +124,8 @@
         </div>
 
         <div class="show__media">
-          <button class="yt" type="button" data-yt="{{ show.youtube }}" data-title="{{ show.title }}">
-            <img src="https://i.ytimg.com/vi/{{ show.youtube }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <button class="yt" type="button" data-embed="{{ show.video|embed }}" data-title="{{ show.title }}">
+            <img src="{{ img_lg }}{{ show.video_cover|slug }}.jpg" alt="" loading="lazy" width="1200" height="800">
             <span class="yt__play" aria-hidden="true"></span>
             <span class="yt__label">{{ t.ui.play_video }} — {{ show.title }}</span>
           </button>
@@ -145,8 +144,8 @@
 
         <div class="mosaic mosaic--{{ show.images|length }}" data-gallery="{{ show.id }}" role="list" aria-label="{{ t.labels.gallery }}: {{ show.title }}">
           {%- for img in show.images %}
-          <a class="mosaic__item mosaic__item--{{ img.o }}" role="listitem" href="{{ img_lg }}{{ img.file }}.jpg" data-caption="{{ show.title }} · {{ loop.index }}/{{ show.images|length }}">
-            <img src="{{ img_sm }}{{ img.file }}.jpg" alt="{{ show.title }} — {{ t.labels.photo }} {{ loop.index }}" loading="lazy" decoding="async"{% if img.o == "l" %} width="820" height="547"{% else %} width="547" height="820"{% endif %}>
+          <a class="mosaic__item mosaic__item--{{ img.o }}" role="listitem" href="{{ img_lg }}{{ img.file|slug }}.jpg" data-caption="{{ show.title }} · {{ loop.index }}/{{ show.images|length }}">
+            <img src="{{ img_sm }}{{ img.file|slug }}.jpg" alt="{{ show.title }} — {{ t.labels.photo }} {{ loop.index }}" loading="lazy" decoding="async"{% if img.o == "l" %} width="820" height="547"{% else %} width="547" height="820"{% endif %}>
           </a>
           {%- endfor %}
         </div>
@@ -158,7 +157,7 @@
     <section id="about" class="about" aria-labelledby="about-title">
       <div class="about__media">
         <figure class="arch">
-          <img src="{{ img_lg }}{{ about.portrait }}.jpg" alt="{{ t.about.portrait_alt }}" width="1200" height="1800" loading="lazy">
+          <img src="{{ img_lg }}{{ about.portrait|slug }}.jpg" alt="{{ t.about.portrait_alt }}" width="1200" height="1800" loading="lazy">
         </figure>
       </div>
       <div class="about__text">
@@ -171,8 +170,8 @@
       </div>
       <div class="strip" data-gallery="about" role="list" aria-label="{{ t.labels.gallery }}: Victoria Sickness">
         {%- for img in about.images %}
-        <a class="strip__item" role="listitem" href="{{ img_lg }}{{ img.file }}.jpg" data-caption="Victoria Sickness · {{ loop.index }}/{{ about.images|length }}">
-          <img src="{{ img_sm }}{{ img.file }}.jpg" alt="{{ t.about.photo_alt }} {{ loop.index }}" width="547" height="820" loading="lazy" decoding="async">
+        <a class="strip__item" role="listitem" href="{{ img_lg }}{{ img.file|slug }}.jpg" data-caption="Victoria Sickness · {{ loop.index }}/{{ about.images|length }}">
+          <img src="{{ img_sm }}{{ img.file|slug }}.jpg" alt="{{ t.about.photo_alt }} {{ loop.index }}" width="547" height="820" loading="lazy" decoding="async">
         </a>
         {%- endfor %}
       </div>
@@ -211,5 +210,15 @@
   {% include 'cursor.html' %}
   <script src="{{ R }}assets/site.js?v={{ version }}" defer></script>
   <script src="{{ R }}assets/smoke.js?v={{ version }}" defer></script>
+  {#- Edit on the page: open any page with #edit (see src/edit.js; admin: victoriasickness-admin) #}
+  <script>try{if(location.hash==="#edit"||sessionStorage.getItem("ls-edit")){sessionStorage.setItem("ls-edit","1");document.documentElement.classList.add("is-editing");
+window.LS_EDIT={repo:"ciaVENDAVAL/victoriasickness-web",branch:"main",base:"{{ edit_base }}",lang:"{{ lang }}",
+files:["content/i18n/{lang}.json","content/data.json","content/downloads.json"],
+skip:["_about","lang_name","lang_label","locale","site","languages","redirects","photos","id","file","o","video","video_cover","download","url","role","portrait","email","instagram","youtube","facebook","kind","short","show","source","draft","marquee"],
+img:{root:"/img/",small:"/img/sm/",large:"/img/lg/",repo:"source-images/"},
+pdf:{downloads:"content/downloads.json",repo:"static",name:"/pdf/VictoriaSickness-{kind}_{LANG}_dossier_{yyyy-mm}.pdf",short:"/dossier/{kind}/{lang}/"},
+admin:"https://ciavendaval.github.io/victoriasickness-admin/"};
+var s=document.createElement("script");s.type="module";s.src="{{ R }}assets/edit.js?v={{ version }}";document.body.appendChild(s)}
+else addEventListener("hashchange",function(){if(location.hash==="#edit")location.reload()})}catch(e){}</script>
 </body>
 </html>
