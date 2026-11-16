@@ -2,7 +2,7 @@
 """Build the compact Invocaciones dossier (A4 landscape, 4 pages) → static/pdf/.
 
 Texts:   dossiers/invocaciones-compacto/<lang>.json   (one per language; copy es.json to start a new one)
-Facts:   content/data.json  (credits, supporters of the show "invocaciones")
+Facts:   content/shows.json  (credits, supporters of the show "invocaciones")
 Photos:  source-images/ (resized copies in .img/, never cropped)
 Output:  static/pdf/VictoriaSickness-Invocaciones_<LANG>_dossier-compacto_<yyyy-mm>.pdf
 
@@ -17,8 +17,8 @@ from PIL import Image, ImageOps
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
-data = json.loads((ROOT/'content/data.json').read_text(encoding='utf-8'))
-show = next(s for s in data['shows'] if s['id'] == 'invocaciones')
+data = json.loads((ROOT/'content/site.json').read_text(encoding='utf-8'))
+show = next(s for s in json.loads((ROOT/'content/shows.json').read_text(encoding='utf-8'))['shows'] if s['id'] == 'invocaciones')
 STAMP = os.environ.get('DOSSIER_DATE', datetime.date.today().strftime('%Y-%m'))
 IMAGES = ['invocaciones-cartel', 'invocaciones-1', 'invocaciones-2', 'victoria-retrato', 'circografia-4']
 

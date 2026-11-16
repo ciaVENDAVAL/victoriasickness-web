@@ -213,7 +213,7 @@
   {#- Edit on the page: open any page with #edit (see src/edit.js; admin: victoriasickness-admin) #}
   <script>try{if(location.hash==="#edit"||sessionStorage.getItem("ls-edit")){sessionStorage.setItem("ls-edit","1");document.documentElement.classList.add("is-editing");
 window.LS_EDIT={repo:"ciaVENDAVAL/victoriasickness-web",branch:"main",base:"{{ edit_base }}",lang:"{{ lang }}",
-files:["content/i18n/{lang}.json","content/data.json","content/downloads.json"],
+files:["content/i18n/{lang}.json","content/shows.json","content/about.json","content/downloads.json"],
 skip:["_about","lang_name","lang_label","locale","site","languages","redirects","photos","id","file","o","video","video_cover","download","url","role","portrait","email","instagram","youtube","facebook","kind","short","show","source","draft","marquee"],
 img:{root:"/img/",small:"/img/sm/",large:"/img/lg/",repo:"source-images/"},
 pdf:{downloads:"content/downloads.json",repo:"static",name:"/pdf/VictoriaSickness-{kind}_{LANG}_dossier_{yyyy-mm}.pdf",short:"/dossier/{kind}/{lang}/"},

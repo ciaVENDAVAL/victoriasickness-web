@@ -1,0 +1,22 @@
+{
+ "_about": "Photos of the 'about' section.",
+ "portrait": "/source-images/victoria-retrato.jpg",
+ "images": [
+  {
+   "file": "/source-images/victoria-escena.jpg",
+   "o": "p"
+  },
+  {
+   "file": "/source-images/marikarmen-1.jpg",
+   "o": "p"
+  },
+  {
+   "file": "/source-images/victoria-3.jpg",
+   "o": "p"
+  },
+  {
+   "file": "/source-images/marikarmen-2.jpg",
+   "o": "p"
+  }
+ ]
+}

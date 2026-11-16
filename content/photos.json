@@ -1,0 +1,22 @@
+{
+ "_about": "Every photo in source-images/ (original, never cropped) is published as img/sm/<name>.jpg (820 px) and img/lg/<name>.jpg (1800 px). Use the name without .jpg in shows → images. Credits: name → photographer.",
+ "camera_files": {
+  "invocaciones-1": "photo_2026-05-26_22-06-11.jpg",
+  "invocaciones-2": "photo_2026-05-26_22-05-58.jpg",
+  "invocaciones-cartel": "Gemini_Generated_Image_ere461ere461ere4.jpg",
+  "circografia-1": "MG_4427.jpg",
+  "circografia-2": "MG_4471.jpg",
+  "circografia-3": "MG_4652.jpg",
+  "circografia-4": "MG_4695.jpg",
+  "circografia-5": "MG_4762.jpg",
+  "circografia-6": "MG_7299.jpg",
+  "circografia-7": "MG_7362.jpg",
+  "circografia-8": "MG_7385.jpg",
+  "victoria-retrato": "MG_0569-copia-2.jpg",
+  "victoria-escena": "MG_6647.jpg",
+  "victoria-3": "MG_6875.jpg",
+  "marikarmen-1": "Las-Marikarmen-Molinex-01-fot-Dani-Canto.jpg",
+  "marikarmen-2": "marikarmen-22-1.jpg"
+ },
+ "credits": {}
+}

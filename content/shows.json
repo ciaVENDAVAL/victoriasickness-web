@@ -1,0 +1,144 @@
+{
+ "_about": "Shows: titles, video, credits, supporters, photos (texts per language are in content/i18n/<lang>.json → shows.<id>).",
+ "shows": [
+  {
+   "id": "invocaciones",
+   "title": "Invocaciones",
+   "video": "https://www.youtube.com/watch?v=zzgOx4tenbE",
+   "video_cover": "/source-images/invocaciones-cartel.jpg",
+   "download": "invocaciones",
+   "credits": [
+    {
+     "role": "idea",
+     "name": "Cia. Victoria Sickness"
+    },
+    {
+     "role": "outside_eye",
+     "name": "Antxon Ordoñez",
+     "url": "https://www.apcc.cat/en/professionals/951/antxon-ordonez-bergareche"
+    },
+    {
+     "role": "music",
+     "name": "Sloubou",
+     "url": "https://open.spotify.com/intl-es/artist/7EFKqT5YMcmShsQhrFJSXv"
+    },
+    {
+     "role": "artistic_support",
+     "name": "Martí Corbera",
+     "url": "https://www.instagram.com/marticorbe/"
+    },
+    {
+     "role": "image",
+     "name": "Julia Vargas",
+     "url": "https://www.instagram.com/juliavargasco/"
+    }
+   ],
+   "support": [
+    "Becas Barcelona Crea",
+    "La Central del Circ",
+    "nau Ivanov",
+    "L'Obrador Deltebre",
+    "Plataforma In-Situ",
+    "FRAC Fuenlabrada",
+    "Cardant Cultura"
+   ],
+   "images": [
+    {
+     "file": "/source-images/invocaciones-cartel.jpg",
+     "o": "p"
+    },
+    {
+     "file": "/source-images/invocaciones-1.jpg",
+     "o": "p"
+    },
+    {
+     "file": "/source-images/invocaciones-2.jpg",
+     "o": "p"
+    }
+   ]
+  },
+  {
+   "id": "circografia",
+   "title": "Circografía de una Travesti",
+   "video": "https://www.youtube.com/watch?v=9dBYIIkbDuE",
+   "video_cover": "/source-images/circografia-1.jpg",
+   "credits": [
+    {
+     "role": "idea",
+     "name": "Cia. Victoria Sickness"
+    },
+    {
+     "role": "outside_eye",
+     "name": "Quim Giron",
+     "url": "https://www.instagram.com/quimgiron/"
+    },
+    {
+     "role": "lighting",
+     "name": "Artis Díaz Barbagli",
+     "url": "https://www.instagram.com/artis.tiqui/"
+    },
+    {
+     "role": "music",
+     "name": "Suzio Tarik",
+     "url": "https://soundcloud.com/suzio_tarik"
+    },
+    {
+     "role": "video_art",
+     "name": "tyle fernández",
+     "url": "https://www.instagram.com/contamina_perpetua/"
+    },
+    {
+     "role": "costume",
+     "name": "Tropidelia",
+     "url": "https://tropidelia.bigcartel.com/"
+    }
+   ],
+   "support": [
+    "Espai d'acompanyament – La Central del Circ",
+    "Ateneu Popular 9Barris",
+    "Konvent",
+    "Lleialtat Santsenca",
+    "Tub d'assaig",
+    "CAC Rogelio Rivel",
+    "Can Clariana",
+    "Travesia",
+    "L'Obrador Deltebre",
+    "La Granerie"
+   ],
+   "images": [
+    {
+     "file": "/source-images/circografia-1.jpg",
+     "o": "p"
+    },
+    {
+     "file": "/source-images/circografia-3.jpg",
+     "o": "l"
+    },
+    {
+     "file": "/source-images/circografia-4.jpg",
+     "o": "p"
+    },
+    {
+     "file": "/source-images/circografia-8.jpg",
+     "o": "l"
+    },
+    {
+     "file": "/source-images/circografia-6.jpg",
+     "o": "l"
+    },
+    {
+     "file": "/source-images/circografia-5.jpg",
+     "o": "p"
+    },
+    {
+     "file": "/source-images/circografia-7.jpg",
+     "o": "l"
+    },
+    {
+     "file": "/source-images/circografia-2.jpg",
+     "o": "p"
+    }
+   ]
+  }
+ ]
+}

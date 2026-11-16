@@ -14,4 +14,4 @@
 
 ## 4. Files
 
-- ⚠ no photographer credits yet (data.json → photos.credits)
+- ⚠ no photographer credits yet (content/photos.json → credits)

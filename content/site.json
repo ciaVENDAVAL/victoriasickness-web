@@ -1,0 +1,48 @@
+{
+ "_about": "Technical settings (not in the admin forms): domain, languages, contact, which PDFs exist, old-address redirects.",
+ "site": {
+  "name": "Cia. Victoria Sickness",
+  "domain": "victoriasickness.com",
+  "domain_live": false,
+  "preview_url": "https://ciavendaval.github.io/victoriasickness-web",
+  "default_lang": "es"
+ },
+ "languages": [
+  "es",
+  "ca",
+  "eu",
+  "en",
+  "fr",
+  "it",
+  "pt",
+  "de"
+ ],
+ "contact": {
+  "email": "victoriasickness@gmail.com",
+  "instagram": "https://www.instagram.com/cia.victoriasickness/",
+  "youtube": "https://www.youtube.com/@victoriasickness",
+  "facebook": "https://www.facebook.com/victoriasickness/"
+ },
+ "downloads": {
+  "invocaciones": {
+   "kind": "dossier",
+   "short": "invocaciones",
+   "show": "invocaciones",
+   "source": "dossiers/invocaciones-largo (7 p)"
+  },
+  "invocaciones-compacto": {
+   "kind": "dossier",
+   "short": "invocaciones-compacto",
+   "show": "invocaciones",
+   "draft": true,
+   "source": "dossiers/invocaciones-compacto (4 p, in approval)"
+  },
+  "_about": "Kind, short link and status of each PDF. WHICH file each language gets: content/downloads.json."
+ },
+ "redirects": {
+  "ca/inici/": "ca/",
+  "en/home/": "en/",
+  "sobre-mi/": "es/#about",
+  "contacto/": "es/#contact"
+ }
+}

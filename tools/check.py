@@ -8,12 +8,13 @@ Sections:
   1. Languages: web keys missing per language · dossiers missing per language
   2. Contact data: email and web address present and spelled right
   3. House style: banned words, wrong name spellings (content/facts.json)
-  4. Files: downloads registered in data.json that have no PDF, PDFs not registered, photos without original
+  4. Files: downloads registered in content/site.json that have no PDF, PDFs not registered, photos without original
 """
 import json, pathlib, re, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-data = json.loads((ROOT/'content/data.json').read_text(encoding='utf-8'))
+_l = lambda n: json.loads((ROOT/'content'/n).read_text(encoding='utf-8'))
+data = _l('site.json'); data['shows'] = _l('shows.json')['shows']; data['about'] = _l('about.json'); data['photos'] = _l('photos.json')
 facts = json.loads((ROOT/'content/facts.json').read_text(encoding='utf-8'))
 LANGS = data['languages']; DEFAULT = data['site']['default_lang']
 
@@ -84,7 +85,7 @@ def main():
     downloads = json.loads((ROOT/'content/downloads.json').read_text(encoding='utf-8'))
     registered = set()
     for key, per in downloads.items():
-        if key not in data['downloads']: out.append(f'- ⚠ downloads.json "{key}" has no entry in data.json → downloads')
+        if key not in data['downloads']: out.append(f'- ⚠ downloads.json "{key}" has no entry in content/site.json → downloads')
         for l, u in per.items():
             if not u: continue
             registered.add(pathlib.Path(u).name)
@@ -96,7 +97,7 @@ def main():
     used = [i['file'] for s in data['shows'] for i in s['images']] + [s.get('video_cover') for s in data['shows']] + [data['about']['portrait']] + [i['file'] for i in data['about']['images']]
     for u in used:
         if u and pathlib.PurePosixPath(u).stem not in have: out.append(f'- ❌ photo "{u}" is used but not in source-images/')
-    if not data['photos'].get('credits'): out.append('- ⚠ no photographer credits yet (data.json → photos.credits)')
+    if not data['photos'].get('credits'): out.append('- ⚠ no photographer credits yet (content/photos.json → credits)')
     problems = sum(1 for x in out if x.startswith('- ❌'))
     out.insert(1, f'{problems} problem(s), {sum(1 for x in out if x.startswith("- ⚠"))} warning(s).\n')
     (ROOT/'CHECK-REPORT.md').write_text('\n'.join(out) + '\n', encoding='utf-8')

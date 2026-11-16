@@ -2,8 +2,8 @@
 """Build the Cia. Victoria Sickness website into docs/ (served by GitHub Pages, branch main, folder /docs).
 
 Texts:   content/i18n/<lang>.json   (one file per language; a language is live when its file exists
-                                     AND it is listed in content/data.json → languages)
-Facts:   content/data.json          (shows, credits, photos, downloads, redirects)
+                                     AND it is listed in content/site.json → languages)
+Facts:   content/shows.json · about.json · photos.json (admin forms) · site.json (technical: domain, languages, redirects)
 Layout:  src/page.html (+ social.html, a11y.html, cursor.html), src/style.css, src/site.js, src/smoke.js
 Static:  static/ (favicon, fonts, preview image, video, PDFs) is copied as is.
 Photos:  every original in source-images/ (never cropped) → docs/img/sm|lg/<name>.jpg. Data may name a photo
@@ -11,7 +11,7 @@ Photos:  every original in source-images/ (never cropped) → docs/img/sm|lg/<na
 PDFs:    content/downloads.json says which file each language gets ({ kind: { lang: "/pdf/…" } }).
 Colours: content/theme.json (editable in the admin).
 
-Pages:        /<lang>/            (root / picks the visitor's language, default from data.json)
+Pages:        /<lang>/            (root / picks the visitor's language, default from site.json)
 Short links:  /dossier/<short>/<lang>/  ·  /dossier/<short>/  (opens in the reader's language)
 Run:  pip install jinja2 pillow && python3 build.py
 """
@@ -21,7 +21,11 @@ from PIL import Image, ImageOps
 
 ROOT = pathlib.Path(__file__).parent
 SRC, OUT, CONTENT, STATIC, IMGSRC = ROOT/'src', ROOT/'docs', ROOT/'content', ROOT/'static', ROOT/'source-images'
-data = json.loads((CONTENT/'data.json').read_text(encoding='utf-8'))
+def load(name): return json.loads((CONTENT/name).read_text(encoding='utf-8'))
+data = load('site.json')                     # technical settings
+data['shows'] = load('shows.json')['shows']  # editable in the admin
+data['about'] = load('about.json')
+data['photos'] = load('photos.json')
 SITE_URL = 'https://' + data['site']['domain'] if data['site'].get('domain_live') else data['site']['preview_url']
 downloads = json.loads((CONTENT/'downloads.json').read_text(encoding='utf-8'))
 theme = json.loads((CONTENT/'theme.json').read_text(encoding='utf-8'))
