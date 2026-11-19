@@ -1,0 +1,98 @@
+{#- Technical rider (A4 portrait, 1 page). Texts: <lang>.json in this folder. Build: python3 riders/invocaciones/build.py [langs] -#}
+<!doctype html>
+<html lang="{{ lang }}"><head><meta charset="utf-8">
+<title>{{ t.title }} — {{ t.doc }} · Cia. Victoria Sickness</title>
+<link rel="stylesheet" href="../../static/fonts/fonts.css">
+<style>
+@page { size: 210mm 297mm; margin: 0; }
+:root { --ink:#120d11; --paper:#fbf8f4; --lac:#e8004f; --bub:#ff8fc7; --bone:#f4eee6;
+  --serif:"Instrument Serif",serif; --sans:"Instrument Sans",sans-serif; --disp:"Bricolage Grotesque",sans-serif; }
+* { box-sizing: border-box; margin: 0; }
+body { font: 400 9.6pt/1.45 var(--sans); color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 210mm; height: 297mm; position: relative; overflow: hidden; background: var(--paper); }
+b { font-weight: 700; }
+.top { background: var(--ink); color: var(--bone); padding: 13mm 14mm 9mm; }
+.eyebrow { font-size: 7.5pt; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--bub); }
+h1 { font: italic 400 54pt/.9 var(--serif); letter-spacing: -.03em; margin-top: 3mm; }
+.doc { font: 800 22pt/1 var(--disp); font-stretch: 75%; text-transform: uppercase; color: var(--lac); letter-spacing: -.01em; margin-top: 2mm; }
+.sub { margin-top: 3mm; font-size: 9pt; opacity: .8; }
+.keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; padding: 6mm 14mm 0; }
+.key { border: .35mm solid var(--ink); border-radius: 3mm; padding: 3mm 3.5mm; }
+.key b { display: block; font: 800 20pt/1 var(--disp); font-stretch: 75%; }
+.key span { font-size: 8pt; }
+.body { display: grid; grid-template-columns: 1fr 74mm; gap: 8mm; padding: 6mm 14mm 0; }
+h2 { font-size: 7.5pt; font-weight: 800; letter-spacing: .26em; text-transform: uppercase; color: var(--lac); margin: 4.2mm 0 1.2mm; }
+h2:first-child { margin-top: 0; }
+ul { list-style: none; padding: 0; }
+ul li { padding: .9mm 0 .9mm 4.5mm; position: relative; border-bottom: .25mm dashed rgb(18 13 17 / .25); }
+ul li::before { content: "✦"; color: var(--lac); position: absolute; left: 0; font-size: 7pt; top: 1.4mm; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.fire { margin-top: 4mm; padding: 2.6mm 3.5mm; border-left: 1mm solid var(--lac); background: rgb(232 0 79 / .07); font-weight: 600; }
+.plan svg { width: 74mm; height: 74mm; overflow: visible; display: block; }
+.plan text { font-family: var(--sans); font-size: 5.4px; fill: var(--ink); }
+.legend { margin-top: 2mm; font-size: 7.5pt; display: grid; gap: .8mm; }
+.legend i { display: inline-block; width: 3.4mm; height: 3.4mm; border-radius: 50%; vertical-align: -0.6mm; margin-right: 1.6mm; }
+.band { position: absolute; left: 0; right: 0; bottom: 0; height: 42mm; background: var(--lac); color: var(--ink); padding: 7mm 14mm 0;
+  display: grid; grid-template-columns: 1fr auto; align-items: start; }
+.band .eyebrow { color: var(--ink); font-weight: 800; }
+.band .name { font: 800 20pt/1 var(--disp); font-stretch: 75%; text-transform: uppercase; margin-top: 2mm; }
+.band .mail { font: 700 15pt/1 var(--sans); margin-top: 1.6mm; display: inline-block; border-bottom: .8mm solid var(--ink); padding-bottom: .6mm; color: inherit; text-decoration: none; }
+.band .web { font: 800 13pt/1 var(--disp); font-stretch: 75%; text-transform: uppercase; text-align: right; color: inherit; text-decoration: none; }
+.band .foot { position: absolute; left: 14mm; right: 14mm; bottom: 6mm; display: flex; justify-content: space-between; font-size: 7pt; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+</style></head><body>
+<section class="page">
+  <div class="top">
+    <p class="eyebrow">✦ Cia. Victoria Sickness</p>
+    <h1>{{ t.title }}</h1>
+    <p class="doc">{{ t.doc }}</p>
+    <p class="sub">{{ t.sub }}</p>
+  </div>
+  <div class="keys">{% for a, b in t["keys"] %}<div class="key"><b>{{ a }}</b><span>{{ b }}</span></div>{% endfor %}</div>
+  <div class="body">
+    <div>
+      <h2>{{ t.space_h }}</h2><p>{{ t.space }}</p>
+      <h2>{{ t.platform_h }}</h2><p>{{ t.platform }}</p>
+      <h2>{{ t.audience_h }}</h2><p>{{ t.audience }}</p>
+      <div class="cols">
+        <div><h2>{{ t.company_h }}</h2><ul>{% for x in t.company %}<li>{{ x }}</li>{% endfor %}</ul></div>
+        <div><h2>{{ t.venue_h }}</h2><ul>{% for x in t.venue %}<li>{{ x }}</li>{% endfor %}</ul></div>
+      </div>
+      <p class="fire"><span class="eyebrow" style="color:var(--lac);font-weight:800">✦ {{ t.fire_h }}</span><br>{{ t.fire }}</p>
+    </div>
+    <div class="plan">
+      <h2>{{ t.plan_h }}</h2>
+      <svg viewBox="0 0 200 200" aria-label="{{ t.plan_h }}">
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#120d11" stroke-width=".8" stroke-dasharray="3 2.4"/>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#ff8fc7" stroke-width="22" opacity=".55"/>
+        <circle cx="100" cy="100" r="51" fill="none" stroke="#120d11" stroke-width="8" opacity=".18"/>
+        {%- for r in [0, 90] %}
+        <rect x="94" y="5" width="12" height="190" fill="#fbf8f4" transform="rotate({{ r }} 100 100)"/>
+        {%- endfor %}
+        <circle cx="100" cy="100" r="43" fill="#c98a4b" stroke="#120d11" stroke-width="1"/>
+        {%- for a in [0, 45, 90, 135] %}<line x1="100" y1="57" x2="100" y2="143" stroke="#120d11" stroke-width=".35" opacity=".45" transform="rotate({{ a }} 100 100)"/>{% endfor %}
+        <circle cx="100" cy="100" r="17" fill="none" stroke="#f4eee6" stroke-width="2.2"/>
+        <text x="100" y="126" text-anchor="middle" font-weight="700">{{ t.plan.platform }}</text>
+        {%- for x, y in [(30, 30), (170, 30), (30, 170), (170, 170)] %}
+        <rect x="{{ x - 4 }}" y="{{ y - 4 }}" width="8" height="8" rx="1.2" fill="#120d11"/><text x="{{ x }}" y="{{ y + 11 }}" text-anchor="middle" font-weight="700">{{ t.plan.speaker }}</text>
+        {%- endfor %}
+        <rect x="72" y="0" width="56" height="8" fill="#fbf8f4"/><text x="100" y="6" text-anchor="middle" font-weight="700">{{ t.plan.space }}</text>
+        <text x="100" y="40" text-anchor="middle" font-style="italic" font-size="5px">↓ {{ t.plan.aisle }}</text>
+      </svg>
+      <div class="legend">
+        <span><i style="background:rgb(18 13 17 / .18)"></i>{{ t.plan.floor }}</span>
+        <span><i style="background:rgb(255 143 199 / .55)"></i>{{ t.plan.chairs }}</span>
+        <span><i style="background:#c98a4b;border:.3mm solid #120d11"></i>{{ t.plan.platform }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="band">
+    <div>
+      <p class="eyebrow">✦ {{ t.contact_h }}</p>
+      <p class="name">{{ t.contact_name }}</p>
+      <a class="mail" href="mailto:victoriasickness@gmail.com">victoriasickness@gmail.com</a>
+    </div>
+    <a class="web" href="https://victoriasickness.com">victoriasickness.com</a>
+    <div class="foot"><span>✦ {{ t.title }} · {{ t.foot }}</span><span>Cia. Victoria Sickness</span></div>
+  </div>
+</section>
+</body></html>

@@ -42,6 +42,13 @@
    "cia. Victoria Sickness",
    "Cía. Victoria Sickness",
    "CIA. Victoria Sickness"
+  ],
+  "Slowbou": [
+   "Sloubou"
+  ],
+  "Nau Ivanow": [
+   "nau Ivanov",
+   "Nau Ivanov"
   ]
  },
  "banned": {
@@ -106,26 +113,43 @@
  ],
  "do_not_translate": [
   "Ateneu Popular 9 Barris",
+  "Becas Barcelona Crea",
   "caixa d'eines",
+  "Cardant Cultura",
   "Centre de les Arts del Circ Rogelio Rivel",
   "Cia. Victoria Sickness",
   "Circ de Nadal",
   "Circografía de una Travesti",
   "Combinat 57",
   "Cyr",
+  "Dommelhof",
   "Espai de Circ Cronopis",
+  "Fira Tàrrega",
+  "Florent Bergal",
+  "FRAC",
+  "HAPU",
+  "InSitu",
   "Invocaciones",
   "INVOCACIONES",
+  "Invocacions",
+  "INVOCACIONS",
+  "L'Obrador",
   "La Central del Circ",
   "La Poderosa",
   "Las Marikarmen",
+  "LEME",
+  "Marc Lescertales",
   "Mataró",
+  "Nau Ivanow",
   "queer",
   "Roberta Marrero",
   "Rogelio Rivel",
+  "Sarah Anglada",
+  "Slowbou",
   "travesti",
   "travestis",
   "tyle fernández",
+  "Uli Ulrich",
   "Universidad Carlos III",
   "Vic Heredero",
   "Victoria Sickness"

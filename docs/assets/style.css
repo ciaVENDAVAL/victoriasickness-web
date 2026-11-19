@@ -173,6 +173,8 @@ a { color: inherit; }
 .credits a:hover { background-size: 100% 1px; color: var(--bubble); }
 .supports { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem .2rem; font-size: .9rem; color: rgb(244 238 230 / .75); }
 .supports li:not(:last-child)::after { content: " ✦"; color: var(--lacquer); margin-left: .2rem; }
+.supports + .mini { margin-top: 1.6rem; }
+.supports--copro b { color: var(--bone); font-weight: 600; }
 
 /* lite youtube */
 .yt { all: unset; box-sizing: border-box; position: relative; display: block; width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 18px; cursor: pointer; background: #000; }

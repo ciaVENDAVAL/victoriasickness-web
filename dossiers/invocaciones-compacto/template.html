@@ -1,7 +1,7 @@
 {#- Compact dossier template. Texts: <lang>.json in this folder. Credits + supporters: content/shows.json. Build: python3 build.py [langs] -#}
 <!doctype html>
 <html lang="{{ lang }}"><head><meta charset="utf-8">
-<title>Invocaciones — {{ t.doc_title }} · Cia. Victoria Sickness</title>
+<title>{{ t.title or 'Invocaciones' }} — {{ t.doc_title }} · Cia. Victoria Sickness</title>
 <link rel="stylesheet" href="../../static/fonts/fonts.css">
 <style>
 @page { size: 297mm 210mm; margin: 0; }
@@ -201,6 +201,18 @@ a { color: inherit; text-decoration: none; }
 .q4 .icons svg { width: 100%; height: 100%; }
 .q4 .foot { font-weight: 700; opacity: 1; }
 .q4 .foot b { color: var(--ink); }
+/* v3: new credits block (8 roles + residencies + co-production) */
+.p4 .c2 .credits--ink div { padding: 1.7mm 0; font-size: 9.6pt; grid-template-columns: 54mm 1fr; }
+.p4 .c2 .credits--ink dt { font-size: 8.4pt; }
+.p4 .eyebrow.sp { margin-top: 5.5mm; }
+.p4 .supports { margin-top: 2mm; }
+.p4 .supports li { padding: 1.4mm 0; font-size: 9pt; }
+.p4 .copro { margin-top: 2mm; font-size: 9pt; line-height: 1.4; }
+.p4 .copro b { color: var(--bub); }
+.p4 .prog { margin-top: 5mm; font-size: 8.8pt; }
+.p4 .pnote { margin-top: 6mm; padding: 3mm 4mm; border-left: 1mm solid var(--lac); font-size: 10pt; line-height: 1.35; }
+.q4 .band .tech { margin-top: 1.8mm; font-size: 8.6pt; font-weight: 600; }
+.q4 .band { padding-bottom: 11mm; }
 </style></head><body>
 <!-- 1 · PORTADA -->
 <section class="page p1 grain">
@@ -208,7 +220,7 @@ a { color: inherit; text-decoration: none; }
   <div class="txt">
     <p class="presenta">Cia. Victoria Sickness <b>presenta</b></p>
     <div>
-      <h1>Invocaciones</h1>
+      <h1>{{ t.title or 'Invocaciones' }}</h1>
       <p class="sub" style="color:var(--bub)">{{ t.cover_sub }}</p>
       <div class="meta"><span class="badge"><i></i>{{ t.status }}</span></div>
       <p class="lede1">{{ t.cover_lede }}</p>
@@ -233,7 +245,7 @@ a { color: inherit; text-decoration: none; }
   </div>
   <div class="phs"><img class="a" src="{{ img }}invocaciones-2.jpg" alt=""><img class="b" src="{{ img }}invocaciones-1.jpg" alt=""></div>
   <blockquote><p>“{{ t.quote }}”</p><footer>— Roberta Marrero</footer></blockquote>
-  <div class="foot"><span><b>✦</b> Invocaciones</span><span>Cia. Victoria Sickness · 02</span></div>
+  <div class="foot"><span><b>✦</b> {{ t.title or 'Invocaciones' }}</span><span>Cia. Victoria Sickness · 02</span></div>
 </section>
 
 <!-- 4 · PROCESO (bone) -->
@@ -245,7 +257,8 @@ a { color: inherit; text-decoration: none; }
       {% for a, b in t.facts %}<div class="fact"><b>{{ a }}</b><span>{{ b }}</span></div>
       {% endfor %}
     </div>
-    <a class="vlink" href="https://youtu.be/zzgOx4tenbE"><span class="play">▶</span><span><b>{{ t.video_process }}</b>youtu.be/zzgOx4tenbE</span></a>
+    {% if t.process_note %}<p class="pnote">{{ t.process_note }}</p>{% endif %}
+    {% set vu = t.video_url or "https://youtu.be/zzgOx4tenbE" %}<a class="vlink" href="{{ vu }}"><span class="play">▶</span><span><b>{{ t.video_process }}</b>{{ vu|replace("https://","") }}</span></a>
   </div>
   <div class="col c2">
     <p class="eyebrow">✦ {{ t.credits_eyebrow }}</p>
@@ -253,13 +266,19 @@ a { color: inherit; text-decoration: none; }
       {% for c in show.credits %}<div><dt>{{ t.roles[c.role] }}</dt><dd>{{ c.name }}</dd></div>
       {% endfor %}
     </dl>
-    <p class="eyebrow" style="margin-top:8mm">✦ {{ t.support_eyebrow }}</p>
+    {% if show.residencies %}<p class="eyebrow sp">✦ {{ t.residencies_eyebrow }}</p>
+    <ul class="supports">
+      {% for x in show.residencies %}<li>{{ x }}</li>{% endfor %}
+    </ul>{% endif %}
+    {% if show.coproductions %}<p class="eyebrow sp">✦ {{ t.coproductions_eyebrow }}</p>
+    {% for x in show.coproductions %}<p class="copro"><b>{{ x.name }}</b>{% if x.partners %} — {{ x.partners }}{% endif %}</p>{% endfor %}{% endif %}
+    {% if show.support %}<p class="eyebrow sp">✦ {{ t.support_eyebrow }}</p>
     <ul class="supports">
       {% for x in show.support %}<li>{{ x }}</li>{% endfor %}
-    </ul>
-    <p style="margin-top:6mm;font-size:9.5pt">{{ t.programmers }} <b>victoriasickness@gmail.com</b></p>
+    </ul>{% endif %}
+    <p class="prog">{{ t.programmers }} <b>victoriasickness@gmail.com</b></p>
   </div>
-  <div class="foot"><span><b>✦</b> Invocaciones</span><span>Cia. Victoria Sickness · 03</span></div>
+  <div class="foot"><span><b>✦</b> {{ t.title or 'Invocaciones' }}</span><span>Cia. Victoria Sickness · 03</span></div>
 </section>
 
 <!-- 4 · COMPAÑÍA + PRODUCCIONES ANTERIORES + CONTACTO -->
@@ -286,6 +305,7 @@ a { color: inherit; text-decoration: none; }
     <div>
       <p class="eyebrow">✦ {{ t.contact_eyebrow }}</p>
       <a class="mail" href="mailto:victoriasickness@gmail.com">victoriasickness@gmail.com</a>
+      {% if t.tech_contact %}<p class="tech">{{ t.tech_contact }}</p>{% endif %}
     </div>
     <div class="reach">
       <a class="web" href="https://victoriasickness.com">victoriasickness.com</a>
@@ -296,6 +316,6 @@ a { color: inherit; text-decoration: none; }
       </div>
     </div>
   </div>
-  <div class="foot"><span><b>✦</b> Invocaciones · {{ t.dossier_foot }}</span><span>04</span></div>
+  <div class="foot"><span><b>✦</b> {{ t.title or 'Invocaciones' }} · {{ t.dossier_foot }}</span><span>04</span></div>
 </section>
 </body></html>

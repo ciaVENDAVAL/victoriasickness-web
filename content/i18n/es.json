@@ -60,7 +60,9 @@
   "credits": "Ficha artística",
   "support": "Con el apoyo de",
   "gallery": "Galería",
-  "photo": "fotografía"
+  "photo": "fotografía",
+  "residencies": "Residencias",
+  "coproductions": "Coproducción"
  },
  "roles": {
   "idea": "Idea y dirección",
@@ -70,7 +72,13 @@
   "image": "Imagen",
   "lighting": "Diseño de iluminación",
   "video_art": "Videoarte",
-  "costume": "Vestuario"
+  "costume": "Vestuario",
+  "idea_direction_performance": "Idea, dirección e interpretación",
+  "dramaturgy_support": "Acompañamiento dramatúrgico",
+  "choreography_support": "Acompañamiento coreográfico",
+  "music_sound": "Banda sonora y sonorización",
+  "set_design": "Escenografía",
+  "insitu_tutoring": "Tutorías del programa InSitu"
  },
  "shows": {
   "invocaciones": {
@@ -97,7 +105,7 @@
   "name": "Vic Heredero",
   "paragraphs": [
    "Victoria Sickness es el nombre artístico de Vic Heredero, artista de circo que cruza técnica, creación e investigación escénica. Se formó en el Centre de les Arts del Circ Rogelio Rivel (2016–2020), con especialidad en rueda Cyr y acrobacia de suelo, después de estudiar Ingeniería de Sistemas Audiovisuales en la Universidad Carlos III de Madrid.",
-   "Desde 2018 es voz principal y saxo tenor de Las Marikarmen, donde también dirige la puesta en escena. Con su compañía ha creado un solo de 12 minutos, el espectáculo de 50 minutos Circografía de una Travesti y la investigación en curso sobre el cuerpo travesti INVOCACIONES.",
+   "Desde 2017 es voz principal y saxo tenor de Las Marikarmen, donde también dirige la puesta en escena. Con su compañía ha creado un solo de 12 minutos, el espectáculo de 50 minutos Circografía de una Travesti y la investigación en curso sobre el cuerpo travesti INVOCACIONES.",
    "Imparte talleres de técnica y creación en la escuela Rogelio Rivel, donde dirige un cabaret anual. Dirigió el Circ de Nadal 2024 del Espai de Circ Cronopis (Mataró), participa en la caixa d'eines de La Central del Circ, está en residencia en La Poderosa (2026/27) y ha actuado en Combinat 57 del Ateneu Popular 9 Barris."
   ],
   "quote": "Algunas personas no podemos permitirnos el lujo de no poner el cuerpo.",

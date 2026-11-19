@@ -60,7 +60,9 @@
   "credits": "Ficha artística",
   "support": "Com o apoio de",
   "gallery": "Galeria",
-  "photo": "fotografia"
+  "photo": "fotografia",
+  "residencies": "Residências",
+  "coproductions": "Coprodução"
  },
  "roles": {
   "idea": "Ideia e direção",
@@ -70,7 +72,13 @@
   "image": "Imagem",
   "lighting": "Desenho de luz",
   "video_art": "Videoarte",
-  "costume": "Figurinos"
+  "costume": "Figurinos",
+  "idea_direction_performance": "Ideia, direção e interpretação",
+  "dramaturgy_support": "Acompanhamento dramatúrgico",
+  "choreography_support": "Acompanhamento coreográfico",
+  "music_sound": "Banda sonora e sonoplastia",
+  "set_design": "Cenografia",
+  "insitu_tutoring": "Tutoria do programa InSitu"
  },
  "shows": {
   "invocaciones": {
@@ -97,7 +105,7 @@
   "name": "Vic Heredero",
   "paragraphs": [
    "Victoria Sickness é o nome artístico de Vic Heredero, artista de circo que cruza técnica, criação e investigação cénica. Formação no Centre de les Arts del Circ Rogelio Rivel (2016–2020), com especialização em roda Cyr e acrobacia de solo, depois de estudar Engenharia de Sistemas Audiovisuais na Universidad Carlos III de Madrid.",
-   "Desde 2018, voz principal e saxofone tenor de Las Marikarmen, onde também dirige a encenação. Com a companhia: um solo de 12 minutos, o espetáculo de 50 minutos Circografía de una Travesti e a investigação em curso sobre o corpo travesti, INVOCACIONES.",
+   "Desde 2017, voz principal e saxofone tenor de Las Marikarmen, onde também dirige a encenação. Com a companhia: um solo de 12 minutos, o espetáculo de 50 minutos Circografía de una Travesti e a investigação em curso sobre o corpo travesti, INVOCACIONES.",
    "Orienta oficinas de técnica e criação na escola Rogelio Rivel, onde dirige um cabaré anual. Dirigiu o Circ de Nadal 2024 no Espai de Circ Cronopis (Mataró), participa na caixa d'eines de La Central del Circ, está em residência em La Poderosa (2026/27) e atuou em Combinat 57 no Ateneu Popular 9 Barris."
   ],
   "quote": "Algumas de nós não podemos dar-nos ao luxo de não pôr o corpo.",

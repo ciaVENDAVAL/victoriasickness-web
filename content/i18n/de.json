@@ -60,7 +60,9 @@
   "credits": "Besetzung & Team",
   "support": "Mit Unterstützung von",
   "gallery": "Galerie",
-  "photo": "Foto"
+  "photo": "Foto",
+  "residencies": "Residenzen",
+  "coproductions": "Koproduktion"
  },
  "roles": {
   "idea": "Idee und Regie",
@@ -70,7 +72,13 @@
   "image": "Bildgestaltung",
   "lighting": "Lichtdesign",
   "video_art": "Videokunst",
-  "costume": "Kostüme"
+  "costume": "Kostüme",
+  "idea_direction_performance": "Idee, Regie & Performance",
+  "dramaturgy_support": "Dramaturgische Begleitung",
+  "choreography_support": "Choreografische Begleitung",
+  "music_sound": "Soundtrack & Sounddesign",
+  "set_design": "Bühnenbild",
+  "insitu_tutoring": "Mentoring im InSitu-Programm"
  },
  "shows": {
   "invocaciones": {
@@ -97,7 +105,7 @@
   "name": "Vic Heredero",
   "paragraphs": [
    "Victoria Sickness ist der Künstlername von Vic Heredero, Zirkusartist*in an der Schnittstelle von Technik, Kreation und szenischer Forschung. Ausbildung am Centre de les Arts del Circ Rogelio Rivel (2016–2020) mit Schwerpunkt Cyr-Rad und Bodenakrobatik, nach einem Studium der audiovisuellen Systemtechnik an der Universidad Carlos III in Madrid.",
-   "Seit 2018 Leadstimme und Tenorsaxofon bei Las Marikarmen, dort auch verantwortlich für die Inszenierung. Mit der Kompanie entstanden ein 12-minütiges Solo, das 50-minütige Stück Circografía de una Travesti und die laufende Recherche zum Travesti-Körper, INVOCACIONES.",
+   "Seit 2017 Leadstimme und Tenorsaxofon bei Las Marikarmen, dort auch verantwortlich für die Inszenierung. Mit der Kompanie entstanden ein 12-minütiges Solo, das 50-minütige Stück Circografía de una Travesti und die laufende Recherche zum Travesti-Körper, INVOCACIONES.",
    "Leitet Technik- und Kreationsworkshops an der Schule Rogelio Rivel und dort ein jährliches Cabaret. Regie beim Circ de Nadal 2024 im Espai de Circ Cronopis (Mataró), Teilnahme an der caixa d'eines von La Central del Circ, Residenz bei La Poderosa (2026/27) und Auftritte in Combinat 57 im Ateneu Popular 9 Barris."
   ],
   "quote": "Manche von uns können sich den Luxus nicht leisten, nicht mit dem eigenen Körper einzustehen.",

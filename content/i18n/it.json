@@ -60,7 +60,9 @@
   "credits": "Crediti",
   "support": "Con il sostegno di",
   "gallery": "Galleria",
-  "photo": "foto"
+  "photo": "foto",
+  "residencies": "Residenze",
+  "coproductions": "Coproduzione"
  },
  "roles": {
   "idea": "Ideazione e regia",
@@ -70,7 +72,13 @@
   "image": "Immagine",
   "lighting": "Disegno luci",
   "video_art": "Videoarte",
-  "costume": "Costumi"
+  "costume": "Costumi",
+  "idea_direction_performance": "Ideazione, regia e interpretazione",
+  "dramaturgy_support": "Accompagnamento drammaturgico",
+  "choreography_support": "Accompagnamento coreografico",
+  "music_sound": "Colonna sonora e sonorizzazione",
+  "set_design": "Scenografia",
+  "insitu_tutoring": "Tutoraggio del programma InSitu"
  },
  "shows": {
   "invocaciones": {
@@ -97,7 +105,7 @@
   "name": "Vic Heredero",
   "paragraphs": [
    "Victoria Sickness è il nome d'arte di Vic Heredero, artista di circo che intreccia tecnica, creazione e ricerca scenica. Formazione al Centre de les Arts del Circ Rogelio Rivel (2016–2020), con specializzazione in ruota Cyr e acrobatica a terra, dopo gli studi in Ingegneria dei Sistemi Audiovisivi all'Universidad Carlos III di Madrid.",
-   "Dal 2018 voce principale e sax tenore di Las Marikarmen, di cui cura anche la messa in scena. Con la compagnia: un assolo di 12 minuti, lo spettacolo di 50 minuti Circografía de una Travesti e la ricerca in corso sul corpo travesti, INVOCACIONES.",
+   "Dal 2017 voce principale e sax tenore di Las Marikarmen, di cui cura anche la messa in scena. Con la compagnia: un assolo di 12 minuti, lo spettacolo di 50 minuti Circografía de una Travesti e la ricerca in corso sul corpo travesti, INVOCACIONES.",
    "Conduce laboratori di tecnica e creazione alla scuola Rogelio Rivel, dove dirige un cabaret annuale. Ha diretto il Circ de Nadal 2024 all'Espai de Circ Cronopis (Mataró), partecipa alla caixa d'eines de La Central del Circ, è in residenza a La Poderosa (2026/27) e ha recitato in Combinat 57 all'Ateneu Popular 9 Barris."
   ],
   "quote": "Alcune di noi non possono permettersi il lusso di non metterci il corpo.",

@@ -4,7 +4,7 @@
 
 ## 1. Languages
 
-- ⚠ dossier invocaciones-compacto: no ca eu en fr it pt de
+- ⚠ dossier invocaciones-compacto: no eu en fr it pt de
 
 ## 2. Contact data and 3. House style
 

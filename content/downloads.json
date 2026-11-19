@@ -1,8 +1,16 @@
 {
  "invocaciones": {
-  "es": "/pdf/VictoriaSickness-Invocaciones_ES_dossier_2026-11.pdf"
+  "es": "/pdf/VictoriaSickness-Invocaciones_ES_dossier_2026-11.pdf",
+  "ca": "/pdf/VictoriaSickness-Invocaciones_CA_dossier-compacto_2026-11.pdf"
  },
  "invocaciones-compacto": {
-  "es": "/pdf/VictoriaSickness-Invocaciones_ES_dossier-compacto_2026-11.pdf"
+  "es": "/pdf/VictoriaSickness-Invocaciones_ES_dossier-compacto_2026-11.pdf",
+  "ca": "/pdf/VictoriaSickness-Invocaciones_CA_dossier-compacto_2026-11.pdf"
+ },
+ "invocaciones-rider": {
+  "ca": "/pdf/VictoriaSickness-Invocaciones_CA_rider_2026-11.pdf"
+ },
+ "invocacions-obertura": {
+  "ca": "/pdf/VictoriaSickness-Invocaciones_CA_flyer-obertura_2026-11.pdf"
  }
 }

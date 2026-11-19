@@ -1,0 +1,86 @@
+{
+ "_lang": "ca",
+ "_status": "CA version of the compact dossier (20 Nov 2026); title in Catalan «Invocacions» (tyle's brief, fact sheet ⚠19)",
+ "title": "Invocacions",
+ "cover_presenta": "presenta",
+ "cover_sub": "Cerimònia de circ contemporani",
+ "status": "En creació · estrena estiu 2027",
+ "cover_lede": "El cos travesti al centre d'un ritual de circ per invocar les memòries queer que l'escena ha esborrat. 40 minuts, a l'espai públic, amb el públic a dins.",
+ "cover_kicker": "Dossier de creació · 2026/27",
+ "marquee": [
+  "circ contemporani",
+  "cos travesti",
+  "memòria queer",
+  "roda Cyr",
+  "ritual",
+  "purpurina política"
+ ],
+ "piece_eyebrow": "La peça",
+ "piece_title": "Una cerimònia <em>travesti</em>",
+ "piece_text": "Una peça de circ contemporani i performance que convoca la genealogia travesti i les memòries dissidents de l'Estat espanyol. Partint de l'arxiu de figures i transformistes oblidades dels anys vint i trenta, porta aquests referents al present a través del cos, el ritual i l'escena.",
+ "piece_punch": "El públic no mira: hi participa.",
+ "chips": [
+  "40 min",
+  "Format 360°",
+  "Carrer / in situ",
+  "A partir de 12 anys",
+  "Circ · performance · ritual"
+ ],
+ "research_eyebrow": "La recerca · el cos com a arxiu",
+ "research_text": "L'auge dels discursos d'odi i la pèrdua de drets tornen a posar allò travesti en el punt de mira, i a aquesta violència s'hi suma un esborrament històric persistent. Invocacions recupera cossos, veus i gestos invisibilitzats —de l'Edat de Plata a la Transició— a partir de l'arxiu i del diàleg amb persones que l'investiguen. Davant l'oblit, el cos en escena es converteix en arxiu viu, en acte de memòria i en espai de disputa simbòlica.",
+ "quote": "Algunes persones no ens podem permetre el luxe de no posar-hi el cos.",
+ "process_eyebrow": "Procés de creació",
+ "process_title": "En <em>creació</em>",
+ "facts": [
+  [
+   "Estiu 2027",
+   "Estrena prevista"
+  ],
+  [
+   "40 min",
+   "Durada"
+  ],
+  [
+   "360°",
+   "Carrer, in situ o sala"
+  ],
+  [
+   "+12",
+   "Edat recomanada"
+  ]
+ ],
+ "video_process": "Teaser",
+ "video_url": "https://youtu.be/6qElDL9gkRs",
+ "process_note": "Propera obertura de procés: 17 de desembre de 2026, 18 h · La Central del Circ (Barcelona)",
+ "credits_eyebrow": "Fitxa artística",
+ "roles": {
+  "idea_direction_performance": "Idea, direcció i interpretació",
+  "dramaturgy_support": "Acompanyament dramatúrgic",
+  "choreography_support": "Acompanyament coreogràfic",
+  "artistic_support": "Acompanyament artístic",
+  "costume": "Vestuari",
+  "music_sound": "Banda sonora i sonorització",
+  "set_design": "Escenografia",
+  "insitu_tutoring": "Tutories del programa InSitu"
+ },
+ "residencies_eyebrow": "Residències",
+ "coproductions_eyebrow": "Coproducció",
+ "support_eyebrow": "Suports i residències",
+ "programmers": "Per a programació, festivals i espais de residència que vulguin acompanyar el procés o programar l'estrena:",
+ "company_eyebrow": "La companyia",
+ "portrait_alt": "Retrat de Victoria Sickness",
+ "bio": [
+  "Victoria Sickness és el nom artístic de Vic Heredero, artista de circ que creua tècnica, creació i recerca escènica. Es va formar al Centre de les Arts del Circ Rogelio Rivel (2016–2020), amb especialitat en roda Cyr i acrobàcia de terra, després d'estudiar Enginyeria de Sistemes Audiovisuals a la Universidad Carlos III de Madrid.",
+  "Des del 2017 és veu principal i saxo tenor de Las Marikarmen, on també dirigeix la posada en escena. Amb la seva companyia ha creat un solo de 12 minuts, l'espectacle de 50 minuts Circografía de una Travesti i la recerca en curs sobre el cos travesti INVOCACIONS.",
+  "Imparteix tallers de tècnica i creació a l'escola Rogelio Rivel, on dirigeix un cabaret anual. Va dirigir el Circ de Nadal 2024 de l'Espai de Circ Cronopis (Mataró), participa a la caixa d'eines de La Central del Circ, és en residència a La Poderosa (2026/27) i ha actuat al Combinat 57 de l'Ateneu Popular 9 Barris."
+ ],
+ "prev_eyebrow": "Produccions anteriors",
+ "circo_title": "Circografía de una <em>Travesti</em>",
+ "circo_text": "Un viatge autobiogràfic a la infantesa i l'adolescència queer que Victoria no va poder viure. Una fallada tècnica en ple concert l'arrossega a una realitat paral·lela on els peluixos de la seva infància le guien pel seu passat.",
+ "circo_meta": "50 min · estrena 2022, Teatre Alegria (Terrassa) · música en directe · roda Cyr, acrobàcia, patins i xanques",
+ "video_watch": "Veure el vídeo",
+ "contact_eyebrow": "Contacte · contractació · premsa",
+ "tech_contact": "Contacte tècnic: Vic Heredero",
+ "dossier_foot": "dossier 2026/27",
+ "doc_title": "dossier compacte"
+}

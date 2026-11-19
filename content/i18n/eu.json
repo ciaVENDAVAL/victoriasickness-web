@@ -60,7 +60,9 @@
   "credits": "Fitxa artistikoa",
   "support": "Laguntzaileak",
   "gallery": "Galeria",
-  "photo": "argazkia"
+  "photo": "argazkia",
+  "residencies": "Egonaldiak",
+  "coproductions": "Koprodukzioa"
  },
  "roles": {
   "idea": "Ideia eta zuzendaritza",
@@ -70,7 +72,13 @@
   "image": "Irudia",
   "lighting": "Argiztapen-diseinua",
   "video_art": "Bideo-artea",
-  "costume": "Jantziak"
+  "costume": "Jantziak",
+  "idea_direction_performance": "Ideia, zuzendaritza eta interpretazioa",
+  "dramaturgy_support": "Dramaturgia-laguntza",
+  "choreography_support": "Koreografia-laguntza",
+  "music_sound": "Soinu-banda eta soinuztapena",
+  "set_design": "Eszenografia",
+  "insitu_tutoring": "InSitu programaren tutoretza"
  },
  "shows": {
   "invocaciones": {
@@ -97,7 +105,7 @@
   "name": "Vic Heredero",
   "paragraphs": [
    "Victoria Sickness Vic Herederoren izen artistikoa da: teknika, sorkuntza eta ikerketa eszenikoa gurutzatzen dituen zirku-artista. Centre de les Arts del Circ Rogelio Rivel eskolan ikasi zuen (2016–2020), Cyr gurpilean eta lurreko akrobazian espezializatuta, Madrilgo Universidad Carlos III-n Sistema Ikus-entzunezkoen Ingeniaritza ikasi ondoren.",
-   "2018tik Las Marikarmen taldeko ahots nagusia eta saxofoi tenorra da, eta taldearen eszenaratzea ere zuzentzen du. Konpainiarekin 12 minutuko bakarlana, 50 minutuko Circografía de una Travesti ikuskizuna eta gorputz trabestiari buruzko INVOCACIONES ikerketa (abian) sortu ditu.",
+   "2017tik Las Marikarmen taldeko ahots nagusia eta saxofoi tenorra da, eta taldearen eszenaratzea ere zuzentzen du. Konpainiarekin 12 minutuko bakarlana, 50 minutuko Circografía de una Travesti ikuskizuna eta gorputz trabestiari buruzko INVOCACIONES ikerketa (abian) sortu ditu.",
    "Teknika eta sorkuntza tailerrak ematen ditu Rogelio Rivel eskolan, eta bertako urteroko kabareta zuzentzen du. 2024ko Circ de Nadal zuzendu zuen Espai de Circ Cronopis-en (Mataró), La Central del Circ-eko caixa d'eines programan parte hartzen du, La Poderosan egoiliar da (2026/27) eta Ateneu Popular 9 Barris-eko Combinat 57-n aritu da."
   ],
   "quote": "Batzuok ezin dugu gorputza ez jartzearen luxua onartu.",

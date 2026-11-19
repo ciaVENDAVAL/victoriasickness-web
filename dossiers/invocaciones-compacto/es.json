@@ -1,6 +1,6 @@
 {
  "_lang": "es",
- "_status": "draft, waiting for tyle's approval (14 Nov 2026)",
+ "_status": "draft, waiting for tyle's approval (14 Nov 2026); credits/residencies/co-production, age, 360°, teaser updated 20 Nov 2026",
  "cover_presenta": "presenta",
  "cover_sub": "Ceremonia de circo contemporáneo",
  "status": "En creación · estreno verano 2027",
@@ -20,8 +20,9 @@
  "piece_punch": "El público no mira: participa.",
  "chips": [
   "40 min",
-  "Calle / espacio no convencional",
-  "Ceremonia participativa",
+  "Formato 360°",
+  "Calle / in situ",
+  "A partir de 12 años",
   "Circo · performance · ritual"
  ],
  "research_eyebrow": "La investigación · el cuerpo como archivo",
@@ -39,38 +40,46 @@
    "Duración"
   ],
   [
-   "Calle",
-   "O espacio no convencional"
+   "360°",
+   "Calle, in situ o sala"
   ],
   [
-   "Participativa",
-   "El público forma parte de la ceremonia"
+   "+12",
+   "Edad recomendada"
   ]
  ],
- "video_process": "Vídeo del proceso",
+ "video_process": "Teaser",
+ "video_url": "https://youtu.be/zzgOx4tenbE",
+ "process_note": "Próxima apertura de proceso: 17 de diciembre de 2026, 18 h · La Central del Circ (Barcelona)",
  "credits_eyebrow": "Ficha artística",
  "roles": {
-  "idea": "Idea y dirección",
-  "outside_eye": "Mirada externa",
-  "music": "Banda sonora",
+  "idea_direction_performance": "Idea, dirección e interpretación",
+  "dramaturgy_support": "Acompañamiento dramatúrgico",
+  "choreography_support": "Acompañamiento coreográfico",
   "artistic_support": "Acompañamiento artístico",
-  "image": "Imagen"
+  "costume": "Vestuario",
+  "music_sound": "Banda sonora y sonorización",
+  "set_design": "Escenografía",
+  "insitu_tutoring": "Tutorías del programa InSitu"
  },
+ "residencies_eyebrow": "Residencias",
+ "coproductions_eyebrow": "Coproducción",
  "support_eyebrow": "Apoyos y residencias",
  "programmers": "Para programadores, festivales y espacios de residencia que quieran acompañar el proceso o programar el estreno:",
  "company_eyebrow": "La compañía",
  "portrait_alt": "Retrato de Victoria Sickness",
  "bio": [
   "Victoria Sickness es el nombre artístico de Vic Heredero, artista de circo que cruza técnica, creación e investigación escénica. Se formó en el Centre de les Arts del Circ Rogelio Rivel (2016–2020), con especialidad en rueda Cyr y acrobacia de suelo, después de estudiar Ingeniería de Sistemas Audiovisuales en la Universidad Carlos III de Madrid.",
-  "Desde 2018 es voz principal y saxo tenor de Las Marikarmen, donde también dirige la puesta en escena. Con su compañía ha creado un solo de 12 minutos, el espectáculo de 50 minutos Circografía de una Travesti y la investigación en curso sobre el cuerpo travesti INVOCACIONES.",
+  "Desde 2017 es voz principal y saxo tenor de Las Marikarmen, donde también dirige la puesta en escena. Con su compañía ha creado un solo de 12 minutos, el espectáculo de 50 minutos Circografía de una Travesti y la investigación en curso sobre el cuerpo travesti INVOCACIONES.",
   "Imparte talleres de técnica y creación en la escuela Rogelio Rivel, donde dirige un cabaret anual. Dirigió el Circ de Nadal 2024 del Espai de Circ Cronopis (Mataró), participa en la caixa d'eines de La Central del Circ, está en residencia en La Poderosa (2026/27) y ha actuado en Combinat 57 del Ateneu Popular 9 Barris."
  ],
  "prev_eyebrow": "Producciones anteriores",
  "circo_title": "Circografía de una <em>Travesti</em>",
  "circo_text": "Un viaje autobiográfico a la infancia y la adolescencia queer que Victoria no pudo vivir. Un fallo técnico en pleno concierto le arrastra a una realidad paralela donde los peluches de su infancia le guían por su pasado.",
- "circo_meta": "50 min · sala · música en directo · rueda Cyr, acrobacia, patines y zancos",
+ "circo_meta": "50 min · estreno 2022, Teatre Alegria (Terrassa) · música en directo · rueda Cyr, acrobacia, patines y zancos",
  "video_watch": "Ver el vídeo",
  "contact_eyebrow": "Contacto · contratación · prensa",
+ "tech_contact": "Contacto técnico: Vic Heredero",
  "dossier_foot": "dossier 2026",
  "doc_title": "dossier compacto"
 }

@@ -52,7 +52,7 @@ def build(lang):
     from pypdf import PdfReader, PdfWriter
     r = PdfReader(out); w = PdfWriter()
     for page in r.pages: w.add_page(page)
-    w.add_metadata({'/Title': f'Invocaciones — {t["doc_title"]}', '/Author': data['site']['name'], '/Subject': t['status']})
+    w.add_metadata({'/Title': f'{t.get("title", "Invocaciones")} — {t["doc_title"]}', '/Author': data['site']['name'], '/Subject': t['status']})
     w.write(out)
     print(f'  ✓ {out.relative_to(ROOT)}  ({out.stat().st_size / 1e6:.1f} MB, {len(r.pages)} p)')
 

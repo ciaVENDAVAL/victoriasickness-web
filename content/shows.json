@@ -9,38 +9,54 @@
    "download": "invocaciones",
    "credits": [
     {
-     "role": "idea",
-     "name": "Cia. Victoria Sickness"
+     "role": "idea_direction_performance",
+     "name": "Victoria Sickness"
     },
     {
-     "role": "outside_eye",
+     "role": "dramaturgy_support",
      "name": "Antxon Ordoñez",
      "url": "https://www.apcc.cat/en/professionals/951/antxon-ordonez-bergareche"
     },
     {
-     "role": "music",
-     "name": "Sloubou",
-     "url": "https://open.spotify.com/intl-es/artist/7EFKqT5YMcmShsQhrFJSXv"
-    },
-    {
-     "role": "artistic_support",
+     "role": "choreography_support",
      "name": "Martí Corbera",
      "url": "https://www.instagram.com/marticorbe/"
     },
     {
-     "role": "image",
+     "role": "artistic_support",
+     "name": "Sarah Anglada"
+    },
+    {
+     "role": "costume",
      "name": "Julia Vargas",
      "url": "https://www.instagram.com/juliavargasco/"
+    },
+    {
+     "role": "music_sound",
+     "name": "Slowbou (Marc Lescertales)",
+     "url": "https://open.spotify.com/intl-es/artist/7EFKqT5YMcmShsQhrFJSXv"
+    },
+    {
+     "role": "set_design",
+     "name": "Uli Ulrich"
+    },
+    {
+     "role": "insitu_tutoring",
+     "name": "Florent Bergal"
     }
    ],
-   "support": [
-    "Becas Barcelona Crea",
-    "La Central del Circ",
-    "nau Ivanov",
-    "L'Obrador Deltebre",
-    "Plataforma In-Situ",
-    "FRAC Fuenlabrada",
-    "Cardant Cultura"
+   "residencies": [
+    "La Central del Circ (Barcelona) – Becas Barcelona Crea",
+    "Nau Ivanow (Barcelona)",
+    "Cardant Cultura",
+    "L'Obrador (Deltebre)",
+    "FRAC (Fuenlabrada)"
+   ],
+   "coproductions": [
+    {
+     "name": "Plataforma InSitu",
+     "partners": "Fira Tàrrega · LEME (Portugal) · HAPU festival (Kosovo) · Dommelhof"
+    }
    ],
    "images": [
     {

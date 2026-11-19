@@ -60,7 +60,9 @@
   "credits": "Fitxa artística",
   "support": "Amb el suport de",
   "gallery": "Galeria",
-  "photo": "fotografia"
+  "photo": "fotografia",
+  "residencies": "Residències",
+  "coproductions": "Coproducció"
  },
  "roles": {
   "idea": "Idea i direcció",
@@ -70,7 +72,13 @@
   "image": "Imatge",
   "lighting": "Disseny d'il·luminació",
   "video_art": "Videoart",
-  "costume": "Vestuari"
+  "costume": "Vestuari",
+  "idea_direction_performance": "Idea, direcció i interpretació",
+  "dramaturgy_support": "Acompanyament dramatúrgic",
+  "choreography_support": "Acompanyament coreogràfic",
+  "music_sound": "Banda sonora i sonorització",
+  "set_design": "Escenografia",
+  "insitu_tutoring": "Tutories del programa InSitu"
  },
  "shows": {
   "invocaciones": {
@@ -97,7 +105,7 @@
   "name": "Vic Heredero",
   "paragraphs": [
    "Victoria Sickness és el nom artístic de Vic Heredero, artista de circ que creua tècnica, creació i recerca escènica. Es va formar al Centre de les Arts del Circ Rogelio Rivel (2016–2020), amb especialitat en roda Cyr i acrobàcia de terra, després d'estudiar Enginyeria de Sistemes Audiovisuals a la Universidad Carlos III de Madrid.",
-   "Des del 2018 és veu principal i saxo tenor de Las Marikarmen, on també dirigeix la posada en escena. Amb la seva companyia ha creat un solo de 12 minuts, l'espectacle de 50 minuts Circografía de una Travesti i la recerca en curs sobre el cos travesti INVOCACIONES.",
+   "Des del 2017 és veu principal i saxo tenor de Las Marikarmen, on també dirigeix la posada en escena. Amb la seva companyia ha creat un solo de 12 minuts, l'espectacle de 50 minuts Circografía de una Travesti i la recerca en curs sobre el cos travesti INVOCACIONES.",
    "Imparteix tallers de tècnica i creació a l'escola Rogelio Rivel, on dirigeix un cabaret anual. Va dirigir el Circ de Nadal 2024 de l'Espai de Circ Cronopis (Mataró), participa a la caixa d'eines de La Central del Circ, és en residència a La Poderosa (2026/27) i ha actuat al Combinat 57 de l'Ateneu Popular 9 Barris."
   ],
   "quote": "Algunes persones no ens podem permetre el luxe de no posar-hi el cos.",

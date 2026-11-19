@@ -60,7 +60,9 @@
   "credits": "Distribution",
   "support": "Avec le soutien de",
   "gallery": "Galerie",
-  "photo": "photo"
+  "photo": "photo",
+  "residencies": "Résidences",
+  "coproductions": "Coproduction"
  },
  "roles": {
   "idea": "Idée et mise en scène",
@@ -70,7 +72,13 @@
   "image": "Image",
   "lighting": "Création lumière",
   "video_art": "Art vidéo",
-  "costume": "Costumes"
+  "costume": "Costumes",
+  "idea_direction_performance": "Idée, mise en scène et interprétation",
+  "dramaturgy_support": "Accompagnement dramaturgique",
+  "choreography_support": "Accompagnement chorégraphique",
+  "music_sound": "Bande sonore et sonorisation",
+  "set_design": "Scénographie",
+  "insitu_tutoring": "Tutorat du programme InSitu"
  },
  "shows": {
   "invocaciones": {
@@ -97,7 +105,7 @@
   "name": "Vic Heredero",
   "paragraphs": [
    "Victoria Sickness est le nom de scène de Vic Heredero, artiste de cirque qui croise technique, création et recherche scénique. Formation au Centre de les Arts del Circ Rogelio Rivel (2016–2020), spécialité roue Cyr et acrobatie au sol, après des études d'ingénierie des systèmes audiovisuels à l'Universidad Carlos III de Madrid.",
-   "Depuis 2018, voix principale et saxophone ténor de Las Marikarmen, dont Vic dirige aussi la mise en scène. Avec la compagnie : un solo de 12 minutes, le spectacle de 50 minutes Circografía de una Travesti et la recherche en cours sur le corps travesti, INVOCACIONES.",
+   "Depuis 2017, voix principale et saxophone ténor de Las Marikarmen, dont Vic dirige aussi la mise en scène. Avec la compagnie : un solo de 12 minutes, le spectacle de 50 minutes Circografía de una Travesti et la recherche en cours sur le corps travesti, INVOCACIONES.",
    "Ateliers de technique et de création à l'école Rogelio Rivel, avec la direction d'un cabaret annuel. Mise en scène du Circ de Nadal 2024 à l'Espai de Circ Cronopis (Mataró), participation à la caixa d'eines de La Central del Circ, résidence à La Poderosa (2026/27) et interprétation dans Combinat 57 à l'Ateneu Popular 9 Barris."
   ],
   "quote": "Certain·es d'entre nous ne peuvent pas se permettre le luxe de ne pas engager leur corps.",

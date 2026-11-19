@@ -37,6 +37,19 @@
    "draft": true,
    "source": "dossiers/invocaciones-compacto (4 p, in approval)"
   },
+  "invocaciones-rider": {
+   "kind": "rider",
+   "short": "invocaciones",
+   "show": "invocaciones",
+   "source": "riders/invocaciones (1 p)"
+  },
+  "invocacions-obertura": {
+   "kind": "flyer",
+   "short": "invocacions-obertura",
+   "show": "invocaciones",
+   "draft": true,
+   "source": "flyers/invocacions-obertura (A5 + Instagram JPG in static/img/)"
+  },
   "_about": "Kind, short link and status of each PDF. WHICH file each language gets: content/downloads.json."
  },
  "redirects": {

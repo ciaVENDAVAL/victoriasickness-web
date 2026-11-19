@@ -1,0 +1,37 @@
+{
+ "_lang": "ca",
+ "_status": "first version 20 Nov 2026, from the CA fitxa + EN rider (13 Oct 2026) and the CA dossier; platform and rosemary/incense still to confirm (fact sheet ⚠23)",
+ "title": "Invocacions",
+ "doc": "Fitxa tècnica",
+ "sub": "Cerimònia de circ contemporani · Cia. Victoria Sickness",
+ "keys": [
+  ["40 min", "Durada"],
+  ["1", "Artista en escena"],
+  ["+12", "Edat recomanada"],
+  ["360°", "Públic al voltant"]
+ ],
+ "space_h": "Espai",
+ "space": "Espai escènic global d'entre <b>6 i 10 m de diàmetre</b>, amb la plataforma al centre. A l'aire lliure (in situ) o en interior, sempre que es compleixi aquesta fitxa.",
+ "platform_h": "Plataforma",
+ "platform": "Plataforma <b>circular de fusta, elevada, de 4,5 m de diàmetre</b>, microfonada per sota: amplifica en directe l'impacte del cos i de la roda Cyr. En gira o en format adaptat es pot substituir per una <b>tarima elevada de 5 × 5 m</b>. L'alçada depèn de la del públic.",
+ "audience_h": "Públic",
+ "audience": "En <b>360°</b> i tan a prop de la plataforma com sigui possible: primeres files a terra (o coixins) i, darrere, cadires o grada. <b>Quatre passadissos en creu</b> per entrar i sortir.",
+ "company_h": "Porta la companyia",
+ "company": ["Plataforma", "Micròfon de veu", "Micròfon de superfície (sota la plataforma)", "Tècnic"],
+ "venue_h": "A càrrec de l'organització",
+ "venue": ["Equip de so (PA) adequat a l'espai: idealment 4 altaveus, mínim 1", "Il·luminació si l'actuació és de nit", "En interior: desactivar l'alarma d'incendis"],
+ "fire_h": "Foc",
+ "fire": "S'encenen espelmes i es crema romaní.",
+ "plan_h": "Planta",
+ "plan": {
+  "space": "espai 6–10 m",
+  "platform": "plataforma 4,5 m",
+  "floor": "terra",
+  "chairs": "cadires / grada",
+  "aisle": "passadís",
+  "speaker": "PA"
+ },
+ "contact_h": "Contacte tècnic",
+ "contact_name": "Vic Heredero",
+ "foot": "Fitxa tècnica · novembre 2026"
+}
