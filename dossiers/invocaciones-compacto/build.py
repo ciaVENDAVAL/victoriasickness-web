@@ -30,6 +30,25 @@ def images():
         im = ImageOps.exif_transpose(Image.open(ROOT/'source-images'/f'{slug}.jpg')).convert('RGB')
         im.thumbnail((1500, 1500)); im.save(out, 'JPEG', quality=78, optimize=True, progressive=True)
 
+def cover_fade():
+    """Cover image with the fade to black baked in (PDF viewers on phones draw CSS alpha gradients over images wrongly, pink).
+    Same framing as CSS object-fit: cover in the 46% × 210 mm box on page 1."""
+    out = HERE/'.img'/'invocaciones-cartel-fade.jpg'
+    im = Image.open(HERE/'.img'/'invocaciones-cartel.jpg').convert('RGB')
+    box = (297 * .46) / 210
+    w, h = im.size
+    if w / h > box:
+        nw = round(h * box); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+    w, h = im.size
+    stops = [(0, 1), (.06, 1), (.16, .92), (.27, .7), (.40, .38), (.52, .12), (.62, 0), (1, 0)]
+    def alpha(x):
+        for (x0, a0), (x1, a1) in zip(stops, stops[1:]):
+            if x <= x1: return a0 + (a1 - a0) * (x - x0) / (x1 - x0)
+        return 0
+    mask = Image.new('L', (w, 1)); mask.putdata([round(255 * alpha(i / (w - 1))) for i in range(w)])
+    ink = Image.new('RGB', (w, h), (18, 13, 17))
+    Image.composite(ink, im, mask.resize((w, h))).save(out, 'JPEG', quality=80, optimize=True, progressive=True)
+
 async def pdf(html_path, out):
     from playwright.async_api import async_playwright
     async with async_playwright() as p:
@@ -57,6 +76,6 @@ def build(lang):
     print(f'  ✓ {out.relative_to(ROOT)}  ({out.stat().st_size / 1e6:.1f} MB, {len(r.pages)} p)')
 
 if __name__ == '__main__':
-    images()
+    images(); cover_fade()
     langs = sys.argv[1:] or sorted(p.stem for p in HERE.glob('*.json'))
     for l in langs: build(l)
