@@ -43,7 +43,8 @@ p + p { margin-top: 3.2mm; }
 
 /* 1 — cover */
 .p1 .art { position: absolute; right: 0; top: 0; bottom: 0; width: 46%; }
-.p1 .art::before { content:""; position:absolute; inset:0; background: linear-gradient(90deg, var(--ink) 0%, rgb(18 13 17 / 0) 22%); z-index: 1; }
+.p1 .art::before { content:""; position:absolute; inset:0; z-index: 1;
+  background: linear-gradient(90deg, var(--ink) 0%, var(--ink) 6%, rgb(18 13 17 / .92) 16%, rgb(18 13 17 / .7) 27%, rgb(18 13 17 / .38) 40%, rgb(18 13 17 / .12) 52%, rgb(18 13 17 / 0) 62%); }
 .p1 .txt { position: absolute; left: 16mm; top: 15mm; bottom: 30mm; width: 52%; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; }
 .p1 .{{ t.cover_presenta }} { font: italic 400 15pt/1 var(--serif); color: var(--bub); }
 .p1 .presenta b { font: 600 9pt var(--sans); letter-spacing: .3em; text-transform: uppercase; color: var(--bone); margin-left: 2mm; font-style: normal; }

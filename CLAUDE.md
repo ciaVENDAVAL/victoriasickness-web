@@ -1,7 +1,7 @@
 # victoriasickness-web (PUBLIC)
 
 Website victoriasickness.com and all promoter material of Cia. Victoria Sickness (show dossiers, riders, photos).
-**This repo is public:** never add fees, budgets, tax IDs (NIF), personal data (team phones, IDs, addresses) or application answers — not in text, PDFs or commit messages. Those go in the private repo `ciaVENDAVAL/victoriasickness-docs` (its `INDEX.md` lists where every document lives).
+**This repo is public:** never add fees, budgets, tax IDs (NIF), personal data (team phones, IDs, addresses — exception: the company contact phone +34 658 955 471, Vic Heredero, is public, tyle 20 Nov 2026) or application answers — not in text, PDFs or commit messages. Those go in the private repo `ciaVENDAVAL/victoriasickness-docs` (its `INDEX.md` lists where every document lives).
 
 - **Facts:** Project doc `master/VICTORIA SICKNESS master fact sheet.md` (claude.ai Project "Cia. Victoria Sickness"). Newest info wins; update it and every language when a fact changes. Read it right before writing it (parallel sessions overwrite each other).
 - **How to update:** `UPDATING.md`. Check before pushing: `python3 tools/check.py` (writes CHECK-REPORT.md).

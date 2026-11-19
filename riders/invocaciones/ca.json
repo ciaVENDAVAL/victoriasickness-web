@@ -1,14 +1,26 @@
 {
  "_lang": "ca",
- "_status": "first version 20 Nov 2026, from the CA fitxa + EN rider (13 Oct 2026) and the CA dossier; platform and rosemary/incense still to confirm (fact sheet ⚠23)",
+ "_status": "first version 20 Nov 2026; phone public (tyle, 20 Nov 2026); platform photo added; platform and rosemary/incense still to confirm (fact sheet ⚠23)",
  "title": "Invocacions",
  "doc": "Fitxa tècnica",
  "sub": "Cerimònia de circ contemporani · Cia. Victoria Sickness",
  "keys": [
-  ["40 min", "Durada"],
-  ["1", "Artista en escena"],
-  ["+12", "Edat recomanada"],
-  ["360°", "Públic al voltant"]
+  [
+   "40 min",
+   "Durada"
+  ],
+  [
+   "1",
+   "Artista en escena"
+  ],
+  [
+   "+12",
+   "Edat recomanada"
+  ],
+  [
+   "360°",
+   "Públic al voltant"
+  ]
  ],
  "space_h": "Espai",
  "space": "Espai escènic global d'entre <b>6 i 10 m de diàmetre</b>, amb la plataforma al centre. A l'aire lliure (in situ) o en interior, sempre que es compleixi aquesta fitxa.",
@@ -17,9 +29,18 @@
  "audience_h": "Públic",
  "audience": "En <b>360°</b> i tan a prop de la plataforma com sigui possible: primeres files a terra (o coixins) i, darrere, cadires o grada. <b>Quatre passadissos en creu</b> per entrar i sortir.",
  "company_h": "Porta la companyia",
- "company": ["Plataforma", "Micròfon de veu", "Micròfon de superfície (sota la plataforma)", "Tècnic"],
+ "company": [
+  "Plataforma",
+  "Micròfon de veu",
+  "Micròfon de superfície (sota la plataforma)",
+  "Tècnic"
+ ],
  "venue_h": "A càrrec de l'organització",
- "venue": ["Equip de so (PA) adequat a l'espai: idealment 4 altaveus, mínim 1", "Il·luminació si l'actuació és de nit", "En interior: desactivar l'alarma d'incendis"],
+ "venue": [
+  "Equip de so (PA) adequat a l'espai: idealment 4 altaveus, mínim 1",
+  "Il·luminació si l'actuació és de nit",
+  "En interior: desactivar l'alarma d'incendis"
+ ],
  "fire_h": "Foc",
  "fire": "S'encenen espelmes i es crema romaní.",
  "plan_h": "Planta",
@@ -33,5 +54,7 @@
  },
  "contact_h": "Contacte tècnic",
  "contact_name": "Vic Heredero",
- "foot": "Fitxa tècnica · novembre 2026"
+ "foot": "Fitxa tècnica · novembre 2026",
+ "contact_phone": "+34 658 955 471",
+ "photo_caption": "La plataforma circular de fusta (4,5 m) amb la roda Cyr."
 }

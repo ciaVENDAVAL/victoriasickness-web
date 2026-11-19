@@ -2,7 +2,8 @@
  "_about": "Canonical facts and house style used by tools/check.py. Update this file FIRST when a spelling, contact detail or style rule changes.",
  "contact": {
   "email": "victoriasickness@gmail.com",
-  "web": "victoriasickness.com"
+  "web": "victoriasickness.com",
+  "phone": "+34 658 955 471"
  },
  "names": {
   "Vic Heredero": [
